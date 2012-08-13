@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using MVC.Core.Attributes;
 using MVC4.Sample.Common.Entities;
+using MVC4.Sample.Common.ViewModels;
 
 namespace MVC4.Sample.Web.Controllers.Home
 {
@@ -13,17 +14,27 @@ namespace MVC4.Sample.Web.Controllers.Home
         public ActionResult Index()
         {
             ViewBag.Title = "Welcome, Guest";
+            var model = new HomeViewModel
+                            {
+                                Student = "Hoang Gia",
+                                Employee = "Duy Truong",
+                                Peoples = People.GetLists()
+                            };
+            return View(model);
+        }
 
-            return View(People.GetLists());
+        public PartialViewResult Student(HomeViewModel viewModel)
+        {
+            return PartialView(viewModel);
         }
 
         [HttpPost]
         [ActionCommand(ButtonName= "Submit", ButtonValue= "Submit")] 
-        public ActionResult Index(List<People> peoples)
+        public ActionResult Index(HomeViewModel viewModel)
         {
             ViewBag.Title = "Welcome, peoples";
 
-            return View(peoples);
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -36,7 +47,13 @@ namespace MVC4.Sample.Web.Controllers.Home
         [HttpPost]
         public ActionResult Edit()
         {
-            return View("Index", People.GetLists());
+            var model = new HomeViewModel
+            {
+                Student = "Hoang Gia",
+                Employee = "Duy Truong",
+                Peoples = People.GetLists()
+            };
+            return View("Index", model);
         }
     }
 }

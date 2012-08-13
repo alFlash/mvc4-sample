@@ -1,6 +1,5 @@
-﻿@using System.Diagnostics
-@using MVC4.Sample.Common.Entities
-@model List<People>
+﻿@using MVC4.Sample.Common.ViewModels
+@model HomeViewModel
 @{
     Layout = "~/Views/Layout/MasterPage.cshtml";
 }
@@ -23,28 +22,33 @@
             </tr>
         </thead>
         <tbody>
-            @if (Model != null && Model.Count > 0)
+            @if (Model != null && Model.Peoples != null && Model.Peoples.Count > 0)
             {
-                for (var index = 0; index < Model.Count; index++)
+                for (var index = 0; index < Model.Peoples.Count; index++)
                  {
                      <tr>
                          <td>
-                             @Html.TextBoxFor(p => p[index].Id)
+                             @Html.TextBoxFor(p => p.Peoples[index].Id)
                          </td>
                          <td>
-                             @Html.TextBoxFor(p => p[index].FullName)
+                             @Html.TextBoxFor(p => p.Peoples[index].FullName)
                          </td>
                          <td>
-                             @Html.TextBoxFor(p => p[index].Age)
-                             @Html.HiddenFor(p => p[index].FirstName)
-                             @Html.HiddenFor(p => p[index].LastName)
+                             @Html.TextBoxFor(p => p.Peoples[index].Age)
+                             @Html.HiddenFor(p => p.Peoples[index].FirstName)
+                             @Html.HiddenFor(p => p.Peoples[index].LastName)
                          </td>
                      </tr>
                  }
             }
         </tbody>
     </table>
-
+    if (Model != null)
+    {
+        //Html.EditorFor(m => new StudenViewModel {Name = m.Student}, "Student");
+        //Html.EditorFor(m => m.Student, "Student");
+        Html.RenderPartial("Student", Model);
+    }
     <input type="submit" value="Submit" name="Submit" />
     <input type="submit" value="Cancel" name="Cancel" />
 }
