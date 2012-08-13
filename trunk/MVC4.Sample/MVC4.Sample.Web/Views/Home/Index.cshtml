@@ -1,0 +1,50 @@
+﻿@using System.Diagnostics
+@using MVC4.Sample.Common.Entities
+@model List<People>
+@{
+    Layout = "~/Views/Layout/MasterPage.cshtml";
+}
+<h2>
+    Home</h2>
+@using (@Html.BeginForm())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Full Name
+                </th>
+                <th>
+                    Age
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count > 0)
+            {
+                for (var index = 0; index < Model.Count; index++)
+                 {
+                     <tr>
+                         <td>
+                             @Html.TextBoxFor(p => p[index].Id)
+                         </td>
+                         <td>
+                             @Html.TextBoxFor(p => p[index].FullName)
+                         </td>
+                         <td>
+                             @Html.TextBoxFor(p => p[index].Age)
+                             @Html.HiddenFor(p => p[index].FirstName)
+                             @Html.HiddenFor(p => p[index].LastName)
+                         </td>
+                     </tr>
+                 }
+            }
+        </tbody>
+    </table>
+
+    <input type="submit" value="Submit" name="Submit" />
+    <input type="submit" value="Cancel" name="Cancel" />
+}
