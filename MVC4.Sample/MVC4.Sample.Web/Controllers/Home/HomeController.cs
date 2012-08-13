@@ -55,5 +55,11 @@ namespace MVC4.Sample.Web.Controllers.Home
             };
             return View("Index", model);
         }
+
+        public JsonResult GetPersons()
+        {
+            //return Json(<object>)
+            return null;
+        }
     }
 }
