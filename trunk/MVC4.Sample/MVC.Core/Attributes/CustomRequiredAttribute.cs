@@ -8,7 +8,9 @@ using System.Web;
 namespace MVC.Core.Attributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
-    public class CustomRequiredAttribute : RequiredAttribute
+    public class CustomRequiredAttribute<T> : T
+        where T: ValidationAttribute
+    //public class CustomRequiredAttribute : RequiredAttribute
     {
         public string ErrorMessageResourceClass { get; set; }
 
