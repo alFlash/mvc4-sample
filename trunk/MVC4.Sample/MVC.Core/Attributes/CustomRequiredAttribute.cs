@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.ComponentModel.DataAnnotations;
 using System.Web;
 
 namespace MVC.Core.Attributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
-    public class CustomRequiredAttribute<T> : T
-        where T: ValidationAttribute
-    //public class CustomRequiredAttribute : RequiredAttribute
+    public class CustomRequiredAttribute : RequiredAttribute
     {
         public string ErrorMessageResourceClass { get; set; }
 
