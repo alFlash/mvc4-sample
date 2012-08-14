@@ -1,0 +1,157 @@
+﻿/* File Created: July 19, 2012 */
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td
+{
+    vertical-align: top;
+}
+
+.padl5 {
+    padding-left: 5px;
+}
+
+.padlr10
+{
+    padding: 0px 10px 0px 10px;
+}
+
+.padr5 {
+    padding-right: 5px;
+}
+
+.padr10 {
+    padding-right: 10px;    
+}
+
+.pad10
+{
+    padding: 10px;
+}
+
+.fl
+{
+    float: left;
+}
+.fr
+{
+    float: right;
+}
+.cb
+{
+    clear: both;
+}
+.dn
+{
+    display: none;
+}
+
+.tbl-default
+{
+    width: auto;
+}
+
+.tbl-default td
+{
+    padding: 3px;
+    vertical-align: middle;
+}
+.tbl-default .tbl-header {
+    width: 150px;
+}
+
+.tbl-grid-default
+{
+    width: 100%;
+    font-size: 12px;
+}
+
+.tbl-grid-default td
+{
+    border: 1px solid grey;
+}
+
+.tbl-grid-default .tbl-header
+{
+    font-weight: bold;
+    background-color: #add8f9;
+    white-space: nowrap;
+}
+
+.tbl-grid-default .tbl-header td
+{
+    padding: 5px 2px 5px 2px;
+}
+
+.tbl-grid-default .tbl-item td
+{
+    padding: 2px;
+}
+.tbl-grid-default .action
+{
+    text-align: center;
+    width: 45px;
+}
+
+.tbl-grid-default .number
+{
+    text-align: right;
+}
+
+.control-header
+{
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    background-color: darkcyan;
+}
+
+.button-default
+{
+    width: 100px;
+}
+
+.input-default {
+    width: 215px;
+    padding-right: 0px;
+    padding-left: 0px;
+    height: 22px;
+}
+
+.content-place-holder
+{
+    width: 900px;
+    margin: 0px 0px 0px 40px;
+}
+
+.error
+{
+    font-weight: bold;
+    color: red;
+    border: 2px solid crimson;
+    padding: 10px;
+    margin: 20px 10px 10px 10px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: bisque;
+}
+
+.error .error-con
+{
+}
+
+.jquery-popup {
+    display: none;
+}
+
+.blockUI {
+	font-weight:normal;
+	position:relative;
+	/* top:50px; left:30px;*/
+	letter-spacing:1px;
+	color:#aaaaaa;
+	font-style:italic;
+	}
