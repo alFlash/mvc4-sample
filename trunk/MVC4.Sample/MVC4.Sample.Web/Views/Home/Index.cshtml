@@ -8,11 +8,13 @@
 <h2>@ViewBag.Title</h2>
 @using (Html.BeginForm())
 {
+    
     <div class="dn">
         @Html.HiddenFor(m => m.Welcome)
     </div>
     <div>
         @Model.Welcome
+        @Html.ValidationSummary("Users", false)
     </div>
     <div>
         @Html.PartialFor(h => h.UserListViewModel, "UserList")
