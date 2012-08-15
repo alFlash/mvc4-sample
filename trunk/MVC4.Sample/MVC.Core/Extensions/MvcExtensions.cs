@@ -7,7 +7,9 @@ namespace MVC.Core.Extensions
 {
     public static class MvcHtmlExtension
     {
-        public static MvcHtmlString PartialFor<TModel, TProperty>(this HtmlHelper<TModel> helper, Expression<Func<TModel, TProperty>> expression, string partialViewName)
+        public static MvcHtmlString PartialFor<TModel, TProperty>(this HtmlHelper<TModel> helper, 
+            Expression<Func<TModel, TProperty>> expression, 
+            string partialViewName)
         {
             var name = ExpressionHelper.GetExpressionText(expression);
             var model = ModelMetadata.FromLambdaExpression(expression, helper.ViewData).Model;
