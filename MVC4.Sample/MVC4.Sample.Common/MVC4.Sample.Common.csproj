@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="McjDevelopment.Mvc3ValidationGroups">
+    <Reference Include="McjDevelopment.Mvc3ValidationGroups, Version=0.3.0.0, Culture=neutral, PublicKeyToken=5022c2fe4750e9cc, processorArchitecture=MSIL">
       <HintPath>..\MVC.Core\Libs\McjDevelopment.Mvc3ValidationGroups.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Build.Framework" />
