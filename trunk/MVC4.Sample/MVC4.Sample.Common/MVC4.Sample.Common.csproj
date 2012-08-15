@@ -43,19 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\People.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\HomeViewModel.cs" />
-    <Compile Include="ViewModels\LocalizationViewModel.cs" />
-    <Compile Include="ViewModels\ParentViewModel.cs" />
-    <Compile Include="ViewModels\PartialViewViewModel.cs" />
-    <Compile Include="ViewModels\StudenViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MVC.Core\MVC.Core.csproj">
       <Project>{C9CF49CA-39D5-48E0-8CB6-BD9649F200F2}</Project>
       <Name>MVC.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

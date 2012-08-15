@@ -120,6 +120,9 @@
   <data name="AnotherStudent" xml:space="preserve">
     <value>Another Student</value>
   </data>
+  <data name="PartialView" xml:space="preserve">
+    <value>Welcome to My PartialView</value>
+  </data>
   <data name="Student" xml:space="preserve">
     <value>The Student</value>
   </data>

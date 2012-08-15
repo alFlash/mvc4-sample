@@ -48,6 +48,7 @@
     <Compile Include="Attributes\ActionCommandAttribute.cs" />
     <Compile Include="Attributes\CustomDisplayAttribute.cs" />
     <Compile Include="Attributes\CustomRequiredAttribute.cs" />
+    <Compile Include="Extensions\MvcExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validators\CustomBaseValidator.cs" />
     <Compile Include="Validators\CustomRequiredValidator.cs" />

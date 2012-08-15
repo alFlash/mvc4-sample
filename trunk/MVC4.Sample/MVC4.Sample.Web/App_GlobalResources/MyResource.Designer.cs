@@ -70,6 +70,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Welcome to My PartialView.
+        /// </summary>
+        internal static string PartialView {
+            get {
+                return ResourceManager.GetString("PartialView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The Student.
         /// </summary>
         internal static string Student {
