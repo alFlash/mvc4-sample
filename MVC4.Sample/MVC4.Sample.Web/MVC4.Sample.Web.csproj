@@ -110,7 +110,8 @@
       <DependentUpon>MyResource.resx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Home\HomeController.cs" />
-    <Compile Include="Controllers\LocalizationController.cs" />
+    <Compile Include="Controllers\Localization\LocalizationController.cs" />
+    <Compile Include="Controllers\Partials\ParentViewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,7 +184,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Account\" />
-    <Folder Include="Controllers\Localization\" />
     <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
@@ -219,6 +219,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentView\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ParentView\PartialView.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
