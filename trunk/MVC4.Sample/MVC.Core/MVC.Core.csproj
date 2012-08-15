@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="McjDevelopment.Mvc3ValidationGroups, Version=0.3.0.0, Culture=neutral, PublicKeyToken=5022c2fe4750e9cc, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -53,7 +54,6 @@
     <Compile Include="Validators\CustomBaseValidator.cs" />
     <Compile Include="Validators\CustomRequiredValidator.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Libs\McjDevelopment.Mvc3ValidationGroups.dll" />
   </ItemGroup>

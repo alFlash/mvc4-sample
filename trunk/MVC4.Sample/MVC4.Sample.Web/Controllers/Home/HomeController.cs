@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using MVC.Core.Attributes;
 using MVC4.Sample.Common.Entities;
@@ -27,30 +25,40 @@ namespace MVC4.Sample.Web.Controllers.Home
             viewModel.UserListViewModel.Users.Add(new UserInfo
             {
                 Id = Guid.NewGuid(),
-                UserName = "Le Huu Hoang Gia"
+                UserName = "Gia Le"
             });
             viewModel.UserListViewModel.Users.Add(new UserInfo
             {
                 Id = Guid.NewGuid(),
-                UserName = "Khoa Tran Viet"
+                UserName = "Khoa Tran"
             });
             viewModel.UserListViewModel.Users.Add(new UserInfo
             {
                 Id = Guid.NewGuid(),
-                UserName = "Duy Truong Nguyen Bao"
+                UserName = "Duy Truong"
             });
             viewModel.UserListViewModel.Users.Add(new UserInfo
             {
                 Id = Guid.NewGuid(),
-                UserName = "Hai Nguyen Tuan"
+                UserName = "Hai Nguyen"
             });
             return View(viewModel);
         }
 
         [HttpPost]
-        //[ActionCommand(ButtonName = "SaveWholePage")]
+        [ActionCommand(ButtonName = "SaveWholePage")]
         public ActionResult Index(HomeViewModel viewModel)
         {
+            ModelState.Clear();
+            if (ModelState.IsValid)
+            {
+                //TODO: Business here!
+                viewModel.Welcome = "Saved Welcome Text";
+                foreach (var userInfo in viewModel.UserListViewModel.Users)
+                {
+                    userInfo.UserName = "Saved";
+                }
+            }
             return View(viewModel);
         }
 
@@ -58,6 +66,8 @@ namespace MVC4.Sample.Web.Controllers.Home
         [ActionCommand(ButtonName = "ChangeWelcomeText")]
         public ActionResult ChangeWelcomeText(HomeViewModel viewModel)
         {
+            ModelState.Clear();
+            viewModel.Welcome = "Welcome Text has Changed";
             return View("Index", viewModel);
         }
 
@@ -65,6 +75,16 @@ namespace MVC4.Sample.Web.Controllers.Home
         [ActionCommand(ButtonName = "SaveUsers")]
         public ActionResult SaveUsers(HomeViewModel viewModel)
         {
+            ModelState.Clear();
+            //if (ModelState.IsGroupValid(viewModel.UserListViewModel, "Users"))
+            {
+                //TODO: Business here!
+                foreach (var userInfo in viewModel.UserListViewModel.Users)
+                {
+
+                    userInfo.UserName = "Changed";
+                }
+            }
             return View("Index", viewModel);
         }
 
