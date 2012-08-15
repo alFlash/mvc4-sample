@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using MVC.Core.Attributes;
+using MVC.Core.Extensions;
 using MVC4.Sample.Common.Entities;
 using MVC4.Sample.Common.ViewModels.Home;
 
@@ -76,12 +77,14 @@ namespace MVC4.Sample.Web.Controllers.Home
         public ActionResult SaveUsers(HomeViewModel viewModel)
         {
             ModelState.Clear();
+            //viewModel.UserListViewModel.Users[0].UserName = string.Empty;
             //if (ModelState.IsGroupValid(viewModel.UserListViewModel, "Users"))
+            //if (ModelState.IsValidField("UserName"))
+            if (ModelState.IsValidGroupRecursive(viewModel, "Users"))
             {
                 //TODO: Business here!
                 foreach (var userInfo in viewModel.UserListViewModel.Users)
                 {
-
                     userInfo.UserName = "Changed";
                 }
             }
