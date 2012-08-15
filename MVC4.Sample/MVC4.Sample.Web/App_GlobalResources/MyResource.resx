@@ -123,4 +123,7 @@
   <data name="Student" xml:space="preserve">
     <value>The Student</value>
   </data>
+  <data name="StudentRequired" xml:space="preserve">
+    <value>The field "{0}" is required.</value>
+  </data>
 </root>

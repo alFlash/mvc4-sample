@@ -77,5 +77,14 @@ namespace Resources {
                 return ResourceManager.GetString("Student", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field &quot;{0}&quot; is required..
+        /// </summary>
+        internal static string StudentRequired {
+            get {
+                return ResourceManager.GetString("StudentRequired", resourceCulture);
+            }
+        }
     }
 }
