@@ -1,0 +1,20 @@
+﻿@model MVC4.Sample.Common.ViewModels.ParentViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = null;
+}
+
+@using (Html.BeginForm())
+{
+    <div id="hidden">
+        @Html.HiddenFor(m => m.ParentView)
+    </div>
+    <h2>@Html.DisplayFor(m => m.ParentView)</h2>
+    <div>
+        @*This is the PartialView*@
+        @Html.EditorFor(m => m.PartialView, "PartialView")
+    </div>
+    
+    <input type="submit" value="Edit Model" name="partialMain"/>
+}
