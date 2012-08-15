@@ -48,7 +48,7 @@ namespace MVC4.Sample.Web.Controllers.Home
         }
 
         [HttpPost]
-        [ActionCommand(ButtonName = "SaveWholePage")]
+        //[ActionCommand(ButtonName = "SaveWholePage")]
         public ActionResult Index(HomeViewModel viewModel)
         {
             return View(viewModel);
