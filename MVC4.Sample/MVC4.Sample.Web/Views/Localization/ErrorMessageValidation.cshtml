@@ -1,18 +1,16 @@
 ﻿@model MVC4.Sample.Common.ViewModels.LocalizationViewModel
-
 @{
     ViewBag.Title = "ErrorMessageValidation";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>ErrorMessageValidation</h2>
-
-@using (Html.BeginForm()) {
+<h2>
+    ErrorMessageValidation</h2>
+@using (Html.BeginForm())
+{
     @Html.ValidationSummary(true)
 
     <fieldset>
         <legend>LocalizationViewModel</legend>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.Student)
         </div>
@@ -21,16 +19,22 @@
             @Html.ValidationMessageFor(model => model.Student)
         </div>
 
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AnotherStudent)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AnotherStudent)
+            @Html.ValidationMessageFor(model => model.AnotherStudent)
+        </div>
         <p>
             <input type="submit" value="Save" />
         </p>
     </fieldset>
 }
-
 <div>
     @Html.ActionLink("Back to List", "ErrorMessageValidation")
 </div>
 @*
 @section Scripts {
     
-}*@
+}*@ 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,11 @@ namespace MVC4.Sample.Common.ViewModels
         //[CustomRequired(ErrorMessageResourceName = "Student", ErrorMessageResourceClass = "MyResource")]
         //[CustomRequired(ErrorMessage = "Error from ErrorMessage Properties")]
         [CustomRequired]
-        [Display(Name = "Student", Order = 0)]
+        [CustomDisplayNameAttribute("Student", "MyResource")]
         public string Student { get; set; }
+
+        [CustomRequired]
+        [CustomDisplayNameAttribute("AnotherStudent", "MyResource")]
+        public string AnotherStudent { get; set; }
     }
 }
