@@ -61,6 +61,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Another Student.
+        /// </summary>
+        internal static string AnotherStudent {
+            get {
+                return ResourceManager.GetString("AnotherStudent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The Student.
         /// </summary>
         internal static string Student {
