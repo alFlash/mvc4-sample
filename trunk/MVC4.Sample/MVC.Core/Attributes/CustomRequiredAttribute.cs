@@ -11,9 +11,12 @@ namespace MVC.Core.Attributes
 
         public override string FormatErrorMessage(string name)
         {
+            var defaultErrorMessage = !string.IsNullOrWhiteSpace(name)
+                                      ? string.Format("The field \"{0}\" is required.", name)
+                                      : "This field is required.";
             var result =(!string.IsNullOrWhiteSpace(ErrorMessageResourceClass) && ErrorMessageResourceType != null )
                 || !string.IsNullOrWhiteSpace(ErrorMessage)
-                ? base.FormatErrorMessage(name) : !string.IsNullOrWhiteSpace(name) ? string.Format("The field {0} is required", name): "This field is required"; //base.FormatErrorMessage(name);
+                ? base.FormatErrorMessage(name) : defaultErrorMessage;
             if (!string.IsNullOrWhiteSpace(ErrorMessageResourceClass) && !string.IsNullOrWhiteSpace(ErrorMessageResourceName))
             {
                 var globalResourceObject = HttpContext.GetGlobalResourceObject(ErrorMessageResourceClass, ErrorMessageResourceName);
