@@ -107,11 +107,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_GlobalResources\MyResource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MyResource.resx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -183,13 +178,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_GlobalResources\" />
     <Folder Include="Controllers\Account\" />
     <Folder Include="Controllers\Home\" />
     <Folder Include="Controllers\Localization\" />
     <Folder Include="Controllers\Partials\" />
     <Folder Include="Views\Account\" />
     <Folder Include="Views\Home\" />
-    <Folder Include="Views\Layout\" />
     <Folder Include="Views\Localization\" />
     <Folder Include="Views\ParentView\" />
     <Folder Include="Views\Shared\" />
@@ -206,12 +201,6 @@
       <Project>{B143A71D-EEB1-4858-BBA5-02FBCBD30611}</Project>
       <Name>MVC4.Sample.Common</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_GlobalResources\MyResource.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>MyResource.Designer.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
