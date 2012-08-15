@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BeginCollectionItem">
+      <HintPath>..\packages\BeginCollectionItem.1.1\lib\net35\BeginCollectionItem.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -109,9 +112,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\Home\HomeController.cs" />
-    <Compile Include="Controllers\Localization\LocalizationController.cs" />
-    <Compile Include="Controllers\Partials\ParentViewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -184,16 +184,18 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Account\" />
+    <Folder Include="Controllers\Home\" />
+    <Folder Include="Controllers\Localization\" />
+    <Folder Include="Controllers\Partials\" />
     <Folder Include="Views\Account\" />
+    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Layout\" />
+    <Folder Include="Views\Localization\" />
+    <Folder Include="Views\ParentView\" />
+    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Layout\MasterPage.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MVC.Core\MVC.Core.csproj">
@@ -206,25 +208,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\Student.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="App_GlobalResources\MyResource.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>MyResource.Designer.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Localization\ErrorMessageValidation.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\_Layout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\ParentView\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\ParentView\PartialView.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
