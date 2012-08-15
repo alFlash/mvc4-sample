@@ -1,0 +1,24 @@
+﻿@model MVC4.Sample.Common.ViewModels.Home.HomeViewModel
+@using MVC.Core.Extensions
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm())
+{
+    <div class="dn">
+        @Html.HiddenFor(m => m.Welcome)
+    </div>
+    <div>
+        @Model.Welcome
+    </div>
+    <div>
+        @Html.PartialFor(h => h.UserListViewModel, "UserList")
+    </div>
+    
+    <input type="submit" value="Change Welcome Text" name="ChangeWelcomeText" data-val-valgroup-name="xxx"/>
+    
+    <input type="submit" value="Save Whole Page" name="SaveWholePage" data-val-valgroup-name="xxx"/>
+}
