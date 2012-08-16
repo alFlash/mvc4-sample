@@ -4,32 +4,7 @@
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<script>
-    var Common = new Object();
-    $(document).ready(function () {
-        Common.RemoveDuplicate(".validation-summary-errors ul li");
 
-        $("form").submit(
-            function() {
-                if (!$(this).valid()) {
-                    //form is not valid         
-                    Common.RemoveDuplicate(".validation-summary-errors ul li");
-                }
-            });
-    });
-
-    Common.RemoveDuplicate = function(selector) {
-        var map = {};
-        $(selector).each(function () {
-            var value = $(this).text();
-            if (map[value] == null) {
-                map[value] = true;
-            } else {
-                $(this).remove();
-            }
-        });
-    };
-</script>
 <h2>@ViewBag.Title</h2>
 @using (Html.BeginForm())
 {
