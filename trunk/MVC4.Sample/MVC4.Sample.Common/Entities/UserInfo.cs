@@ -1,13 +1,15 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
+using MVC.Core.Attributes;
 
 namespace MVC4.Sample.Common.Entities
 {
     public class UserInfo
     {
         public Guid Id { get; set; }
-        [Required]
+        [CustomRequired]
+        [StringLength(10, MinimumLength = 5)]
         [ValidationGroup("Users")]
         public string UserName { get; set; }
     }
