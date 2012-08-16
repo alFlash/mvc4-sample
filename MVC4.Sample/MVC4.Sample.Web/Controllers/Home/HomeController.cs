@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Reflection;
 using System.Web.Mvc;
 using MVC.Core.Attributes;
-using MVC.Core.Entities;
 using MVC.Core.Extensions;
 using MVC4.Sample.Common.Entities;
 using MVC4.Sample.Common.ViewModels.Home;
@@ -74,7 +70,8 @@ namespace MVC4.Sample.Web.Controllers.Home
         public ActionResult ChangeWelcomeText(HomeViewModel viewModel)
         {
             ModelState.Clear();
-            viewModel.Welcome = "Welcome Text has Changed";
+            viewModel.Welcome = string.Empty;
+            ModelState.IsValidationGroupValid(viewModel, "Welcome");
             return View("Index", viewModel);
         }
 
@@ -83,7 +80,10 @@ namespace MVC4.Sample.Web.Controllers.Home
         public ActionResult SaveUsers(HomeViewModel viewModel)
         {
             ModelState.Clear();
-            var isValid = ModelState.IsGroupValid(viewModel, new List<string>(new[] { "Users" }));
+            viewModel.Welcome = string.Empty;
+            viewModel.UserListViewModel.Users[0].UserName = string.Empty;
+            viewModel.UserListViewModel.Users[1].UserName = "dafsadfsdfsafsadfsadfsadfsadf";
+            var isValid = ModelState.IsValidationGroupValid(viewModel, "Users");
             
             return View("Index", viewModel);
         }
