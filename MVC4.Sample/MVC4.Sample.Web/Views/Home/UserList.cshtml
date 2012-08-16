@@ -1,7 +1,12 @@
 ﻿@model MVC4.Sample.Common.ViewModels.Home.UserListViewModel
 @if (Model != null)
 {
-    
+        <div class="dn">
+        @Html.HiddenFor(m => m.Text)
+    </div>
+    <div>
+        @Model.Text
+    </div>
     <table>
         @for (var i = 0; i < Model.Users.Count; i++)
         {

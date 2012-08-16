@@ -42,138 +42,76 @@ namespace MVC.Core.Extensions
 
         }
 
-        /// <summary>
-        /// Determines whether [is group valid] [the specified model state].
-        /// </summary>
-        /// <typeparam name="TModel">The type of the model.</typeparam>
-        /// <param name="modelState">State of the model.</param>
-        /// <param name="viewModel">The view model.</param>
-        /// <param name="validationGroups">The validation groups.</param>
-        /// <param name="prefix">The prefix.</param>
-        /// <returns>
-        ///   <c>true</c> if [is group valid] [the specified model state]; otherwise, <c>false</c>.
-        /// </returns>
-        public static bool IsValidationGroupValid<TModel>(this ModelStateDictionary modelState, TModel viewModel, string validationGroups, string prefix = "")
+        public static bool IsModelValid<TModel>(this ModelStateDictionary modelState, TModel viewModel, string validationGroups = "", string prefix = "")
         {
-            var groups = new List<string>();
-            groups.AddRange(validationGroups.Split(' '));
-            return modelState.IsValidationGroupValid(viewModel, groups, prefix);
+            if (string.IsNullOrWhiteSpace(validationGroups))
+            {
+                return modelState.IsValidationGroupValid(viewModel, prefix: prefix);
+            }
+            var groups = validationGroups.Split(' ');
+            return modelState.IsValidationGroupValid(viewModel, new List<string>(groups), prefix);
         }
 
-        /// <summary>
-        /// Determines whether [is group valid] [the specified model state].
-        /// </summary>
-        /// <typeparam name="TModel">The type of the model.</typeparam>
-        /// <param name="modelState">State of the model.</param>
-        /// <param name="viewModel">The view model.</param>
-        /// <param name="validationGroups">The validation groups.</param>
-        /// <param name="prefix">The prefix.</param>
-        /// <returns>
-        ///   <c>true</c> if [is group valid] [the specified model state]; otherwise, <c>false</c>.
-        /// </returns>
-        public static bool IsValidationGroupValid<TModel>(this ModelStateDictionary modelState, TModel viewModel, List<string> validationGroups, string prefix = "")
+        public static bool IsValidationGroupValid<TModel>(this ModelStateDictionary modelState, TModel viewModel, List<string> validationGroups = null, string prefix = "")
         {
             var result = true;
+            //List
             if (viewModel.GetType().IsArray || viewModel.GetType().IsGenericType || viewModel is IEnumerable)
             {
                 if (!modelState.IsEnumarableGroupValid(viewModel, validationGroups, prefix)) result = false;
             }
-            else
+            else //Property
             {
                 var properties = viewModel.GetType().GetProperties(BindingFlags.Public | BindingFlags.DeclaredOnly | BindingFlags.Instance);
-                foreach (var property in properties.Where(property => property.CanRead))
-                {
-                    if (!(property.PropertyType is IEnumerable || property.PropertyType.IsArray || property.PropertyType.IsGenericType)
-                        && Attribute.IsDefined(property, typeof(ValidationGroupAttribute)) && !modelState.IsObjectValid(viewModel, validationGroups, property, prefix))
-                    {
-                        result = false;
-                    }
-                    var subPrefix = !string.IsNullOrWhiteSpace(prefix) ? string.Format("{0}.{1}", prefix, property.Name) : property.Name;
-                    if (!modelState.IsGroupValidRecursive(viewModel, validationGroups, property, subPrefix)) result = false;
-                }
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Determines whether [is object valid] [the specified model state].
-        /// </summary>
-        /// <typeparam name="TModel">The type of the model.</typeparam>
-        /// <param name="modelState">State of the model.</param>
-        /// <param name="model">The model.</param>
-        /// <param name="groupNames">The group names.</param>
-        /// <param name="property">The property.</param>
-        /// <param name="prefix">The prefix.</param>
-        /// <returns>
-        ///   <c>true</c> if [is object valid] [the specified model state]; otherwise, <c>false</c>.
-        /// </returns>
-        private static bool IsObjectValid<TModel>(this ModelStateDictionary modelState, TModel model, List<string> groupNames, PropertyInfo property, string prefix = "")
-        {
-            var attributes = property.GetCustomAttributes(false);
-            var result = true;
-            foreach (var attribute in attributes)
-            {
-                if (groupNames != null && ((attribute is ValidationGroupAttribute) && IsValidValidationGroup(((ValidationGroupAttribute)attribute).GroupName, groupNames)))
-                {
-                    var validationResult = new List<ValidationResult>();
-                    var isValid = Validator.TryValidateObject(model, new ValidationContext(model, null, null), validationResult, true);
-                    if (!isValid)
-                    {
-                        result = false;
-                        foreach (var vResult in validationResult)
-                        {
-                            foreach (var name in vResult.MemberNames)
-                            {
-                                var subPrefix = !string.IsNullOrWhiteSpace(prefix)
-                                                    ? string.Format("{0}.{1}", prefix, name)
-                                                    : name;
-                                modelState.AddModelError(subPrefix, vResult.ErrorMessage);
-                            }
-                        }
-                    }
-                }
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// Determines whether [is group valid recursive] [the specified model state].
-        /// </summary>
-        /// <typeparam name="TModel">The type of the model.</typeparam>
-        /// <param name="modelState">State of the model.</param>
-        /// <param name="model">The model.</param>
-        /// <param name="groupNames">The group names.</param>
-        /// <param name="property">The property.</param>
-        /// <param name="prefix">The prefix.</param>
-        /// <returns>
-        ///   <c>true</c> if [is group valid recursive] [the specified model state]; otherwise, <c>false</c>.
-        /// </returns>
-        private static bool IsGroupValidRecursive<TModel>(this ModelStateDictionary modelState, TModel model, List<string> groupNames, PropertyInfo property, string prefix = "")
-        {
-            var instance = property.GetValue(model, null);
-            if (instance != null)
-            {
-                var isValid = modelState.IsValidationGroupValid(instance, groupNames, prefix);
+                result = ValidateProperties(modelState, viewModel, validationGroups, prefix, properties);
+                var isValid = TraverseRecursive(modelState, viewModel, validationGroups, prefix, properties);
                 if (!isValid)
                 {
-                    return false;
+                    result = false;
                 }
             }
-            return true;
+            return result;
         }
 
-        /// <summary>
-        /// Determines whether [is enumarable group valid] [the specified model state].
-        /// </summary>
-        /// <typeparam name="TModel">The type of the model.</typeparam>
-        /// <param name="modelState">State of the model.</param>
-        /// <param name="model">The model.</param>
-        /// <param name="groupNames">The group names.</param>
-        /// <param name="prefix">The prefix.</param>
-        /// <returns>
-        ///   <c>true</c> if [is enumarable group valid] [the specified model state]; otherwise, <c>false</c>.
-        /// </returns>
+        private static bool TraverseRecursive<TModel>(ModelStateDictionary modelState, TModel viewModel, List<string> validationGroups,
+                                                      string prefix, PropertyInfo[] properties)
+        {
+            var result = true;
+            foreach (var p in properties.Where(p => p.CanRead))
+            {
+                if (p.PropertyType.Name != "String" && !p.PropertyType.IsValueType)
+                {
+                    //List/Array/Object...
+                    var subPrefix = !string.IsNullOrWhiteSpace(prefix)
+                                        ? string.Format("{0}.{1}", prefix, p.Name)
+                                        : p.Name;
+                    if (!modelState.IsGroupValidRecursive(viewModel, validationGroups, p, subPrefix)) result = false;
+                }
+            }
+            return result;
+        }
+
+        private static bool ValidateProperties<TModel>(ModelStateDictionary modelState, TModel viewModel, List<string> validationGroups,
+                                                       string prefix, PropertyInfo[] properties)
+        {
+            var result = true;
+            foreach (var property in properties.Where(property => property.CanRead))
+            {
+                if (
+                    !(property.PropertyType is IEnumerable || property.PropertyType.IsArray ||
+                      property.PropertyType.IsGenericType))
+                {
+                    //Validate only once
+                    if (!ValidateProperty(modelState, viewModel, validationGroups, prefix, property))
+                    {
+                        result = false;
+                        break;
+                    }
+                }
+            }
+            return result;
+        }
+
         private static bool IsEnumarableGroupValid<TModel>(this ModelStateDictionary modelState, TModel model, List<string> groupNames, string prefix = "")
         {
             var result = true;
@@ -193,6 +131,74 @@ namespace MVC.Core.Extensions
             return result;
         }
 
+        private static bool IsGroupValidRecursive<TModel>(this ModelStateDictionary modelState, TModel model, List<string> groupNames, PropertyInfo property, string prefix = "")
+        {
+            var instance = property.GetValue(model, null);
+            if (instance != null && !string.IsNullOrWhiteSpace(instance.ToString()))
+            {
+                var isValid = modelState.IsValidationGroupValid(instance, groupNames, prefix);
+                if (!isValid)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private static bool ValidateProperty<TModel>(ModelStateDictionary modelState, TModel viewModel, List<string> validationGroups,
+                                                     string prefix, PropertyInfo property)
+        {
+            var result = true;
+            if (validationGroups == null || validationGroups.Count < 0)
+            {
+                if (!ValidateModel(modelState, viewModel, prefix))
+                {
+                    result = false;
+                }
+            }
+            else if (Attribute.IsDefined(property, typeof (ValidationGroupAttribute)))
+            {
+                var attributes = property.GetCustomAttributes(false);
+                foreach (var attribute in attributes)
+                {
+                    if ((attribute is ValidationGroupAttribute)
+                        && IsValidValidationGroupName(((ValidationGroupAttribute) attribute).GroupName, validationGroups))
+                    {
+                        if (!ValidateModel(modelState, viewModel, prefix))
+                        {
+                            result = false;
+                            break;
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
+        private static bool ValidateModel<TModel>(ModelStateDictionary modelState, TModel viewModel, string prefix)
+        {
+            var result = true;
+            var validationResult = new List<ValidationResult>();
+            var isValid = Validator.TryValidateObject(viewModel,
+                                                      new ValidationContext(viewModel, null, null),
+                                                      validationResult, true);
+            if (!isValid)
+            {
+                result = false;
+                foreach (var vResult in validationResult)
+                {
+                    foreach (var name in vResult.MemberNames)
+                    {
+                        var subPrefix = !string.IsNullOrWhiteSpace(prefix)
+                                            ? string.Format("{0}.{1}", prefix, name)
+                                            : name;
+                        modelState.AddModelError(subPrefix, vResult.ErrorMessage);
+                    }
+                }
+            }
+            return result;
+        }
+
         /// <summary>
         /// Determines whether [is valid validation group] [the specified item group names].
         /// </summary>
@@ -201,7 +207,7 @@ namespace MVC.Core.Extensions
         /// <returns>
         ///   <c>true</c> if [is valid validation group] [the specified item group names]; otherwise, <c>false</c>.
         /// </returns>
-        private static bool IsValidValidationGroup(string itemGroupNames, IEnumerable<string> groupNames)
+        private static bool IsValidValidationGroupName(string itemGroupNames, IEnumerable<string> groupNames)
         {
             var groups = itemGroupNames.Split(' ');
             return groups.Any(@group => groupNames.Any(groupName => @group == groupName));
