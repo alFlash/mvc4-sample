@@ -74,7 +74,7 @@ namespace MVC.Core.Extensions
         }
 
         private static bool TraverseRecursive<TModel>(ModelStateDictionary modelState, TModel viewModel, List<string> validationGroups,
-                                                      string prefix, PropertyInfo[] properties)
+                                                      string prefix, IEnumerable<PropertyInfo> properties)
         {
             var result = true;
             foreach (var p in properties.Where(p => p.CanRead))
@@ -92,22 +92,17 @@ namespace MVC.Core.Extensions
         }
 
         private static bool ValidateProperties<TModel>(ModelStateDictionary modelState, TModel viewModel, List<string> validationGroups,
-                                                       string prefix, PropertyInfo[] properties)
+                                                       string prefix, IEnumerable<PropertyInfo> properties)
         {
             var result = true;
             foreach (var property in properties.Where(property => property.CanRead))
             {
-                if (
-                    !(property.PropertyType is IEnumerable || property.PropertyType.IsArray ||
-                      property.PropertyType.IsGenericType))
-                {
-                    //Validate only once
-                    if (!ValidateProperty(modelState, viewModel, validationGroups, prefix, property))
-                    {
-                        result = false;
-                        break;
-                    }
-                }
+                if ((property.PropertyType is IEnumerable || property.PropertyType.IsArray ||
+                     property.PropertyType.IsGenericType)) continue;
+                //Validate only once
+                if (ValidateProperty(modelState, viewModel, validationGroups, prefix, property)) continue;
+                result = false;
+                break;
             }
             return result;
         }
@@ -161,15 +156,12 @@ namespace MVC.Core.Extensions
                 var attributes = property.GetCustomAttributes(false);
                 foreach (var attribute in attributes)
                 {
-                    if ((attribute is ValidationGroupAttribute)
-                        && IsValidValidationGroupName(((ValidationGroupAttribute) attribute).GroupName, validationGroups))
-                    {
-                        if (!ValidateModel(modelState, viewModel, prefix))
-                        {
-                            result = false;
-                            break;
-                        }
-                    }
+                    if ((!(attribute is ValidationGroupAttribute)) ||
+                        !IsValidValidationGroupName(((ValidationGroupAttribute) attribute).GroupName, validationGroups))
+                        continue;
+                    if (ValidateModel(modelState, viewModel, prefix)) continue;
+                    result = false;
+                    break;
                 }
             }
             return result;
