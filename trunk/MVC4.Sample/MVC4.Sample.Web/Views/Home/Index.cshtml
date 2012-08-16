@@ -4,16 +4,47 @@
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script>
+    var Common = new Object();
+    $(document).ready(function () {
+        Common.RemoveDuplicate(".validation-summary-errors ul li");
 
+        $("form").submit(
+            function() {
+                if (!$(this).valid()) {
+                    //form is not valid         
+                    Common.RemoveDuplicate(".validation-summary-errors ul li");
+                }
+            });
+    });
+
+    Common.RemoveDuplicate = function(selector) {
+        var map = {};
+        $(selector).each(function () {
+            var value = $(this).text();
+            if (map[value] == null) {
+                map[value] = true;
+            } else {
+                $(this).remove();
+            }
+        });
+    };
+</script>
 <h2>@ViewBag.Title</h2>
 @using (Html.BeginForm())
 {
-    @Html.ValidationSummary()
+    @Html.ValidationSummary(false)
     <div class="dn">
         @Html.HiddenFor(m => m.Welcome)
     </div>
     <div>
         @Model.Welcome
+    </div>
+    <div class="dn">
+        @Html.HiddenFor(m => m.Welcome2)
+    </div>
+    <div>
+        @Model.Welcome2
     </div>
     <div>
         @Html.PartialFor(h => h.UserListViewModel, "UserList")
@@ -21,7 +52,7 @@
     <div>
         @Html.EditorFor(h => h.B)
     </div>
-    <input type="submit" value="Change Welcome Text" name="ChangeWelcomeText" data-val-valgroup-name="Welcome"/>
+    <input type="submit" value="Change Welcome Text" name="ChangeWelcomeText" data-val-valgroup-name="Welcome" />
     
-    <input type="submit" value="Save Whole Page" name="SaveWholePage" data-val-valgroup-name="Users"/>
+    <input type="submit" value="Save Whole Page" name="SaveWholePage" data-val-valgroup-name="Users" />
 }

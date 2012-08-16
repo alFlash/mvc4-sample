@@ -19,9 +19,11 @@ namespace MVC4.Sample.Web.Controllers.Home
             var viewModel = new HomeViewModel
             {
                 Welcome = "Welcome to HomePage",
+                Welcome2 = "Welcome2 to HomePage",
                 UserListViewModel = new UserListViewModel
                             {
-                                Users = new List<UserInfo>()
+                                Users = new List<UserInfo>(),
+                                Text = "dsafasdfasdfsd"
                             },
                 B = new ArrayList { new[] { "dafasdfasdf", "11111" } }
             };
@@ -53,14 +55,11 @@ namespace MVC4.Sample.Web.Controllers.Home
         public ActionResult Index(HomeViewModel viewModel)
         {
             ModelState.Clear();
-            if (ModelState.IsValid)
+            var isValid = ModelState.IsModelValid(viewModel /*Validate All Groups*/);
+            //ModelState.IsModelValid(viewModel, "Users Welcome") => Validate Groups: Users & Welcome
+            if (isValid)
             {
-                //TODO: Business here!
-                viewModel.Welcome = "Saved Welcome Text";
-                foreach (var userInfo in viewModel.UserListViewModel.Users)
-                {
-                    userInfo.UserName = "Saved";
-                }
+                //TODO: DO BUSINESS HERE
             }
             return View(viewModel);
         }
@@ -70,8 +69,15 @@ namespace MVC4.Sample.Web.Controllers.Home
         public ActionResult ChangeWelcomeText(HomeViewModel viewModel)
         {
             ModelState.Clear();
+
+            //Make wrong data
             viewModel.Welcome = string.Empty;
-            ModelState.IsValidationGroupValid(viewModel, "Welcome");
+            viewModel.Welcome2 = string.Empty;
+            viewModel.UserListViewModel.Text = string.Empty;
+            viewModel.UserListViewModel.Users[0].UserName = string.Empty;
+            viewModel.UserListViewModel.Users[1].UserName = string.Empty;
+
+            ModelState.IsModelValid(viewModel, "Welcome" /*Validate only Welcome Groups*/);
             return View("Index", viewModel);
         }
 
@@ -80,11 +86,18 @@ namespace MVC4.Sample.Web.Controllers.Home
         public ActionResult SaveUsers(HomeViewModel viewModel)
         {
             ModelState.Clear();
+
+            //Make wrong data
             viewModel.Welcome = string.Empty;
-            viewModel.UserListViewModel.Users[0].UserName = string.Empty;
+            viewModel.UserListViewModel.Users[0].UserName = "dafsadfsdfsafsadfsadfsadfsadf";
             viewModel.UserListViewModel.Users[1].UserName = "dafsadfsdfsafsadfsadfsadfsadf";
-            var isValid = ModelState.IsValidationGroupValid(viewModel, "Users");
-            
+
+            //Validate
+            var isValid = ModelState.IsModelValid(viewModel, "Users" /*Validate Group: Users*/);
+            if (isValid)
+            {
+                //Do business
+            }
             return View("Index", viewModel);
         }
 
