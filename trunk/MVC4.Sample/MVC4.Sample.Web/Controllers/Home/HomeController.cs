@@ -25,7 +25,6 @@ namespace MVC4.Sample.Web.Controllers.Home
                                 Users = new List<UserInfo>(),
                                 Text = "dsafasdfasdfsd"
                             },
-                B = new ArrayList { new[] { "dafasdfasdf", "11111" } }
             };
             viewModel.UserListViewModel.Users.Add(new UserInfo
             {
@@ -55,6 +54,14 @@ namespace MVC4.Sample.Web.Controllers.Home
         public ActionResult Index(HomeViewModel viewModel)
         {
             ModelState.Clear();
+
+            //Make wrong data
+            viewModel.Welcome = string.Empty;
+            viewModel.Welcome2 = string.Empty;
+            viewModel.UserListViewModel.Text = string.Empty;
+            viewModel.UserListViewModel.Users[0].UserName = string.Empty;
+            viewModel.UserListViewModel.Users[1].UserName = string.Empty;
+
             var isValid = ModelState.IsModelValid(viewModel /*Validate All Groups*/);
             //ModelState.IsModelValid(viewModel, "Users Welcome") => Validate Groups: Users & Welcome
             if (isValid)

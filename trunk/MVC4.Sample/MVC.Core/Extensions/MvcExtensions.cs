@@ -94,17 +94,9 @@ namespace MVC.Core.Extensions
         private static bool ValidateProperties<TModel>(ModelStateDictionary modelState, TModel viewModel, List<string> validationGroups,
                                                        string prefix, IEnumerable<PropertyInfo> properties)
         {
-            var result = true;
-            foreach (var property in properties.Where(property => property.CanRead))
-            {
-                if ((property.PropertyType is IEnumerable || property.PropertyType.IsArray ||
-                     property.PropertyType.IsGenericType)) continue;
-                //Validate only once
-                if (ValidateProperty(modelState, viewModel, validationGroups, prefix, property)) continue;
-                result = false;
-                break;
-            }
-            return result;
+            return properties.Where(property => property.CanRead)
+                .Where(property => (!(property.PropertyType is IEnumerable) && !property.PropertyType.IsArray && !property.PropertyType.IsGenericType))
+                .All(property => ValidateProperty(modelState, viewModel, validationGroups, prefix, property));
         }
 
         private static bool IsEnumarableGroupValid<TModel>(this ModelStateDictionary modelState, TModel model, List<string> groupNames, string prefix = "")
@@ -154,14 +146,9 @@ namespace MVC.Core.Extensions
             else if (Attribute.IsDefined(property, typeof (ValidationGroupAttribute)))
             {
                 var attributes = property.GetCustomAttributes(false);
-                foreach (var attribute in attributes)
+                if (attributes.Where(attribute => ((attribute is ValidationGroupAttribute)) && IsValidValidationGroupName(((ValidationGroupAttribute) attribute).GroupName, validationGroups)).Any(attribute => !ValidateModel(modelState, viewModel, prefix)))
                 {
-                    if ((!(attribute is ValidationGroupAttribute)) ||
-                        !IsValidValidationGroupName(((ValidationGroupAttribute) attribute).GroupName, validationGroups))
-                        continue;
-                    if (ValidateModel(modelState, viewModel, prefix)) continue;
                     result = false;
-                    break;
                 }
             }
             return result;
@@ -199,10 +186,23 @@ namespace MVC.Core.Extensions
         /// <returns>
         ///   <c>true</c> if [is valid validation group] [the specified item group names]; otherwise, <c>false</c>.
         /// </returns>
-        private static bool IsValidValidationGroupName(string itemGroupNames, IEnumerable<string> groupNames)
+        private static bool IsValidValidationGroupName(string itemGroupNames, ICollection<string> groupNames)
         {
-            var groups = itemGroupNames.Split(' ');
-            return groups.Any(@group => groupNames.Any(groupName => @group == groupName));
+            var result = true;
+            if (groupNames != null && groupNames.Count > 0)
+            {
+                if (string.IsNullOrWhiteSpace(itemGroupNames))
+                {
+                    result = false;
+                }
+                else if (!string.IsNullOrWhiteSpace(itemGroupNames))
+                {
+                    var groups = itemGroupNames.Split(' ');
+                    result = groups.Any(@group => groupNames.Any(groupName => @group == groupName));
+                }
+            }
+
+            return result;
         }
     }
 }

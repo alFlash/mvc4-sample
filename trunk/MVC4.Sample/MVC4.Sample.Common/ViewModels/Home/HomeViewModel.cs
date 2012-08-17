@@ -17,7 +17,5 @@ namespace MVC4.Sample.Common.ViewModels.Home
         [ValidationGroup("Welcome")]
         public string Welcome2 { get; set; }
         public UserListViewModel UserListViewModel { get; set; }
-        public Array A { get; set; }
-        public ArrayList B { get; set; }
     }
 }
