@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Web;
 
 namespace MVP.Base.BaseUserControl
 {
     public static class BaseControlCollection
     {
+        /// <summary>
+        /// Gets the controls.
+        /// </summary>
         public static Dictionary<string, Dictionary<string, BaseUserControl>> Controls
         {
             get
@@ -19,6 +20,12 @@ namespace MVP.Base.BaseUserControl
             }
         }
 
+        /// <summary>
+        /// Registers the specified parent key.
+        /// </summary>
+        /// <param name="parentKey">The parent key.</param>
+        /// <param name="key">The key.</param>
+        /// <param name="control">The control.</param>
         public static void Register(string parentKey, string key, BaseUserControl control)
         {
             if (!string.IsNullOrEmpty(parentKey))

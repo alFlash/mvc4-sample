@@ -8,18 +8,24 @@ namespace MVP.Base.BaseUserControl
     public class BaseUserControl : UserControl, IBaseUserControl
     {
         #region Properties
+        
         public IBasePresenter Presenter { get; set; }
-        //public virtual string ControlKey { get { return GetType().FullName; } }
         public virtual List<string> ChildControls { get; set; } //Store the fullname of (Children)Usercontrols' Type 
         public virtual string ParentControl { get; set; }
-
         public virtual List<string> RelatedControls { get; set; }
 
         #endregion
 
         #region Public Methods
+        /// <summary>
+        /// Attaches the event handler.
+        /// </summary>
         public virtual void AttachEventHandler() { }
 
+        /// <summary>
+        /// Shows the error message.
+        /// </summary>
+        /// <param name="message">The message.</param>
         public void ShowErrorMessage(string message)
         {
             if (Page.Master == null || !(Page.Master is IMasterPage)) return;
@@ -27,24 +33,45 @@ namespace MVP.Base.BaseUserControl
             masterPage.ShowErrorMessage(message);
         }
 
+        /// <summary>
+        /// Gets the resource.
+        /// </summary>
+        /// <param name="className">Name of the class.</param>
+        /// <param name="resourceKey">The resource key.</param>
+        /// <returns></returns>
         public string GetResource(string className, string resourceKey)
         {
             var result = GetGlobalResourceObject(className, resourceKey);
             return result != null ? result.ToString() : string.Empty;
         }
 
+        /// <summary>
+        /// Gets the resource.
+        /// </summary>
+        /// <param name="resourceKey">The resource key.</param>
+        /// <returns></returns>
         public string GetResource(string resourceKey)
         {
             return GetResource(GetDefautResourceClassName(), resourceKey);
         }
 
+        /// <summary>
+        /// Gets the name of the defaut resource class.
+        /// </summary>
+        /// <returns></returns>
         public virtual string GetDefautResourceClassName()
         {
             return "Common";
         }
 
+        /// <summary>
+        /// Re-load the page.
+        /// </summary>
         public virtual void ReLoad (){}
 
+        /// <summary>
+        /// Commits the changes.
+        /// </summary>
         public void CommitChanges()
         {
             if (!string.IsNullOrEmpty(ParentControl) && RelatedControls != null && RelatedControls.Count > 0)
@@ -67,6 +94,10 @@ namespace MVP.Base.BaseUserControl
 
         #region Event Handlers
 
+        /// <summary>
+        /// Raises the <see cref="E:System.Web.UI.Control.Load"/> event.
+        /// </summary>
+        /// <param name="e">The <see cref="T:System.EventArgs"/> object that contains the event data.</param>
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
