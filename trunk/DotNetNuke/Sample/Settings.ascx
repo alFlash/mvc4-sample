@@ -1,2 +1,2 @@
-<%@ Control Language="vb" AutoEventWireup="false" Inherits="ModuleName1.YourCompany.Modules.ModuleName1.Settings" Codebehind="Settings.ascx.vb" %>
+<%@ Control Language="vb" AutoEventWireup="false" Inherits="DNN.MVP.Sample.ModuleName1.Settings" Codebehind="Settings.ascx.vb" %>
 

@@ -12,14 +12,12 @@ Option Strict Off
 Option Explicit On
 
 
-Namespace YourCompany.Modules.ModuleName1
-    Partial Public Class EditModuleName1
-        Protected WithEvents lblContent As DotNetNuke.UI.UserControls.LabelControl
-        Protected WithEvents txtContent As DotNetNuke.UI.UserControls.TextEditor
-        Protected WithEvents valContent As System.Web.UI.WebControls.RequiredFieldValidator
-        Protected WithEvents cmdUpdate As System.Web.UI.WebControls.LinkButton
-        Protected WithEvents cmdCancel As System.Web.UI.WebControls.LinkButton
-        Protected WithEvents cmdDelete As System.Web.UI.WebControls.LinkButton
-        Protected WithEvents ctlAudit As DotNetNuke.UI.UserControls.ModuleAuditControl
-    End Class
-End Namespace
+Partial Public Class EditModuleName1
+    Protected WithEvents lblContent As DotNetNuke.UI.UserControls.LabelControl
+    Protected WithEvents txtContent As DotNetNuke.UI.UserControls.TextEditor
+    Protected WithEvents valContent As System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents cmdUpdate As System.Web.UI.WebControls.LinkButton
+    Protected WithEvents cmdCancel As System.Web.UI.WebControls.LinkButton
+    Protected WithEvents cmdDelete As System.Web.UI.WebControls.LinkButton
+    Protected WithEvents ctlAudit As DotNetNuke.UI.UserControls.ModuleAuditControl
+End Class

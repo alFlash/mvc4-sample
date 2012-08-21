@@ -20,69 +20,64 @@
 Imports System.Web.UI
 Imports System.Collections.Generic
 Imports System.Reflection
-
 Imports DotNetNuke
 Imports DotNetNuke.Services.Exceptions
 Imports DotNetNuke.Services.Localization
 
-Namespace YourCompany.Modules.ModuleName1
+''' -----------------------------------------------------------------------------
+''' <summary>
+''' The ViewModuleName1 class displays the content
+''' </summary>
+''' <remarks>
+''' </remarks>
+''' <history>
+''' </history>
+''' -----------------------------------------------------------------------------
+Partial Class ViewModuleName1
+    Inherits Entities.Modules.PortalModuleBase
+    Implements Entities.Modules.IActionable
+
+#Region "Event Handlers"
 
     ''' -----------------------------------------------------------------------------
     ''' <summary>
-    ''' The ViewModuleName1 class displays the content
+    ''' Page_Load runs when the control is loaded
     ''' </summary>
     ''' <remarks>
     ''' </remarks>
     ''' <history>
     ''' </history>
     ''' -----------------------------------------------------------------------------
-    Partial Class ViewModuleName1
-        Inherits Entities.Modules.PortalModuleBase
-        Implements Entities.Modules.IActionable
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
+        Try
 
-#Region "Event Handlers"
-
-        ''' -----------------------------------------------------------------------------
-        ''' <summary>
-        ''' Page_Load runs when the control is loaded
-        ''' </summary>
-        ''' <remarks>
-        ''' </remarks>
-        ''' <history>
-        ''' </history>
-        ''' -----------------------------------------------------------------------------
-        Private Sub Page_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
-            Try
-
-            Catch exc As Exception        'Module failed to load
-                ProcessModuleLoadException(Me, exc)
-            End Try
-        End Sub
+        Catch exc As Exception        'Module failed to load
+            ProcessModuleLoadException(Me, exc)
+        End Try
+    End Sub
 
 #End Region
 
 #Region "Optional Interfaces"
 
-        ''' -----------------------------------------------------------------------------
-        ''' <summary>
-        ''' Registers the module actions required for interfacing with the portal framework
-        ''' </summary>
-        ''' <value></value>
-        ''' <returns></returns>
-        ''' <remarks></remarks>
-        ''' <history>
-        ''' </history>
-        ''' -----------------------------------------------------------------------------
-        Public ReadOnly Property ModuleActions() As Entities.Modules.Actions.ModuleActionCollection Implements Entities.Modules.IActionable.ModuleActions
-            Get
-                Dim Actions As New Entities.Modules.Actions.ModuleActionCollection
-                Actions.Add(GetNextActionID, Localization.GetString(Entities.Modules.Actions.ModuleActionType.AddContent, LocalResourceFile), Entities.Modules.Actions.ModuleActionType.AddContent, "", "", EditUrl(), False, Security.SecurityAccessLevel.Edit, True, False)
-                Return Actions
-            End Get
-        End Property
+    ''' -----------------------------------------------------------------------------
+    ''' <summary>
+    ''' Registers the module actions required for interfacing with the portal framework
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    ''' <history>
+    ''' </history>
+    ''' -----------------------------------------------------------------------------
+    Public ReadOnly Property ModuleActions() As Entities.Modules.Actions.ModuleActionCollection Implements Entities.Modules.IActionable.ModuleActions
+        Get
+            Dim Actions As New Entities.Modules.Actions.ModuleActionCollection
+            Actions.Add(GetNextActionID, Localization.GetString(Entities.Modules.Actions.ModuleActionType.AddContent, LocalResourceFile), Entities.Modules.Actions.ModuleActionType.AddContent, "", "", EditUrl(), False, Security.SecurityAccessLevel.Edit, True, False)
+            Return Actions
+        End Get
+    End Property
 
 #End Region
 
-    End Class
-
-End Namespace
+End Class
