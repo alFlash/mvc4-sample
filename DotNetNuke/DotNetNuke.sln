@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{00000000-0000-0000-0000-000000000000}") = "DNN.Web.Sample", "Sample\DNN.Web.Sample.vbproj", "{1822840B-CF40-47BE-8376-0E01F50098EE}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DNN.MVP.Base", "DNN.MVP.Base\DNN.MVP.Base.vbproj", "{46D73F2D-DDCD-48E3-B449-2035DE05F955}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1822840B-CF40-47BE-8376-0E01F50098EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1822840B-CF40-47BE-8376-0E01F50098EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1822840B-CF40-47BE-8376-0E01F50098EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1822840B-CF40-47BE-8376-0E01F50098EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D73F2D-DDCD-48E3-B449-2035DE05F955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D73F2D-DDCD-48E3-B449-2035DE05F955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D73F2D-DDCD-48E3-B449-2035DE05F955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D73F2D-DDCD-48E3-B449-2035DE05F955}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

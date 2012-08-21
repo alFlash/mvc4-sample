@@ -33,6 +33,8 @@ Imports DotNetNuke.Services.Localization
 ''' <history>
 ''' </history>
 ''' -----------------------------------------------------------------------------
+''' 
+
 Partial Class ViewModuleName1
     Inherits Entities.Modules.PortalModuleBase
     Implements Entities.Modules.IActionable
@@ -50,7 +52,17 @@ Partial Class ViewModuleName1
     ''' -----------------------------------------------------------------------------
     Private Sub Page_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
         Try
+            'TabId
+            'TabModuleId
+            'ModuleId
 
+            ucDependencyUC1.ParentControl = String.Format("Sample.{0}{1}{2}{3}", ID, TabId, TabModuleId, ModuleId) 'Must be Unique
+            ucDependencyUC1.RelatedControls = New List(Of String)
+            ucDependencyUC1.RelatedControls.Add("ucDependencyUC2")
+
+            ucDependencyUC2.ParentControl = String.Format("Sample.{0}{1}{2}{3}", ID, TabId, TabModuleId, ModuleId)
+            ucDependencyUC2.RelatedControls = New List(Of String)
+            ucDependencyUC2.RelatedControls.Add("ucDependencyUC1")
         Catch exc As Exception        'Module failed to load
             ProcessModuleLoadException(Me, exc)
         End Try
