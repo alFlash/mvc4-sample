@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web;
+using MVP.Base.BasePresenter;
 
 namespace MVP.Base.BaseUserControl
 {
@@ -8,15 +9,15 @@ namespace MVP.Base.BaseUserControl
         /// <summary>
         /// Gets the controls.
         /// </summary>
-        public static Dictionary<string, Dictionary<string, BaseUserControl>> Controls
+        public static Dictionary<string, Dictionary<string, IBaseUserControl>> Controls
         {
             get
             {
                 if (HttpContext.Current.Session["SS_BaseControlCollection_Key"] == null)
                 {
-                    HttpContext.Current.Session["SS_BaseControlCollection_Key"] = new Dictionary<string, Dictionary<string, BaseUserControl>>();
+                    HttpContext.Current.Session["SS_BaseControlCollection_Key"] = new Dictionary<string, Dictionary<string, IBaseUserControl>>();
                 }
-                return (Dictionary<string, Dictionary<string, BaseUserControl>>)HttpContext.Current.Session["SS_BaseControlCollection_Key"];
+                return (Dictionary<string, Dictionary<string, IBaseUserControl>>)HttpContext.Current.Session["SS_BaseControlCollection_Key"];
             }
         }
 
@@ -26,7 +27,7 @@ namespace MVP.Base.BaseUserControl
         /// <param name="parentKey">The parent key.</param>
         /// <param name="key">The key.</param>
         /// <param name="control">The control.</param>
-        public static void Register(string parentKey, string key, BaseUserControl control)
+        public static void Register(string parentKey, string key, IBaseUserControl control)
         {
             if (!string.IsNullOrEmpty(parentKey))
             {
@@ -36,7 +37,7 @@ namespace MVP.Base.BaseUserControl
                     {
                         if (Controls[parentKey] == null)
                         {
-                            Controls[parentKey] = new Dictionary<string, BaseUserControl>();
+                            Controls[parentKey] = new Dictionary<string, IBaseUserControl>();
                         }
                         if (Controls[parentKey].ContainsKey(key))
                         {
@@ -49,7 +50,7 @@ namespace MVP.Base.BaseUserControl
                     }
                     else
                     {
-                        Controls.Add(parentKey, new Dictionary<string, BaseUserControl>());
+                        Controls.Add(parentKey, new Dictionary<string, IBaseUserControl>());
                         Controls[parentKey].Add(key, control);
                     }
                 }

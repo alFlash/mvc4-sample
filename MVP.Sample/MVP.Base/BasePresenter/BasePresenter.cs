@@ -20,6 +20,7 @@ namespace MVP.Base.BasePresenter
         #endregion
 
         #region IBasePresenter
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BasePresenter&lt;TView, TRepository&gt;"/> class.
         /// </summary>
