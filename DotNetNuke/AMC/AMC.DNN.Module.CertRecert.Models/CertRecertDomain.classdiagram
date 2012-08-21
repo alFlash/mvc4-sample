@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="6d721949-0b32-4b25-bb6c-9e8bf9486dc8" name="CertRecertDomain" linkedPackageId="076c21d0-913a-485b-a263-a4d65856e29c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="379557ef-a916-46fc-8f1e-05613c7724f4" name="AMC.DNN.Modules.CerRecert.Business">
+        <elementDefinition Id="bcbc7031-373d-4d04-af0a-f88ba7c718aa" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="0314a05e-bf6b-4c70-9e83-c4edc160f605" name="InActiveStatus" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b222fda9-b08a-464f-9895-50f65eea2565" />
+              <generalsInternal>
+                <generalization Id="40f526c1-98d9-4c4a-9ed4-a505687f82bf" isSubstitutable="false">
+                  <classMoniker Id="dec71f29-944d-45b2-b54d-d2b602a6543b" LastKnownName="Request" />
+                  <elementDefinition Id="cfdb4a60-df58-4204-93ed-1005ceaa9e8d" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="4997f999-235d-420a-803a-20de63676ac6" name="Certification" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="f3823b75-2140-400c-9d24-9034d545d197" />
+              <generalsInternal>
+                <generalization Id="0ebd31d0-879a-49bd-a4f0-9b62c950540a" isSubstitutable="false">
+                  <classMoniker Id="36dd6db4-d620-4283-9d01-70ae3618f14e" LastKnownName="CertRecertBase" />
+                  <elementDefinition Id="e4abf6c4-00d3-4746-8abb-987cf3ec42dc" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="35f98d56-e3a2-472d-adee-53b3c4ccb575" name="Recertification" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="8bfc04b2-1d75-44b7-b866-4f053403b4a7" />
+              <generalsInternal>
+                <generalization Id="d3e27fcf-a978-4667-a0dc-e4ec041a3827" isSubstitutable="false">
+                  <classMoniker Id="36dd6db4-d620-4283-9d01-70ae3618f14e" LastKnownName="CertRecertBase" />
+                  <elementDefinition Id="96109aef-afe0-4ee8-b7f0-4fdc7504d6b2" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="36dd6db4-d620-4283-9d01-70ae3618f14e" name="CertRecertBase" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="e725a4db-1f4a-473b-85b8-d33ae00bb07d" />
+              <generalsInternal>
+                <generalization Id="4bab1e5f-3b4e-4fc2-80be-f9f64066ffb9" isSubstitutable="false">
+                  <classMoniker Id="dec71f29-944d-45b2-b54d-d2b602a6543b" LastKnownName="Request" />
+                  <elementDefinition Id="99fb3e2a-bd34-4278-a0c2-1b30876c007b" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="dec71f29-944d-45b2-b54d-d2b602a6543b" name="Request" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="4888f652-b1b3-4fe1-8595-1b09896fb67b" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="076c21d0-913a-485b-a263-a4d65856e29c" name="Amc.Models">
+    <elementDefinition Id="4f83f312-0e7b-4923-b2a4-143ad7ce0d25" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e8d0d6e2-71b4-4b8d-8611-b488d1f15534">
+        <profileInstance Id="64871e38-4e35-4e55-a5b6-0881a5db2c51" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1c3272f2-7507-4800-b972-42dc09cdc8f7">
+        <profileInstance Id="d96d9a57-8b96-4503-8425-16e568408add" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

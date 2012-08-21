@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c3c2dee8-8de3-4ab9-ae1c-f3ecd8de78a3" name="Usecase" linkedPackageId="6dd25606-1f73-489b-b2df-2684f79686fd" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="1300fdbd-a70a-4768-bdf0-7f7f4b76a78b">
+      <profileInstance Id="d338c2d2-57e3-4177-89de-58f5a71fcbb8" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8be52c5f-6a02-4f05-bf40-8d5f7d068ac0">
+      <profileInstance Id="890bea46-39f2-4580-80a5-816cd4f642b0" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="baddc051-6567-4ce2-ad46-5d7e42d1bcdc" name="Applicant" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="acc806c5-af3e-4a57-a7dd-c656da8fd197" />
+        <suppliersInternal>
+          <dependency Id="2a207d2d-96c8-493f-858b-40de59a3481d">
+            <useCaseMoniker Id="9d3c149d-446d-46ea-aeab-09a7df3b19df" LastKnownName="Apply for inactive status" />
+            <elementDefinition Id="7b27fd3e-ac1a-4411-a322-54fd8aae3b6b" />
+          </dependency>
+          <dependency Id="9f207314-e423-4831-a990-5640a091dca2">
+            <useCaseMoniker Id="1206b95c-e060-405b-b3bc-d4707d9cb83e" LastKnownName="Apply for cert" />
+            <elementDefinition Id="f76979fd-8f4e-4964-a2fe-52dbfcf930da" />
+          </dependency>
+          <dependency Id="9ecca0e9-9712-4dd2-abcc-1aa7dda3211a">
+            <useCaseMoniker Id="185f7934-4ba0-49a3-8854-41758967302c" LastKnownName="Apply for recert" />
+            <elementDefinition Id="3f7ad356-20ea-4bca-920d-eb497f0443b4" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="135376d6-7a58-4742-b141-b070a1ac9c9d" name="Association Staff" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cec319f0-c38b-4282-affd-f7fae1070e6c" />
+        <suppliersInternal>
+          <dependency Id="3f8919d1-ef0f-4e54-927b-400625d30ca2">
+            <useCaseMoniker Id="72b51e3b-406c-433a-a1d4-26728a9497f4" LastKnownName="Manage Inactive Status" />
+            <elementDefinition Id="35499c34-9775-4153-892b-8215c315f210" />
+          </dependency>
+          <dependency Id="23a9f88d-b54e-4057-9fd3-ae6a0b167dfa">
+            <useCaseMoniker Id="7f82b537-74ce-45a2-b6ce-68d80809c474" LastKnownName="Send new certification's report to board members" />
+            <elementDefinition Id="0d4c28b7-2787-4b44-bbaf-ab37d86ebfb4" />
+          </dependency>
+          <dependency Id="ab5c0aa1-2720-466b-a847-72947cd79ab6">
+            <useCaseMoniker Id="2b4dfbb2-6325-4c0c-8823-08f05e2e44fb" LastKnownName="Manage contact tracking" />
+            <elementDefinition Id="eea42ca5-c060-42b5-8ec5-90590cdd57b2" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="a8236dcf-d1fe-4559-832a-f51f84ade4ea" name="Cert Admin" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f9d5328e-a106-4fab-9c1f-4ae1381b7927" />
+        <suppliersInternal>
+          <dependency Id="fe2a5996-d8bf-4e3d-95f0-ed8966b6871c">
+            <useCaseMoniker Id="140fa308-6dd7-44a2-8bc1-611c592d170f" LastKnownName="Manage application's registration infomation" />
+            <elementDefinition Id="3eb28874-1459-49c4-8882-7eee621dfe28" />
+          </dependency>
+          <dependency Id="467413d4-0460-42de-9ed7-a074aa6d493d">
+            <useCaseMoniker Id="d6ae1368-f4d0-4392-adf1-456e87b0e7b0" LastKnownName="Manage report" />
+            <elementDefinition Id="5d04aff5-310d-4930-b012-2864a6ab0e09" />
+          </dependency>
+          <dependency Id="530cce74-06d9-4220-9895-945e5ab08d21">
+            <useCaseMoniker Id="0e5a1c32-8489-478f-a5a1-cd6be501fe23" LastKnownName="Manage test result" />
+            <elementDefinition Id="d457383d-6c7e-4afb-993a-82840fdbb906" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9d3c149d-446d-46ea-aeab-09a7df3b19df" name="Apply for inactive status" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="85640554-1a5e-4e24-9e97-43edef07fa53" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1206b95c-e060-405b-b3bc-d4707d9cb83e" name="Apply for cert" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="56d2b947-ea0c-4f04-b849-08efba453c5f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="185f7934-4ba0-49a3-8854-41758967302c" name="Apply for recert" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2836ec27-a064-4042-a208-9cbe1811758a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="72b51e3b-406c-433a-a1d4-26728a9497f4" name="Manage Inactive Status" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="75f25099-1764-4a61-8591-dcc65423ed46" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7f82b537-74ce-45a2-b6ce-68d80809c474" name="Send new certification's report to board members" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a13e15da-71c7-4f2f-89a4-313045a0038e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2b4dfbb2-6325-4c0c-8823-08f05e2e44fb" name="Manage contact tracking" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="70971e81-318b-40af-a770-3610090c01fe" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="140fa308-6dd7-44a2-8bc1-611c592d170f" name="Manage application's registration infomation" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c2519f7d-ba16-467a-bf72-9580b1cb7488" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d6ae1368-f4d0-4392-adf1-456e87b0e7b0" name="Manage report" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eccad2f3-873d-4395-9e5d-6e9eed3ac9c8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0e5a1c32-8489-478f-a5a1-cd6be501fe23" name="Manage test result" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fc9ba1c5-80b7-4847-bb2c-ca8d602d7399" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="6dd25606-1f73-489b-b2df-2684f79686fd" name="Amc.Models">
+    <elementDefinition Id="4f83f312-0e7b-4923-b2a4-143ad7ce0d25" />
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,71 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="279" fromTop="11" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="493" fromTop="8" />
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="493" fromTop="18" />
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="493" fromTop="13" />
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="493" fromTop="6" />
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="483" fromTop="0" />
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="559" fromTop="5" />
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="1708" fromTop="24" />
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="994" fromTop="8" />
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="186" fromTop="8" />
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="54" fromTop="3" />
+      <File id="6180C900-FD49-4736-8525-D927B3D947D7/f:Program.cs" caret="483" fromTop="16" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="private" priority="63" />
+      <Item value="static" priority="63" />
+      <Item value="null" priority="31" />
+      <Item value="if" priority="95" />
+      <Item value="applicationPool" priority="95" />
+      <Item value="arnTestApplicationPool" priority="63" />
+      <Item value="break" priority="31" />
+      <Item value="else" priority="63" />
+      <Item value="try" priority="31" />
+      <Item value="catch" priority="31" />
+      <Item value="ServerManagerException`0" priority="63" />
+      <Item value="public" priority="31" />
+      <Item value="void" priority="31" />
+      <Item value="string" priority="31" />
+      <Item value="Length" priority="26" />
+      <Item value="foreach" priority="31" />
+      <Item value="Run`0" priority="31" />
+      <Item value="Console`0" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Web.Administration.ApplicationPool">
+      <Item value="Name" priority="26" />
+      <Item value="Recycle`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Compare`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="53" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

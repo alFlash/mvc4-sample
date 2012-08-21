@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ArrayOfAMCDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AMCDescription ID="ProgramTypeSettings">&lt;ul&gt;&lt;li&gt;These settings are applicable for ABNN and other associations that have similar business validations only&lt;/li&gt;&lt;li&gt;These settings are NOT applicable for ARN or other associations that have similar business validations&lt;/li&gt;&lt;li&gt;These settings are applicable for FORM LEVEL only.&lt;/li&gt;&lt;/ul&gt;</AMCDescription>
+  <AMCDescription ID="CETypeSettings">&lt;ul&gt;&lt;li&gt;These settings are applicable for ABNN and other associations that have similar business validations only&lt;/li&gt;&lt;li&gt;These settings are NOT applicable for ARN or other associations that have similar business validations&lt;/li&gt;&lt;li&gt;These settings are applicable for ROW LEVEL only.&lt;/li&gt;&lt;/ul&gt;</AMCDescription>
+</ArrayOfAMCDescription>

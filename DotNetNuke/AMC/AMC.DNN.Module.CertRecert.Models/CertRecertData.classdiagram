@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="6e35d866-9bd5-426e-ac0d-21b03d05fe2d" name="CertRecertData" linkedPackageId="8ad84f01-5c64-467d-96c5-bd85316332be" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="1c2acda4-2b8f-493b-83c9-76d1d1333d0f" name="AMC.DNN.Modules.CerRecert.Data">
+        <elementDefinition Id="d4312d1d-fb8e-4e8c-876c-7eba817fc57b" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="33ba54eb-9623-4c8e-bd44-7726c190209a" name="DataProvider" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="bfb4f71a-3149-49f5-b5b3-71734c6481ba" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="7b0e0c8b-599d-49e7-9d63-42ddd922c558" name="SqlDataProvider" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="81850118-70a0-40ab-aa4b-1c3ab8824c2d" />
+              <generalsInternal>
+                <generalization Id="faca16c7-1f58-4c80-b97a-8ccf44a59aa9" isSubstitutable="false">
+                  <classMoniker Id="33ba54eb-9623-4c8e-bd44-7726c190209a" LastKnownName="DataProvider" />
+                  <elementDefinition Id="ac06bb69-2b3f-4c69-bec6-631c1e879d00" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="c21c3fb3-595a-4759-8888-e97e2c9c1025" name="PersonifyDataProvider" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="94fd20d5-67ca-4db2-bca1-d7167f0e59c0" />
+              <generalsInternal>
+                <generalization Id="9b344826-2070-4de4-aad9-867af14e2508" isSubstitutable="false">
+                  <classMoniker Id="33ba54eb-9623-4c8e-bd44-7726c190209a" LastKnownName="DataProvider" />
+                  <elementDefinition Id="0752de3a-2902-4adc-8958-e5d937a6e0f0" />
+                </generalization>
+              </generalsInternal>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="8ad84f01-5c64-467d-96c5-bd85316332be" name="Amc.Models">
+    <elementDefinition Id="4f83f312-0e7b-4923-b2a4-143ad7ce0d25" />
+    <profileInstances>
+      <packageHasProfileInstances Id="29e71bbe-2724-4ae2-a2ff-59aa436aef60">
+        <profileInstance Id="dc3936cc-7445-4d64-9610-34bc8eb013d7" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="bc0252a1-e430-4b63-9995-da09e3fc93a8">
+        <profileInstance Id="c3e39482-b1d0-4030-9826-bf6f50a75b25" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

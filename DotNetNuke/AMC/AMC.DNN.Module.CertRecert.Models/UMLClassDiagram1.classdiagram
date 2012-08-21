@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="387cb3c7-c2fe-4582-b0bc-3b55bc839c1c" name="UMLClassDiagram1" linkedPackageId="e4c9c766-a12d-406d-8954-06798e3bcea2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="d5e2d144-7cc1-49d9-9831-c788546731d6">
+      <profileInstance Id="ce6c7b33-d9fe-4c37-b1b7-34926a6e8278" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c0c1ce66-8f1e-4b51-a853-3b0eb40e1875">
+      <profileInstance Id="425086c2-a66e-4e5f-a767-258775be3efb" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="fe44ccd3-7b7b-41f5-ac0b-f80e0e49bf1f" name="AMC.Notification.Service">
+        <elementDefinition Id="16773890-0a0f-4da5-bc45-c640c53b7916" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="7d4d1a12-4608-46ca-8279-8d6e16f97c60" name="NotificationService" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c9bc53b1-ac9a-43b4-8350-be98d02e7e0f" />
+              <suppliersInternal>
+                <dependency Id="12b16f16-a5b4-4895-86ff-7cdc1f39b519">
+                  <classMoniker Id="5d29d381-7c74-4068-85df-a05f8a756176" LastKnownName="NotificationManager" />
+                  <elementDefinition Id="bc8ec707-05a6-4b5b-bd71-8f3aa0b9c1d9" />
+                </dependency>
+                <dependency Id="7d045b1b-abb0-4340-bb83-97ff7eaafdb5">
+                  <interfaceMoniker Id="31750bd6-97cb-4b28-8e31-aa2c0a52263a" LastKnownName="ILog" />
+                  <elementDefinition Id="14c2c2e9-81a9-406a-b660-ee817e021d39" />
+                </dependency>
+                <dependency Id="76a19e95-5087-46f4-a4e7-882e6d30f94a">
+                  <classMoniker Id="668ff05d-64e0-4616-bc31-a4825757e232" LastKnownName="Timer" />
+                  <elementDefinition Id="3fcb9b85-1aa4-41d8-8a77-b9219342da58" />
+                </dependency>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="d622a525-29ab-415f-8b48-a153aa2907b9" name="IDataAccess" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="9c879045-e936-44b6-9adf-3c719f5f2cf4" />
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="31750bd6-97cb-4b28-8e31-aa2c0a52263a" name="ILog" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="dbf9d28b-edd4-4a4f-a2fb-1a426d80b3e3" />
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="f7f59004-7eb8-41b8-8b9e-289e9e04cee4" name="DataAccess" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="48d95afc-e86e-4d46-b7f2-6cc26918b2eb" />
+              <suppliersInternal>
+                <interfaceRealization Id="727353ab-6d04-43b3-a5b6-04972a92b9c9">
+                  <interfaceMoniker Id="d622a525-29ab-415f-8b48-a153aa2907b9" LastKnownName="IDataAccess" />
+                  <elementDefinition Id="015698c0-042d-4f94-b4df-1a4024c25230" />
+                </interfaceRealization>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="5d29d381-7c74-4068-85df-a05f8a756176" name="NotificationManager" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c73f826f-e562-4631-bddc-8aee90889553" />
+              <suppliersInternal>
+                <dependency Id="52832165-d440-4ce3-9810-cb51d5c11884">
+                  <interfaceMoniker Id="31750bd6-97cb-4b28-8e31-aa2c0a52263a" LastKnownName="ILog" />
+                  <elementDefinition Id="c0f41e31-d160-44b8-be1f-84782439d245" />
+                </dependency>
+                <dependency Id="3f19dd9e-c2c9-4e86-b0f8-12165f7d921d">
+                  <interfaceMoniker Id="d622a525-29ab-415f-8b48-a153aa2907b9" LastKnownName="IDataAccess" />
+                  <elementDefinition Id="e55a75a3-07c0-4002-8550-a3dba0c560a4" />
+                </dependency>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="c297437c-9bf1-442e-b19c-2e6454cdf24b" name="LogEnterprise" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="cbe08f72-90fc-4e3b-85e8-8432e31cc967" />
+              <suppliersInternal>
+                <interfaceRealization Id="db539376-4fd1-40d1-b1f3-ac189744df9f">
+                  <interfaceMoniker Id="31750bd6-97cb-4b28-8e31-aa2c0a52263a" LastKnownName="ILog" />
+                  <elementDefinition Id="23242434-ba68-4f9f-8a43-11556a7d0744" />
+                </interfaceRealization>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="fb31a56f-6665-48ff-bf15-1972af745453" name="Log4Net" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="7d893c8b-33dc-4b68-9b23-72075c9bc9bc" />
+              <suppliersInternal>
+                <interfaceRealization Id="dbe9509c-a185-4b56-a6e6-b5c43c675269">
+                  <interfaceMoniker Id="31750bd6-97cb-4b28-8e31-aa2c0a52263a" LastKnownName="ILog" />
+                  <elementDefinition Id="7cfafb16-a82b-4f8e-b98c-4eafdd5e9f2a" />
+                </interfaceRealization>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="668ff05d-64e0-4616-bc31-a4825757e232" name="Timer" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="e8eaf51d-54b9-4010-bad4-eddeb3d5e35b" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="e4c9c766-a12d-406d-8954-06798e3bcea2" name="Amc.Models">
+    <elementDefinition Id="4f83f312-0e7b-4923-b2a4-143ad7ce0d25" />
+  </package>
+</logicalClassDesignerModel>

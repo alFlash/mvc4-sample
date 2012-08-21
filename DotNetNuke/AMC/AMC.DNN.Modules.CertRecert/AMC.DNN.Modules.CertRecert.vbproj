@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5AB28E7-F2B6-45E5-98FC-2D752AABB69A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AMC.DNN.Modules.CertRecert</RootNamespace>
+    <AssemblyName>AMC.DNN.Modules.CertRecert</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.20229.20821, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ARNTEST\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="antixsslibrary, Version=4.2.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Lib\antixsslibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetNuke">
+      <HintPath>..\Lib\Lib\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\Lib\Lib\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Personify.API.User.Generated">
+      <HintPath>..\Lib\Lib\Personify.API.User.Generated.dll</HintPath>
+    </Reference>
+    <Reference Include="Personify.ApplicationManager">
+      <HintPath>..\ARNTEST\bin\Personify.ApplicationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Personify.DNN.Modules.DNNWebServices">
+      <HintPath>..\Lib\Lib\Personify.DNN.Modules.DNNWebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Personify.ShoppingCartManager">
+      <HintPath>..\Lib\Lib\Personify.ShoppingCartManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Personify.WebControls">
+      <HintPath>..\ARNTEST\bin\Personify.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpZipLib, Version=0.81.0.1407, Culture=neutral" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Workflow.Runtime" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\Lib\Lib\Telerik.Web.UI.DLL</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.API.Base, Version=1.0.0.773, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ARNTEST\Bin\TIMSS.API.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.API.Core, Version=1.0.0.193, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ARNTEST\Bin\TIMSS.API.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.API.Generated, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ARNTEST\Bin\TIMSS.API.Generated.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.API.Interfaces, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ARNTEST\Bin\TIMSS.API.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.Shared, Version=1.0.0.92, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ARNTEST\Bin\TIMSS.Shared.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="DotNetNuke" />
+    <Import Include="DotNetNuke.Common" />
+    <Import Include="DotNetNuke.Common.Utilities" />
+    <Import Include="DotNetNuke.Data" />
+    <Import Include="DotNetNuke.Entities" />
+    <Import Include="DotNetNuke.Entities.Tabs" />
+    <Import Include="DotNetNuke.Framework" />
+    <Import Include="DotNetNuke.Modules" />
+    <Import Include="DotNetNuke.Security" />
+    <Import Include="DotNetNuke.Services" />
+    <Import Include="DotNetNuke.Services.Exceptions" />
+    <Import Include="DotNetNuke.Services.Localization" />
+    <Import Include="DotNetNuke.UI" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Common\BoardCertificationUC.ascx.designer.vb">
+      <DependentUpon>BoardCertificationUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\BoardCertificationUC.ascx.vb">
+      <DependentUpon>BoardCertificationUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\CommunityServicePresentation.ascx.designer.vb">
+      <DependentUpon>CommunityServicePresentation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\CommunityServicePresentation.ascx.vb">
+      <DependentUpon>CommunityServicePresentation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\CommunityServicePubication.ascx.designer.vb">
+      <DependentUpon>CommunityServicePubication.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\CommunityServicePubication.ascx.vb">
+      <DependentUpon>CommunityServicePubication.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\CommunityServiceReview.ascx.designer.vb">
+      <DependentUpon>CommunityServiceReview.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\CommunityServiceReview.ascx.vb">
+      <DependentUpon>CommunityServiceReview.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\CommunityServiceVolunteerLeaderShip.ascx.designer.vb">
+      <DependentUpon>CommunityServiceVolunteerLeaderShip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\CommunityServiceVolunteerLeaderShip.ascx.vb">
+      <DependentUpon>CommunityServiceVolunteerLeaderShip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\CommunityServiceVolunteerService.ascx.designer.vb">
+      <DependentUpon>CommunityServiceVolunteerService.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\CommunityServiceVolunteerService.ascx.vb">
+      <DependentUpon>CommunityServiceVolunteerService.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ContinuingEducation.ascx.designer.vb">
+      <DependentUpon>ContinuingEducation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ContinuingEducation.ascx.vb">
+      <DependentUpon>ContinuingEducation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ControlSubstanceAuthorizationUC.ascx.designer.vb">
+      <DependentUpon>ControlSubstanceAuthorizationUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ControlSubstanceAuthorizationUC.ascx.vb">
+      <DependentUpon>ControlSubstanceAuthorizationUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\CategoryCertifiedCME.ascx.designer.vb">
+      <DependentUpon>CategoryCertifiedCME.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\CategoryCertifiedCME.ascx.vb">
+      <DependentUpon>CategoryCertifiedCME.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\DocumentationUC.ascx.designer.vb">
+      <DependentUpon>DocumentationUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\DocumentationUC.ascx.vb">
+      <DependentUpon>DocumentationUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ProfessionalPracticeExperienceUC.ascx.designer.vb">
+      <DependentUpon>ProfessionalPracticeExperienceUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ProfessionalPracticeExperienceUC.ascx.vb">
+      <DependentUpon>ProfessionalPracticeExperienceUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ProfessionalPracticeSetting.ascx.designer.vb">
+      <DependentUpon>ProfessionalPracticeSetting.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ProfessionalPracticeSetting.ascx.vb">
+      <DependentUpon>ProfessionalPracticeSetting.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ProfessionalPracticeQuestionnaire.ascx.designer.vb">
+      <DependentUpon>ProfessionalPracticeQuestionnaire.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ProfessionalPracticeQuestionnaire.ascx.vb">
+      <DependentUpon>ProfessionalPracticeQuestionnaire.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\EducationCourseUC.ascx.designer.vb">
+      <DependentUpon>EducationCourseUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\EducationCourseUC.ascx.vb">
+      <DependentUpon>EducationCourseUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\EducationUC.ascx.designer.vb">
+      <DependentUpon>EducationUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\EducationUC.ascx.vb">
+      <DependentUpon>EducationUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ExamChoiceUC.ascx.designer.vb">
+      <DependentUpon>ExamChoiceUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ExamChoiceUC.ascx.vb">
+      <DependentUpon>ExamChoiceUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\Licensure.ascx.designer.vb">
+      <DependentUpon>Licensure.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Licensure.ascx.vb">
+      <DependentUpon>Licensure.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\OrganizationInvolvement.ascx.designer.vb">
+      <DependentUpon>OrganizationInvolvement.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\OrganizationInvolvement.ascx.vb">
+      <DependentUpon>OrganizationInvolvement.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\PracticeExperienceDetailsUC.ascx.designer.vb">
+      <DependentUpon>PracticeExperienceDetailsUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\PracticeExperienceDetailsUC.ascx.vb">
+      <DependentUpon>PracticeExperienceDetailsUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ProgramProjectActivities.ascx.designer.vb">
+      <DependentUpon>ProgramProjectActivities.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ProgramProjectActivities.ascx.vb">
+      <DependentUpon>ProgramProjectActivities.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\Publication.ascx.designer.vb">
+      <DependentUpon>Publication.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Publication.ascx.vb">
+      <DependentUpon>Publication.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\RecertEligibilityUC.ascx.designer.vb">
+      <DependentUpon>RecertEligibilityUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\RecertEligibilityUC.ascx.vb">
+      <DependentUpon>RecertEligibilityUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\RecertificationOptionUC.ascx.designer.vb">
+      <DependentUpon>RecertificationOptionUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\RecertificationOptionUC.ascx.vb">
+      <DependentUpon>RecertificationOptionUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ReferenceAndVerificationUC.ascx.designer.vb">
+      <DependentUpon>ReferenceAndVerificationUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ReferenceAndVerificationUC.ascx.vb">
+      <DependentUpon>ReferenceAndVerificationUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\RegistrationUC.ascx.designer.vb">
+      <DependentUpon>RegistrationUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\RegistrationUC.ascx.vb">
+      <DependentUpon>RegistrationUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\Research.ascx.designer.vb">
+      <DependentUpon>Research.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Research.ascx.vb">
+      <DependentUpon>Research.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\ScopeUC.ascx.designer.vb">
+      <DependentUpon>ScopeUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ScopeUC.ascx.vb">
+      <DependentUpon>ScopeUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\StandardQuestionaireUC.ascx.designer.vb">
+      <DependentUpon>StandardQuestionaireUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\StandardQuestionaireUC.ascx.vb">
+      <DependentUpon>StandardQuestionaireUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\Summary.ascx.designer.vb">
+      <DependentUpon>Summary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Summary.ascx.vb">
+      <DependentUpon>Summary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\SupervisorUC.ascx.designer.vb">
+      <DependentUpon>SupervisorUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\SupervisorUC.ascx.vb">
+      <DependentUpon>SupervisorUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\TeachingPresentation.ascx.designer.vb">
+      <DependentUpon>TeachingPresentation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\TeachingPresentation.ascx.vb">
+      <DependentUpon>TeachingPresentation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FormConfigurations\CETypeSettingsUC.ascx.designer.vb">
+      <DependentUpon>CETypeSettingsUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormConfigurations\CETypeSettingsUC.ascx.vb">
+      <DependentUpon>CETypeSettingsUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FormConfigurations\ConfigureInactiveStatusUC.ascx.designer.vb">
+      <DependentUpon>ConfigureInactiveStatusUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormConfigurations\ConfigureInactiveStatusUC.ascx.vb">
+      <DependentUpon>ConfigureInactiveStatusUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FormConfigurations\FieldQuestionListUC.ascx.designer.vb">
+      <DependentUpon>FieldQuestionListUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormConfigurations\FieldQuestionListUC.ascx.vb">
+      <DependentUpon>FieldQuestionListUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FormConfigurations\ValidationRuleSettingsUC.ascx.designer.vb">
+      <DependentUpon>ValidationRuleSettingsUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormConfigurations\ValidationRuleSettingsUC.ascx.vb">
+      <DependentUpon>ValidationRuleSettingsUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InactiveStatus\ApplyInactiveStatusUC.ascx.designer.vb">
+      <DependentUpon>ApplyInactiveStatusUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InactiveStatus\ApplyInactiveStatusUC.ascx.vb">
+      <DependentUpon>ApplyInactiveStatusUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Certifications\CertUC.ascx.designer.vb">
+      <DependentUpon>CertUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Certifications\CertUC.ascx.vb">
+      <DependentUpon>CertUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InactiveStatus\CertificationTypeSelection.ascx.designer.vb">
+      <DependentUpon>CertificationTypeSelection.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InactiveStatus\CertificationTypeSelection.ascx.vb">
+      <DependentUpon>CertificationTypeSelection.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Certifications\ReCertUC.ascx.designer.vb">
+      <DependentUpon>ReCertUC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Certifications\ReCertUC.ascx.vb">
+      <DependentUpon>ReCertUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Print\PrintCert.ascx.designer.vb">
+      <DependentUpon>PrintCert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Print\PrintCert.ascx.vb">
+      <DependentUpon>PrintCert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Print\PrintRecert.ascx.designer.vb">
+      <DependentUpon>PrintRecert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Print\PrintRecert.ascx.vb">
+      <DependentUpon>PrintRecert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Reusable\AMCDatetime.ascx.designer.vb">
+      <DependentUpon>AMCDatetime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Reusable\AMCDatetime.ascx.vb">
+      <DependentUpon>AMCDatetime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View.ascx.designer.vb">
+      <DependentUpon>View.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="View.ascx.vb">
+      <DependentUpon>View.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\Common\BoardCertificationUC.ascx" />
+    <Content Include="Controls\Common\CommunityServicePresentation.ascx" />
+    <Content Include="Controls\Common\CommunityServicePubication.ascx" />
+    <Content Include="Controls\Common\CommunityServiceReview.ascx" />
+    <Content Include="Controls\Common\CommunityServiceVolunteerLeaderShip.ascx" />
+    <Content Include="Controls\Common\CommunityServiceVolunteerService.ascx" />
+    <Content Include="Controls\Common\ContinuingEducation.ascx" />
+    <Content Include="Controls\Common\ControlSubstanceAuthorizationUC.ascx" />
+    <Content Include="Controls\Common\CategoryCertifiedCME.ascx" />
+    <Content Include="Controls\Common\DocumentationUC.ascx" />
+    <Content Include="Controls\Common\ProfessionalPracticeExperienceUC.ascx" />
+    <Content Include="Controls\Common\ProfessionalPracticeSetting.ascx" />
+    <Content Include="Controls\Common\ProfessionalPracticeQuestionnaire.ascx" />
+    <Content Include="Controls\Common\EducationCourseUC.ascx" />
+    <Content Include="Controls\Common\EducationUC.ascx" />
+    <Content Include="Controls\Common\ExamChoiceUC.ascx" />
+    <Content Include="Controls\Common\Licensure.ascx" />
+    <Content Include="Controls\Common\OrganizationInvolvement.ascx" />
+    <Content Include="Controls\Common\PracticeExperienceDetailsUC.ascx" />
+    <Content Include="Controls\Common\ProgramProjectActivities.ascx" />
+    <Content Include="Controls\Common\Publication.ascx" />
+    <Content Include="Controls\Common\RecertEligibilityUC.ascx" />
+    <Content Include="Controls\Common\RecertificationOptionUC.ascx" />
+    <Content Include="Controls\Common\ReferenceAndVerificationUC.ascx" />
+    <Content Include="Controls\Common\RegistrationUC.ascx" />
+    <Content Include="Controls\Common\Research.ascx" />
+    <Content Include="Controls\Common\ScopeUC.ascx" />
+    <Content Include="Controls\Common\StandardQuestionaireUC.ascx" />
+    <Content Include="Controls\Common\Summary.ascx" />
+    <Content Include="Controls\Common\SupervisorUC.ascx" />
+    <Content Include="Controls\Common\TeachingPresentation.ascx" />
+    <Content Include="Controls\FormConfigurations\CETypeSettingsUC.ascx" />
+    <Content Include="Controls\FormConfigurations\ConfigureInactiveStatusUC.ascx" />
+    <Content Include="Controls\FormConfigurations\FieldQuestionListUC.ascx" />
+    <Content Include="Controls\FormConfigurations\ValidationRuleSettingsUC.ascx" />
+    <Content Include="Controls\InactiveStatus\ApplyInactiveStatusUC.ascx" />
+    <Content Include="Controls\Certifications\CertUC.ascx" />
+    <Content Include="Controls\InactiveStatus\CertificationTypeSelection.ascx" />
+    <Content Include="Controls\Certifications\ReCertUC.ascx" />
+    <Content Include="Controls\Print\PrintCert.ascx" />
+    <Content Include="Controls\Print\PrintRecert.ascx" />
+    <Content Include="Controls\Reusable\AMCDatetime.ascx" />
+    <Content Include="Documentation\configurations\CertAuditSettings.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Documentation\configurations\CertificationCode.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Documentation\configurations\AMCDescriptions.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Documentation\configurations\ValidationRuleSettings.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Documentation\configurations\ProgramTypeSettingsOpt2.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Documentation\configurations\OtherModuleSettings.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Documentation\configurations\RecertAuditSettings.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Documentation\configurations\NotificationSettings.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Documentation\configurations\FormConfigurations.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Documentation\images\icons\addnew_11x11.gif" />
+    <Content Include="Documentation\images\icons\add_icon.gif" />
+    <Content Include="Documentation\images\icons\cancel.png" />
+    <Content Include="Documentation\images\icons\closelabel.gif" />
+    <Content Include="Documentation\images\icons\closepp.gif" />
+    <Content Include="Documentation\images\icons\datepicker.gif" />
+    <Content Include="Documentation\images\icons\delete_icon.gif" />
+    <Content Include="Documentation\images\icons\delete_icon1.gif" />
+    <Content Include="Documentation\images\icons\EditIcon.gif" />
+    <Content Include="Documentation\images\icons\loading.gif" />
+    <Content Include="Documentation\images\icons\minus.gif" />
+    <Content Include="Documentation\images\icons\minus2.gif" />
+    <Content Include="Documentation\images\icons\plus.gif" />
+    <Content Include="Documentation\images\icons\plus2.gif" />
+    <Content Include="Documentation\images\icons\updown.jpg" />
+    <Content Include="Documentation\scripts\AMCTablePopup.js" />
+    <Content Include="Documentation\scripts\common.js" />
+    <Content Include="Documentation\scripts\configurations.js" />
+    <Content Include="Documentation\scripts\cetypesettings.js" />
+    <Content Include="Documentation\scripts\amc_scopeuc.js" />
+    <Content Include="Documentation\scripts\date.js" />
+    <Content Include="Documentation\scripts\validationrulesettings.js" />
+    <Content Include="Documentation\scripts\Print.js" />
+    <Content Include="Documentation\scripts\RecertOption.js" />
+    <Content Include="Documentation\scripts\QuestionListConfigurations.js" />
+    <Content Include="Documentation\scripts\OrganizationInvolvement.js" />
+    <Content Include="Documentation\scripts\DateFormat.js" />
+    <Content Include="Documentation\scripts\education.js" />
+    <Content Include="Documentation\scripts\examchoice.js" />
+    <Content Include="Documentation\scripts\jquery-1.7.2.js" />
+    <Content Include="Documentation\styles\Print.css" />
+    <Content Include="module.css" />
+    <Content Include="View.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\Payments\" />
+    <Folder Include="Controls\Requests\" />
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\View.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\AproveRejectInactiveStatusUC.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\CertUC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\FindRequestUC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\InactiveStatusUC.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\ReCertUC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\RegistrationUC.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\SelectTaskUC.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\ViewRequestUC.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AMC.DNN.Modules.CerRecert.Business\AMC.DNN.Modules.CertRecert.Business.vbproj">
+      <Project>{97143E90-9E4E-44DC-A6A3-0C7B87055482}</Project>
+      <Name>AMC.DNN.Modules.CertRecert.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AMC.DNN.Modules.CertRecert.Data\AMC.DNN.Modules.CertRecert.Data.vbproj">
+      <Project>{2DA9FAC8-2311-473B-B5AF-616E41ADE218}</Project>
+      <Name>AMC.DNN.Modules.CertRecert.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\CertificationTypeSelection.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\ApplyInactiveStatusUC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\SearchConditionsUC.ascx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\InactiveStatusAccountTeamAproveOrRejectUC.ascx.resx" />
+    <Content Include="App_LocalResources\ApplyInactiveStatusUCView.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\Settings.ascx.resx" />
+    <Content Include="App_LocalResources\FieldQuestionListUC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PrintCert.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PrintRecert.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\CETypeSettingsUC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\ValidationRuleSettingsUC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="App_LocalResources\InactiveStatusAssociationSubmitUC.ascx.resx" />
+    <Content Include="App_LocalResources\ProcessConfigurationsUC.ascx.resx" />
+    <Content Include="App_LocalResources\UserTypeSelectionUC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_LocalResources\PayOrdersUC.ascx.resx" />
+    <Content Include="App_LocalResources\PaymentThankYouUC.ascx.resx" />
+    <Content Include="App_LocalResources\RecertificationOptionUC .ascx.resx" />
+    <Content Include="App_LocalResources\UserRegistrationUC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\ConfigureInactiveStatusUC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_LocalResources\InactiveStatusAccountTeamAproveOrRejectUC.ascx.resx" />
+    <Content Include="App_LocalResources\InactiveStatusAssociationSubmitUC.ascx.resx">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AMC - Cert Recert.dnn">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6566</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY "$(SolutionDir)AMC.DNN.Modules.CerRecert.Business\bin\*.dll" "$(SolutionDir)ARNTEST\bin" /Y /R /O
+XCOPY "$(SolutionDir)AMC.DNN.Modules.CertRecert\bin\*.dll" "$(SolutionDir)ARNTEST\bin" /Y /R /O
+XCOPY "$(SolutionDir)AMC.DNN.Modules.CertRecert.Data\bin\*.dll" "$(SolutionDir)ARNTEST\bin" /Y /R /O
+XCOPY "$(SolutionDir)AMC.DNN.Modules.CertRecert\*.*" "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert" /Y /R /O /S /E
+XCOPY "$(SolutionDir)AMC.DNN.Modules.CerRecert.Business\bin\AMC.DNN.Modules.CertRecert.Business.dll" "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert" /Y /R /O
+XCOPY "$(SolutionDir)AMC.DNN.Modules.CertRecert\bin\AMC.DNN.Modules.CertRecert.dll" "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert" /Y /R /O
+XCOPY "$(SolutionDir)AMC.DNN.Modules.CertRecert.Data\bin\AMC.DNN.Modules.CertRecert.Data.dll" "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert" /Y /R /O
+XCOPY "$(SolutionDir)ARNTEST\bin\Personify.API.User.Generated.dll" "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert" /Y /R /O
+del /s "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert\*.vb"
+rmdir /s /q "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert\bin"
+rmdir /s /q "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert\obj"
+del /s "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert\AMC.DNN.Modules.CertRecert.vbproj"
+del /s "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert\AMC.DNN.Modules.CertRecert.vbproj.user"
+
+XCOPY "$(SolutionDir)AMC.DNN.Modules.CertRecert\*.*" "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert" /Y /R /O /S /E
+XCOPY "$(SolutionDir)AMC.DNN.Modules.CerRecert.Business\bin\AMC.DNN.Modules.CertRecert.Business.dll" "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert" /Y /R /O
+XCOPY "$(SolutionDir)AMC.DNN.Modules.CertRecert\bin\AMC.DNN.Modules.CertRecert.dll" "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert" /Y /R /O
+XCOPY "$(SolutionDir)AMC.DNN.Modules.CertRecert.Data\bin\AMC.DNN.Modules.CertRecert.Data.dll" "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert" /Y /R /O
+XCOPY "$(SolutionDir)ARNTEST\bin\Personify.API.User.Generated.dll" "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert" /Y /R /O
+del /s "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert\*.vb"
+rmdir /s /q "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert\bin"
+rmdir /s /q "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert\obj"
+del /s "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert\AMC.DNN.Modules.CertRecert.vbproj"
+del /s "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert\AMC.DNN.Modules.CertRecert.vbproj.user"
+
+%25windir%25\system32\inetsrv\appcmd list apppool /xml | %25windir%25\system32\inetsrv\appcmd recycle apppool /in</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>IF NOT EXIST "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert" (MD "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert")
+attrib -R "$(SolutionDir)ARNTEST\DesktopModules\Personify - Cert Recert" /S
+IF NOT EXIST "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert" (MD "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert")
+attrib -R "$(SolutionDir)ARNTEST\DesktopModules\AMC - Cert Recert" /S</PreBuildEvent>
+  </PropertyGroup>
+</Project>

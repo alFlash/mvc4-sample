@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="52cff5ff-cb69-45f4-8970-f415612cec2c" name="CerRecerImplementView" linkedPackageId="4cac204b-2c16-41a1-958d-ff28bf45cac7" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="6f934cc1-0397-48bb-ac5a-057ff04ab92a" name="AMC.DNN.Modules.CerRecert.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e175737d-1a85-4e0d-b4bb-0ea33b51abb8" />
+        <suppliersInternal>
+          <dependency Id="f350f64f-067b-4a4c-8984-7b5adc745f12">
+            <componentMoniker Id="83a5fc2c-286e-46da-80d4-a84d647d5967" LastKnownName="Dotnetnuke.dll" />
+            <elementDefinition Id="1fcf4768-a012-49f9-93fb-f16ba331c015" />
+          </dependency>
+          <dependency Id="88810d43-e398-49ef-9d35-7761d8e0b896">
+            <componentMoniker Id="125634d9-59a7-4acd-95a3-270fa895f54c" LastKnownName="AMC.DNN.Modules.CerRecert.Business.dll" />
+            <elementDefinition Id="45c7a76c-7505-4df0-b1b8-b9d31d18ad1c" />
+          </dependency>
+          <dependency Id="fb6b3c6e-9d71-4345-b80e-ad27178dec6e">
+            <componentMoniker Id="fe770e01-8051-46c1-8e5f-ccaa010a7052" LastKnownName="Personify.ApplicationManager.dll" />
+            <elementDefinition Id="c159d15a-33ff-40dc-a3f0-02efeefbf0df" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="f307eb86-2009-4a43-9a14-a4c4219015c0" name="Personify.API.User.Generated.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f70d64b1-fd71-4d70-969b-034fa58ad260" />
+        <suppliersInternal>
+          <dependency Id="6ac0f69d-5e1d-4f31-9da3-0cb0172df63e">
+            <componentMoniker Id="25ea3ae3-e234-4f72-a080-3141a73963d2" LastKnownName="TIMSS.API.Base.dll" />
+            <elementDefinition Id="24d215d1-18fb-4542-a63f-3c3050de8ed9" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="25ea3ae3-e234-4f72-a080-3141a73963d2" name="TIMSS.API.Base.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d08a775a-23be-4f25-94a2-57fa290616a8" />
+        <suppliersInternal>
+          <dependency Id="4bb7dc19-1d51-4c03-962c-a5719d484e1d">
+            <componentMoniker Id="1423e224-66f7-4487-a847-824113f34c4d" LastKnownName="TIMSS.API.Generated.dll" />
+            <elementDefinition Id="7094d1f1-60ca-4eee-aa31-d4483eb97e9c" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="1423e224-66f7-4487-a847-824113f34c4d" name="TIMSS.API.Generated.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4e701774-1365-405d-97b7-ee05da9a3a19" />
+        <suppliersInternal>
+          <dependency Id="e305a34e-ac38-40cb-9bb0-14ba5a0157a9">
+            <componentMoniker Id="8cc7876e-10e3-44c6-a476-a8883aee0e90" LastKnownName="TIMSS.API.Core.dll" />
+            <elementDefinition Id="fd6c7350-9258-451a-afa3-ffc8b64050b2" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="fe770e01-8051-46c1-8e5f-ccaa010a7052" name="Personify.ApplicationManager.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8c81ad38-9050-40c8-b668-9f4987e89e85" />
+        <suppliersInternal>
+          <dependency Id="32b1d952-b150-4f91-935e-a3f487a03b36">
+            <componentMoniker Id="f307eb86-2009-4a43-9a14-a4c4219015c0" LastKnownName="Personify.API.User.Generated.dll" />
+            <elementDefinition Id="37d4d881-c839-4c62-aac7-1178eedf7d76" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="83a5fc2c-286e-46da-80d4-a84d647d5967" name="Dotnetnuke.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d00f06de-7b33-4eca-bea6-b654f42638e3" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="8cc7876e-10e3-44c6-a476-a8883aee0e90" name="TIMSS.API.Core.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="da2cc6b0-ec7d-4599-af39-7afd47a75ff0" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="125634d9-59a7-4acd-95a3-270fa895f54c" name="AMC.DNN.Modules.CerRecert.Business.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6e36ac01-4e1e-473d-b1b8-ccf39c5a28df" />
+        <suppliersInternal>
+          <dependency Id="c4158915-beac-4793-a108-adc6887af5f1">
+            <componentMoniker Id="592cf0e7-f395-41c4-b29b-0d8754e8c52c" LastKnownName="AMC.DNN.Modules.CertRecert.Workflow.dll" />
+            <elementDefinition Id="25d072af-50bf-4f7c-958d-99c2eb0e25a0" />
+          </dependency>
+          <dependency Id="5deda276-114f-40e4-89a1-3d955b5f2f8b">
+            <componentMoniker Id="aa2b5012-cfba-4a47-8913-5254f13e9b71" LastKnownName="AMC.DNN.Modules.CerRecert.Data.dll" />
+            <elementDefinition Id="25b5e9bc-50b6-45c6-b186-5b93a207854f" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="aa2b5012-cfba-4a47-8913-5254f13e9b71" name="AMC.DNN.Modules.CerRecert.Data.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5a39cf8b-fe04-4289-8e84-31c5f9d7a4f1" />
+        <suppliersInternal>
+          <dependency Id="22c26368-153c-49ea-b7e3-d0e704602d3a">
+            <componentMoniker Id="f307eb86-2009-4a43-9a14-a4c4219015c0" LastKnownName="Personify.API.User.Generated.dll" />
+            <elementDefinition Id="668ce7aa-6cae-4643-8fb8-bfa549a0c8f3" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="592cf0e7-f395-41c4-b29b-0d8754e8c52c" name="AMC.DNN.Modules.CertRecert.Workflow.dll" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c0fa713b-218b-40ac-aa22-ec750a45e313" />
+        <suppliersInternal>
+          <dependency Id="ee21dbc2-30a5-4e24-9648-21f0c30431c0">
+            <componentMoniker Id="aa2b5012-cfba-4a47-8913-5254f13e9b71" LastKnownName="AMC.DNN.Modules.CerRecert.Data.dll" />
+            <elementDefinition Id="c4f5a456-6e2e-4766-9af3-c184748e77f1" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="4cac204b-2c16-41a1-958d-ff28bf45cac7" name="Amc.Models">
+    <elementDefinition Id="4f83f312-0e7b-4923-b2a4-143ad7ce0d25" />
+    <profileInstances>
+      <packageHasProfileInstances Id="753e4eec-4f95-4268-9e44-333c75e62023">
+        <profileInstance Id="0328ead8-ada2-4fea-99b0-11e897d30944" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a08b3f70-3c60-4fd6-a1db-e80f9c01cb71">
+        <profileInstance Id="73fdcb97-a737-493e-84fb-311dc149c1e2" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</componentModel>

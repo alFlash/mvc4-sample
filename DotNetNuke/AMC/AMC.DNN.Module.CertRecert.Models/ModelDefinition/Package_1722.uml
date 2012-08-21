@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="d4312d1d-fb8e-4e8c-876c-7eba817fc57b"
+  name="AMC.DNN.Modules.CerRecert.Data" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="bfb4f71a-3149-49f5-b5b3-71734c6481ba"
+        name="DataProvider"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="81850118-70a0-40ab-aa4b-1c3ab8824c2d"
+        name="SqlDataProvider"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="ac06bb69-2b3f-4c69-bec6-631c1e879d00"
+            isSubstitutable="false">
+            <classMoniker
+              Id="bfb4f71a-3149-49f5-b5b3-71734c6481ba"
+              LastKnownName="DataProvider"
+              LastKnownLocation="Package_1722.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="94fd20d5-67ca-4db2-bca1-d7167f0e59c0"
+        name="PersonifyDataProvider"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="0752de3a-2902-4adc-8958-e5d937a6e0f0"
+            isSubstitutable="false">
+            <classMoniker
+              Id="bfb4f71a-3149-49f5-b5b3-71734c6481ba"
+              LastKnownName="DataProvider"
+              LastKnownLocation="Package_1722.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

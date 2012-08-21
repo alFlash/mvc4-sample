@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ac880eea-cb5d-4225-91c8-6c4a800355ed}</ProjectGuid>
+    <ArchitectureToolsVersion>1.0.0.0</ArchitectureToolsVersion>
+    <Name>Amc.Models</Name>
+    <RootNamespace>Amc.Models</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
+  <ItemGroup>
+    <Content Include="CerRecerImplementView.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CerRecerImplementView.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CerRecerImplementView.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="CerRecertUI.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CerRecertUI.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CerRecertUI.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="CertRecertData.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CertRecertData.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CertRecertData.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="CertRecertDomain.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CertRecertDomain.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CertRecertDomain.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="GetCountryWithoutCaching.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GetCountryWithoutCaching.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>GetCountryWithoutCaching.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="GetProductByID.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GetProductByID.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>GetProductByID.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1153.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1556.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1126.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1153.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1500.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1556.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1647.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1722.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RecertDomain.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="RecertDomain.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>RecertDomain.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="UMLClassDiagram1.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLClassDiagram1.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLClassDiagram1.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Usecase.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Usecase.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Usecase.usecasediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\Amc.Models.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

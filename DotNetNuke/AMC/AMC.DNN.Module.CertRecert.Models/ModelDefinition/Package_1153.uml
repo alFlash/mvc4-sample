@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="ed451b9e-196b-4611-b032-7cc35b82c07e"
+  name="AMC.DNN.Modules.CerRecert.Business1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="711ce635-3279-4fe2-a7dd-cf54ed3dabfa"
+        name="InActiveStatusInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="f821495d-99a3-4010-887f-0523ae082164"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4190c5f8-8162-47b5-bb1f-1a9b39e8f7e5"
+              LastKnownName="RequestInfo"
+              LastKnownLocation="Package_1153.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d6b916ec-4661-4b93-86f5-4fffba03d1c8"
+        name="CertInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="2c68c277-29c9-4899-b27e-831060e0cf76"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a256bb4d-eb8c-4cc4-a06b-d3b1f1f3faaa"
+              LastKnownName="CertBaseInfo"
+              LastKnownLocation="Package_1153.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="59b17842-c240-4fb8-9412-9c976a7b38fc"
+        name="RecertInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="321d4de2-d608-4928-a828-c79bc2e19ade"
+            isSubstitutable="false">
+            <classMoniker
+              Id="a256bb4d-eb8c-4cc4-a06b-d3b1f1f3faaa"
+              LastKnownName="CertBaseInfo"
+              LastKnownLocation="Package_1153.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a256bb4d-eb8c-4cc4-a06b-d3b1f1f3faaa"
+        name="CertBaseInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="f027c105-83e9-47fd-9945-5e9f595421db"
+            isSubstitutable="false">
+            <classMoniker
+              Id="4190c5f8-8162-47b5-bb1f-1a9b39e8f7e5"
+              LastKnownName="RequestInfo"
+              LastKnownLocation="Package_1153.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5872f715-f61d-44c2-8c28-76e9d55495f2"
+        name="CertRecertController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4190c5f8-8162-47b5-bb1f-1a9b39e8f7e5"
+        name="RequestInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="68d28070-6c43-4cd5-a2b3-ebf1aa130b73"
+        name="BoardCertificationInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6dc9c505-8af6-4dff-a188-da982d2859d2"
+        name="PaymentInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8428391e-7b7b-4925-a8e0-c52952b2e1a6"
+        name="ExamChoiceInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b7bb9d65-d591-4b0e-bc00-ee9ace2b16d5"
+        name="RegistrationInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="315de08d-a2a0-4737-be66-8ee823b6145b"
+        name="LicensureInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="823ea700-b9c1-4cac-a8f4-d13e3df2b73d"
+        name="SubstanceAuthorizationInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e4253ee3-0146-46c0-8a0e-39a99414e84a"
+        name="ExperienceInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1ea32637-fb02-4892-8e97-575254cf40d7"
+        name="SupervisorEmployerInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fc9c8fd2-239b-4f67-9a25-a54f2e02d4e7"
+        name="DeclarationConsentInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="6314772c-468e-46a5-8724-fd50a140f623"
+        name="ReCertRegOptionInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="22df20f1-64a3-4def-bc03-0472458182f4"
+        name="EducationInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="db4bbb43-f735-4a6f-b193-25e4fe207474"
+        name="PracticeExperienceDetailInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="89767900-85ab-4b35-9f3a-9f644e9c13db"
+        name="ReferenceVerificationInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="359fea89-71f5-40cc-a62c-b655103aef82"
+        name="EthicalProfessionalQuestionnaireInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a81e143b-f08f-42e2-b510-97b555daa772"
+        name="ReCertEligibilityInfo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

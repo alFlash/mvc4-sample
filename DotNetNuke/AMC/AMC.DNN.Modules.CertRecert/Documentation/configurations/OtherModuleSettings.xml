@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<OtherModuleSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CertificationCode>CRRN</CertificationCode>
+  <RecertificationCode>CRRNRECERT</RecertificationCode>
+  <InactiveStatusProductCode>DORMANT</InactiveStatusProductCode>
+  <MembershipLink>www.google.com.vn</MembershipLink>
+  <LicensureValidityDate>2012-05-15T00:00:00</LicensureValidityDate>
+  <RecertProductId>676</RecertProductId>
+  <InactiveStatusProductId>682</InactiveStatusProductId>
+  <PersonifyShoppingCartWebService>hntest/personifyshoppingcart.asmx</PersonifyShoppingCartWebService>
+  <CheckoutURL>hntest/ShoppingCart/OrderCreate/tabid/135/Default.aspx</CheckoutURL>
+  <ReCertCMEQuestion1>300</ReCertCMEQuestion1>
+  <ReCertCMEQuestion2>150</ReCertCMEQuestion2>
+  <ReCertCMEQuestion3>100</ReCertCMEQuestion3>
+  <ReCertCMEQuestion4>50</ReCertCMEQuestion4>
+  <ProPracticeQuestionaireValidateMonth>18</ProPracticeQuestionaireValidateMonth>
+  <ProfessionalPracticeQuestionaireStartYear>2011</ProfessionalPracticeQuestionaireStartYear>
+  <ProfessionalPracticeQuestionaireEndYear>2012</ProfessionalPracticeQuestionaireEndYear>
+  <CMEHourEarned>50</CMEHourEarned>
+  <CMEStartYearRange>2011</CMEStartYearRange>
+  <CMEEndYearRange>2012</CMEEndYearRange>
+  <PresentationTotalHours>12</PresentationTotalHours>
+  <EducationCourseTotalHours>48</EducationCourseTotalHours>
+  <PublicationTotalHours>36</PublicationTotalHours>
+  <CommunityServiceTotalHours>10</CommunityServiceTotalHours>
+  <ReCertificationCycle>60</ReCertificationCycle>
+  <RecertificationPaymentMonths>12</RecertificationPaymentMonths>
+  <ARNMaxSummaryPoint>60</ARNMaxSummaryPoint>
+  <ARNMaxSummaryPointOfContinuingEducation>60</ARNMaxSummaryPointOfContinuingEducation>
+</OtherModuleSettings>

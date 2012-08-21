@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{97143E90-9E4E-44DC-A6A3-0C7B87055482}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AMC.DNN.Modules.CertRecert.Business</RootNamespace>
+    <AssemblyName>AMC.DNN.Modules.CertRecert.Business</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>AMC.DNN.Modules.CertRecert.Business.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AMC.DNN.Modules.CertRecert.Business.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetNuke">
+      <HintPath>..\Lib\Lib\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="Personify.API.User.Generated">
+      <HintPath>..\Lib\Lib\Personify.API.User.Generated.dll</HintPath>
+    </Reference>
+    <Reference Include="Personify.ApplicationManager">
+      <HintPath>..\Lib\Lib\Personify.ApplicationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Personify.DNN.Modules.DNNWebServices">
+      <HintPath>..\Lib\Lib\Personify.DNN.Modules.DNNWebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TIMSS.API.Base, Version=1.0.0.773, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Lib\TIMSS.API.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.API.Core, Version=1.0.0.193, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\Lib\TIMSS.API.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.API.Generated, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\Lib\TIMSS.API.Generated.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.API.Interfaces, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\Lib\TIMSS.API.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.Client.Implementation">
+      <HintPath>..\Lib\Lib\TIMSS.Client.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.CommunicationLayer">
+      <HintPath>..\Lib\Lib\TIMSS.CommunicationLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.Server.Implementation">
+      <HintPath>..\Lib\Lib\TIMSS.Server.Implementation.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.Shared">
+      <HintPath>..\ARNTEST\Bin\TIMSS.Shared.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseControl\BaseUserControl.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseControl\PrintBaseUserControl.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseControl\SectionBaseUserControl.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BusinessValidation\CEPointIssues.vb" />
+    <Compile Include="BusinessValidation\CESummaryIssue.vb" />
+    <Compile Include="BusinessValidation\CheckBoxMustSelectedIssue.vb" />
+    <Compile Include="BusinessValidation\AtLeastOneRecordIssue.vb" />
+    <Compile Include="BusinessValidation\EarnedCMEHoursIssue.vb" />
+    <Compile Include="BusinessValidation\DuplicateItemIssues.vb" />
+    <Compile Include="BusinessValidation\UploadFileIssue.vb" />
+    <Compile Include="BusinessValidation\ExpirationDateIssue.vb" />
+    <Compile Include="Controller\CertificationCEWeightSettingsController.vb" />
+    <Compile Include="Controller\CertificationCustomerCertificationController.vb" />
+    <Compile Include="Controller\CertRecertController.vb" />
+    <Compile Include="Controller\CertificationApplicationExamPeriodController.vb" />
+    <Compile Include="Controller\CustomerEducationController.vb" />
+    <Compile Include="Controller\CustomerInfoController.vb" />
+    <Compile Include="Controller\ExternalCustomerContactController.vb" />
+    <Compile Include="Controller\ExternalCustomerDocumentationController.vb" />
+    <Compile Include="Controller\IssuesController.vb" />
+    <Compile Include="Controller\NotificationserviceNotificationController.vb" />
+    <Compile Include="Controller\ShoppingCartController.vb" />
+    <Compile Include="Controller\UserDefinedCustomerCEActivitieController.vb" />
+    <Compile Include="Controller\UserDefinedCustomerPracticeScopeController.vb" />
+    <Compile Include="Controller\UserDefinedSurveyController.vb" />
+    <Compile Include="Entities\AMCStatus.vb" />
+    <Compile Include="Entities\CertificationAuditSetting.vb" />
+    <Compile Include="Entities\CertificationCode.vb" />
+    <Compile Include="Entities\AMCDescription.vb" />
+    <Compile Include="Entities\CusCETypeCode.vb" />
+    <Compile Include="Entities\CusCETypeCodeList.vb" />
+    <Compile Include="Entities\CusCPTCode.vb" />
+    <Compile Include="Entities\CusCPTCodeList.vb" />
+    <Compile Include="Entities\FieldInfo.vb" />
+    <Compile Include="Entities\FormInfo.vb" />
+    <Compile Include="Entities\OtherModuleSettings.vb" />
+    <Compile Include="Entities\ProgramTypeSettings.vb" />
+    <Compile Include="Entities\QuestionInfo.vb" />
+    <Compile Include="Entities\ReCertificationAuditSetting.vb" />
+    <Compile Include="Entities\RecertificationCircleValidation.vb" />
+    <Compile Include="Entities\SectionInfo.vb" />
+    <Compile Include="Entities\SurveyConfigInfo.vb" />
+    <Compile Include="Entities\ThreadResults.vb" />
+    <Compile Include="Entities\ValidateControlInfo.vb" />
+    <Compile Include="Entities\ValidationRuleSetting.vb" />
+    <Compile Include="EnumItems\CommonConstants.vb" />
+    <Compile Include="EnumItems\TypeEnum.vb" />
+    <Compile Include="Helpers\CommonHelper.vb" />
+    <Compile Include="Helpers\ModuleConfigurationHelper.vb" />
+    <Compile Include="Helpers\Utils.vb" />
+    <Compile Include="IControls\IConfigurationInfo.vb" />
+    <Compile Include="IControls\IReload.vb" />
+    <Compile Include="IControls\ISave.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Service References\PersonifyShoppingCart\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\PersonifyShoppingCart\AMC.DNN.Modules.CertRecert.Business.PersonifyShoppingCart.Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PersonifyShoppingCart\AMC.DNN.Modules.CertRecert.Business.PersonifyShoppingCart.Result_Message.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PersonifyShoppingCart\personifyshoppingcart.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AMC.DNN.Modules.CertRecert.Data\AMC.DNN.Modules.CertRecert.Data.vbproj">
+      <Project>{2DA9FAC8-2311-473B-B5AF-616E41ADE218}</Project>
+      <Name>AMC.DNN.Modules.CertRecert.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\PersonifyShoppingCart\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonifyShoppingCart\personifyshoppingcart.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonifyShoppingCart\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonifyShoppingCart\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PersonifyShoppingCart\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
