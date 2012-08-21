@@ -10,12 +10,13 @@
     <OutputType>Library</OutputType>
     <RootNamespace>DNN.MVP.Sample.ModuleName1</RootNamespace>
     <AssemblyName>DNN.MVP.Sample</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
     <UseIISExpress>false</UseIISExpress>
     <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,8 +24,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>
-    </DocumentationFile>
+    <DocumentationFile>DNN.MVP.Sample.xml</DocumentationFile>
     <NoWarn>42353,42354,42355</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
@@ -35,8 +35,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>..\..\bin\</OutputPath>
-    <DocumentationFile>
-    </DocumentationFile>
+    <DocumentationFile>DNN.MVP.Sample.xml</DocumentationFile>
     <NoWarn>42353,42354,42355</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
@@ -62,13 +61,16 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="DotNetNuke" />
@@ -112,11 +114,29 @@
       <DependentUpon>EditModuleName1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="IViews\IDependencyUC1View.vb" />
+    <Compile Include="IViews\IDependencyUC2View.vb" />
+    <Compile Include="Presenters\DependencyUC1Presenter.vb" />
+    <Compile Include="Presenters\DependencyUC2Presenter.vb" />
     <Compile Include="Settings.ascx.designer.vb">
       <DependentUpon>Settings.ascx</DependentUpon>
     </Compile>
     <Compile Include="Settings.ascx.vb">
       <DependentUpon>Settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DependencyUC1.ascx.designer.vb">
+      <DependentUpon>DependencyUC1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DependencyUC1.ascx.vb">
+      <DependentUpon>DependencyUC1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DependencyUC2.ascx.designer.vb">
+      <DependentUpon>DependencyUC2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DependencyUC2.ascx.vb">
+      <DependentUpon>DependencyUC2.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewModuleName1.ascx.designer.vb">
@@ -134,13 +154,7 @@
     <None Include="ModuleName1.dnn" />
     <Content Include="Libs\DotNetNuke.dll" />
     <Content Include="Libs\Microsoft.ApplicationBlocks.Data.dll" />
-    <Content Include="web.config" />
-    <Content Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </Content>
-    <Content Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </Content>
+    <Content Include="UserControls\DependencyUC1.ascx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Documentation\Documentation.css" />
@@ -148,10 +162,17 @@
     <Content Include="Documentation\logo.gif" />
     <Content Include="EditModuleName1.ascx" />
     <Content Include="Settings.ascx" />
+    <Content Include="UserControls\DependencyUC2.ascx" />
     <Content Include="ViewModuleName1.ascx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DNN.MVP.Base\DNN.MVP.Base.vbproj">
+      <Project>{46D73F2D-DDCD-48E3-B449-2035DE05F955}</Project>
+      <Name>DNN.MVP.Base</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
