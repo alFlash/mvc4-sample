@@ -48,7 +48,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BaseUserControl\IBaseUserControl.cs" />
-    <Compile Include="BaseUserControl\IMasterPage.cs" />
     <Compile Include="BaseView\IBaseView.cs" />
     <Compile Include="Common\ControlMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,4 +1,6 @@
-﻿using MVP.Base.Common;
+﻿using System.Collections.Generic;
+using System.Web.UI;
+using MVP.Base.Common;
 
 namespace MVP.Base.BaseView
 {
@@ -30,5 +32,16 @@ namespace MVP.Base.BaseView
         /// The page status.
         /// </value>
         PageStatus PageStatus { get; set; }
+
+        /// <summary>
+        /// Gets or sets the error message.
+        /// </summary>
+        /// <value>
+        /// The error message.
+        /// </value>
+        List<string> ErrorMessages { get; set; }
+
+        void ShowErrorMessage();
+        void AddErrorMessage(string errorMessage);
     }
 }

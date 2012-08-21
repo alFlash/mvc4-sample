@@ -29,52 +29,16 @@ namespace MVP.Base.BasePresenter
             View = view;
         }
 
-        /// <summary>
-        /// The View action.
-        /// </summary>
-        protected virtual void ViewAction()
-        {
-        }
-
-        /// <summary>
-        /// The Edit action.
-        /// </summary>
-        protected virtual void UpdateAction()
-        {
-        }
-
-        /// <summary>
-        /// The Delete action.
-        /// </summary>
-        protected virtual void DeleteAction()
-        {
-        }
-
-        /// <summary>
-        /// The Create action.
-        /// </summary>
-        protected virtual void InsertAction()
-        {
-        }
-
-        /// <summary>
-        /// Initializes this instance.
-        /// </summary>
-        protected virtual void Initialize()
-        {
-        }
-
-
-        /// <summary>
-        /// Searches the action.
-        /// </summary>
-        protected virtual void SearchAction()
-        {
-
-        }
         #endregion
 
-        #region Implementation of IBasePresenter
+        #region Actions
+
+        protected abstract void ViewAction();
+        protected abstract void UpdateAction();
+        protected abstract void DeleteAction();
+        protected abstract void InsertAction();
+        protected abstract void InitializeAction();
+        protected abstract void SearchAction();
 
         /// <summary>
         /// Does the action.
@@ -84,7 +48,7 @@ namespace MVP.Base.BasePresenter
             switch (View.PageMode)
             {
                 case PageMode.None:
-                    Initialize();
+                    InitializeAction();
                     break;
                 case PageMode.Insert:
                     InsertAction();
@@ -108,14 +72,6 @@ namespace MVP.Base.BasePresenter
         /// Validates this instance.
         /// </summary>
         public abstract void Validate();
-
-        #endregion
-
-        #region Private Members
-        
-        #endregion
-
-        #region Members
 
         #endregion
     }
