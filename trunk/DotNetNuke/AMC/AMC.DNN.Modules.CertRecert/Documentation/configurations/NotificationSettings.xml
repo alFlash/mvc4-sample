@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ArrayOfNotificationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NotificationInfo>
+    <NotificationId>0</NotificationId>
+    <NotificationText>Notify users on successful application submission</NotificationText>
+    <IsEnabled>false</IsEnabled>
+  </NotificationInfo>
+  <NotificationInfo>
+    <NotificationId>1</NotificationId>
+    <NotificationText>Notify users when their application is subjected to audit</NotificationText>
+    <IsEnabled>false</IsEnabled>
+  </NotificationInfo>
+  <NotificationInfo>
+    <NotificationId>2</NotificationId>
+    <NotificationText>Other notification type...</NotificationText>
+    <IsEnabled>false</IsEnabled>
+  </NotificationInfo>
+</ArrayOfNotificationInfo>

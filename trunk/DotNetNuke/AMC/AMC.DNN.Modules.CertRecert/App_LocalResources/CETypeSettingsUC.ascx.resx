@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplyInactiveStatusUC.Text" xml:space="preserve">
+    <value>Apply Inactive Status</value>
+  </data>
+  <data name="CertUC.Text" xml:space="preserve">
+    <value>Certification</value>
+  </data>
+  <data name="FieldName.Text" xml:space="preserve">
+    <value>Field Name</value>
+  </data>
+  <data name="FirstName.Text" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="FormConfiguration.Text" xml:space="preserve">
+    <value>Form Configuration</value>
+  </data>
+  <data name="FormConfigurationTitle.Text" xml:space="preserve">
+    <value>Administrator Control Panel</value>
+  </data>
+  <data name="IsEnable.Text" xml:space="preserve">
+    <value>Is Enabled</value>
+  </data>
+  <data name="IsRequired.Text" xml:space="preserve">
+    <value>Is Required</value>
+  </data>
+  <data name="LastName.Text" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="MiddleName.Text" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="ReCertUC.Text" xml:space="preserve">
+    <value>Recertification</value>
+  </data>
+  <data name="Reset.Text" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="rFirstName.Text" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="rLastName.Text" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="rMiddleName.Text" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="Save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SiteDetails.Text" xml:space="preserve">
+    <value>SiteDetails</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="WorkflowConfiguration.Text" xml:space="preserve">
+    <value>Workflow Configuration</value>
+  </data>
+  <data name="WorkflowStep.Text" xml:space="preserve">
+    <value>Workflow Step</value>
+  </data>
+  <data name="City.Text" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="DateOfBirth.Text" xml:space="preserve">
+    <value>Date Of Birth</value>
+  </data>
+  <data name="Degree.Text" xml:space="preserve">
+    <value>Degree</value>
+  </data>
+  <data name="EmailAddress.Text" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="FormerName.Text" xml:space="preserve">
+    <value>Former Name</value>
+  </data>
+  <data name="HomeAddress.Text" xml:space="preserve">
+    <value>Home Address</value>
+  </data>
+  <data name="HomeTelephone.Text" xml:space="preserve">
+    <value>Home Telephone</value>
+  </data>
+  <data name="NameAppearOnCertificate.Text" xml:space="preserve">
+    <value>Name Appear On Certificate</value>
+  </data>
+  <data name="rAccountNumber.Text" xml:space="preserve">
+    <value>Account Number</value>
+  </data>
+  <data name="rAmericanExpress.Text" xml:space="preserve">
+    <value>American Express</value>
+  </data>
+  <data name="rBirthOfChild.Text" xml:space="preserve">
+    <value>Birth Of Child</value>
+  </data>
+  <data name="rCardHolder.Text" xml:space="preserve">
+    <value>Card Holder</value>
+  </data>
+  <data name="rCertification.Text" xml:space="preserve">
+    <value>Certification</value>
+  </data>
+  <data name="rCity.Text" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="rCSV.Text" xml:space="preserve">
+    <value>CSV</value>
+  </data>
+  <data name="rDeathFamilyMember.Text" xml:space="preserve">
+    <value>Death Family Member</value>
+  </data>
+  <data name="rDependent.Text" xml:space="preserve">
+    <value>Dependent</value>
+  </data>
+  <data name="rDiscover.Text" xml:space="preserve">
+    <value>Discover</value>
+  </data>
+  <data name="rDivorce.Text" xml:space="preserve">
+    <value>Divorce</value>
+  </data>
+  <data name="rEmail.Text" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="RequireSpecialTest.Text" xml:space="preserve">
+    <value>Require Special Test</value>
+  </data>
+  <data name="RequireSpecialTestDesc.Text" xml:space="preserve">
+    <value>Require Special Test Description</value>
+  </data>
+  <data name="rExpirationDate.Text" xml:space="preserve">
+    <value>Expiration Date</value>
+  </data>
+  <data name="rHomeAddress.Text" xml:space="preserve">
+    <value>Home Address</value>
+  </data>
+  <data name="rHomePhone.Text" xml:space="preserve">
+    <value>Home Phone</value>
+  </data>
+  <data name="rIllness.Text" xml:space="preserve">
+    <value>Illness</value>
+  </data>
+  <data name="rLicense.Text" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="rLossHousing.Text" xml:space="preserve">
+    <value>Loss Housing</value>
+  </data>
+  <data name="rMasterCard.Text" xml:space="preserve">
+    <value>Master Card</value>
+  </data>
+  <data name="rMilitaryDuty.Text" xml:space="preserve">
+    <value>Military Duty</value>
+  </data>
+  <data name="rState.Text" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="rVisa.Text" xml:space="preserve">
+    <value>Visa</value>
+  </data>
+  <data name="rWorkPhone.Text" xml:space="preserve">
+    <value>Work Phone</value>
+  </data>
+  <data name="rZip.Text" xml:space="preserve">
+    <value>Zip</value>
+  </data>
+  <data name="State.Text" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="WorkTelephone.Text" xml:space="preserve">
+    <value>Work Telephone</value>
+  </data>
+  <data name="Zip.Text" xml:space="preserve">
+    <value>Zip</value>
+  </data>
+  <data name="AllowedFileExtesions.Text" xml:space="preserve">
+    <value>Allowed File Extesions</value>
+  </data>
+  <data name="ApplicationTypeSettings.Text" xml:space="preserve">
+    <value>Application Type Settings</value>
+  </data>
+  <data name="ApplicationTypeSettings0.Text" xml:space="preserve">
+    <value>Allow users to apply for Certification</value>
+  </data>
+  <data name="ApplicationTypeSettings1.Text" xml:space="preserve">
+    <value>Allow users to apply for ReCertification</value>
+  </data>
+  <data name="ApplicationTypeSettings2.Text" xml:space="preserve">
+    <value>Allow users to apply for Inactive Status</value>
+  </data>
+  <data name="DocumentUploadSettings.Text" xml:space="preserve">
+    <value>Document Upload Settings</value>
+  </data>
+  <data name="FileSizeLimitation.Text" xml:space="preserve">
+    <value>File Size Limitation</value>
+  </data>
+  <data name="NotificationSettings.Text" xml:space="preserve">
+    <value>Notification Settings</value>
+  </data>
+  <data name="NotificationSettings0.Text" xml:space="preserve">
+    <value>Notify users on successful application submissioin</value>
+  </data>
+  <data name="NotificationSettings1.Text" xml:space="preserve">
+    <value>Notify users when their application is subjected to audit</value>
+  </data>
+  <data name="NotificationSettings2.Text" xml:space="preserve">
+    <value>Other notification type...</value>
+  </data>
+  <data name="Password.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="UploadedFileLocation.Text" xml:space="preserve">
+    <value>Uploaded File Location</value>
+  </data>
+  <data name="UserCredentials.Text" xml:space="preserve">
+    <value>Impersonatioin Credential Info</value>
+  </data>
+  <data name="Username.Text" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="EnterNewValue.Text" xml:space="preserve">
+    <value>Enter New Value</value>
+  </data>
+  <data name="OK.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="CertAuditSettingsTitle.Text" xml:space="preserve">
+    <value>Certification Audit Settings</value>
+  </data>
+  <data name="AuditSelectionRatio.Text" xml:space="preserve">
+    <value>Selection Ratio</value>
+  </data>
+  <data name="AuditSettingsEndDate.Text" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="AuditSettingsStartDate.Text" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="ReCertAuditSettingsTitle.Text" xml:space="preserve">
+    <value>Recertification Audit Settings</value>
+  </data>
+  <data name="AuditSettingsDonotNotifyApplicant.Text" xml:space="preserve">
+    <value>Do not notify Applicants</value>
+  </data>
+  <data name="AuditSettingsRunSettings.Text" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="AuditSettingsSaveSettings.Text" xml:space="preserve">
+    <value>Save Settings</value>
+  </data>
+  <data name="CertLastAuditRun.Text" xml:space="preserve">
+    <value>Last Date Audit Was Run</value>
+  </data>
+  <data name="ReCertLastAuditRun.Text" xml:space="preserve">
+    <value>Last Date Audit Was Run</value>
+  </data>
+  <data name="IsConfigurable.Text" xml:space="preserve">
+    <value>Is Configurable</value>
+  </data>
+  <data name="CertificationCode.Text" xml:space="preserve">
+    <value>Certification Code</value>
+  </data>
+  <data name="CertificationCodeSettings.Text" xml:space="preserve">
+    <value>Other Module Settings</value>
+  </data>
+  <data name="RunSinceLastAudit.Text" xml:space="preserve">
+    <value>Run Since Last Audit</value>
+  </data>
+  <data name="LicensureValidityDate.Text" xml:space="preserve">
+    <value>Licensure Validity Date</value>
+  </data>
+  <data name="MembershipLink.Text" xml:space="preserve">
+    <value>Membership Link</value>
+  </data>
+  <data name="ProductCodeInactiveStatus.Text" xml:space="preserve">
+    <value>Product Code - Inactive Status</value>
+  </data>
+  <data name="ProductCodeMemberExam.Text" xml:space="preserve">
+    <value>Product Code - Member Exam</value>
+  </data>
+  <data name="ProductCodeMemberRecertification.Text" xml:space="preserve">
+    <value>Product Code - Member Recertification</value>
+  </data>
+  <data name="ProductCodeNoneMemberExam.Text" xml:space="preserve">
+    <value>Product Code - Non-Member Exam</value>
+  </data>
+  <data name="ProductCodeNoneMemberRecertification.Text" xml:space="preserve">
+    <value>Product Code - Non-Member Recertification</value>
+  </data>
+  <data name="SelectedApplicationForAuditPopupTitle.Text" xml:space="preserve">
+    <value>The system found &lt;b&gt;{totalApplication} number of applications&lt;/b&gt; for the specified audit window. &lt;b&gt;{selectedApplication} applications&lt;/b&gt; has been randomly chosen to be audited. This list has been sent to the respective cert admin.</value>
+  </data>
+  <data name="RecertificationCode.Text" xml:space="preserve">
+    <value>Recertification Code</value>
+  </data>
+  <data name="CheckoutURL.Text" xml:space="preserve">
+    <value>Create Order URL</value>
+  </data>
+  <data name="PersonifyShoppingCartWebService.Text" xml:space="preserve">
+    <value>Personify Shopping Cart Web Service URL</value>
+  </data>
+  <data name="ProductId.Text" xml:space="preserve">
+    <value>Recert Product Id</value>
+  </data>
+  <data name="InactiveStatusProductCode.Text" xml:space="preserve">
+    <value>Inactive Status Product Code</value>
+  </data>
+  <data name="InactiveStatusProductId.Text" xml:space="preserve">
+    <value>Inactive Status Product Id</value>
+  </data>
+  <data name="CETypeHeader.Text" xml:space="preserve">
+    <value>CE Type</value>
+  </data>
+  <data name="CEWeightHeader.Text" xml:space="preserve">
+    <value>CE Weight</value>
+  </data>
+  <data name="CEWeightSettings.Text" xml:space="preserve">
+    <value>CE Weight Settings</value>
+  </data>
+  <data name="ProgramTypeHeader.Text" xml:space="preserve">
+    <value>Program Type</value>
+  </data>
+  <data name="PublicationTypeHeader.Text" xml:space="preserve">
+    <value>Publication Type</value>
+  </data>
+  <data name="CETypeSettings.Text" xml:space="preserve">
+    <value>CE Weight Settings</value>
+  </data>
+  <data name="GoToCETypeSettings.Text" xml:space="preserve">
+    <value>Go To CE Weight Settings Page</value>
+  </data>
+  <data name="ProgramTypeSettingsOpt2.Text" xml:space="preserve">
+    <value>ProgramType Settings</value>
+  </data>
+  <data name="ProgramTypeSettingsOpt3.Text" xml:space="preserve">
+    <value>ProgramType Settings of ReCert Option 3</value>
+  </data>
+  <data name="DuplicateItemError.Text" xml:space="preserve">
+    <value>"Cannot add this item. The item is already existed."</value>
+  </data>
+  <data name="MaxCE.Text" xml:space="preserve">
+    <value>Max CE</value>
+  </data>
+  <data name="MinCE.Text" xml:space="preserve">
+    <value>Min CE</value>
+  </data>
+  <data name="CertificationCEWeightSettings.Text" xml:space="preserve">
+    <value>Certification CE Weight Settings</value>
+  </data>
+  <data name="AddInformation.Text" xml:space="preserve">
+    <value>Add Information</value>
+  </data>
+  <data name="InputPoint.Text" xml:space="preserve">
+    <value>Input value should be less than 999999999999</value>
+  </data>
+  <data name="MinCELessThanMaxCE.Text" xml:space="preserve">
+    <value>MinCE must be less than MaxCE</value>
+  </data>
+</root>

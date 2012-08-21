@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddNewEducation.Text" xml:space="preserve">
+    <value>Add Other Education</value>
+  </data>
+  <data name="ApplicationDeadline.Text" xml:space="preserve">
+    <value>Application Deadline</value>
+  </data>
+  <data name="AttachDocumentHeader.Text" xml:space="preserve">
+    <value>Attach Documents</value>
+  </data>
+  <data name="Back.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="BoardCertification.Text" xml:space="preserve">
+    <value>Board Certification</value>
+  </data>
+  <data name="BoardRequired.Text" xml:space="preserve">
+    <value>Board Required</value>
+  </data>
+  <data name="BusinessAdressRequired.Text" xml:space="preserve">
+    <value>Business Adress Required</value>
+  </data>
+  <data name="Cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CertificateDateRequired.Text" xml:space="preserve">
+    <value>Certificate Date Required</value>
+  </data>
+  <data name="CertificateNumberRequired.Text" xml:space="preserve">
+    <value>Certificate Number Required</value>
+  </data>
+  <data name="CETypeRequired.Text" xml:space="preserve">
+    <value>CE Type Required</value>
+  </data>
+  <data name="City.Text" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="CityRequired.Text" xml:space="preserve">
+    <value>City Required</value>
+  </data>
+  <data name="ControlSubstanceAuthorization.Text" xml:space="preserve">
+    <value>Control Substance Authorization</value>
+  </data>
+  <data name="DateOfBirth.Text" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="DateRequired.Text" xml:space="preserve">
+    <value>Date Required</value>
+  </data>
+  <data name="DeclarationAgreement.Text" xml:space="preserve">
+    <value>I agree that the Board of Directors of ABPM shall be the sole judge of my qualifications to receive and retain a certificate issued by ABPM, the timeliness and completeness of my application, and my eligibility to have my name included in any list or directory in which the names of Diplomates of ABPM are published. I hereby indemnify and hold harmless ABPM, and its officers, directors, appointees, examiners, agents, and employees, from any demand or action based on any decision or conduct relating to my application, to the evaluation and scoring of my examination, to my certification status with ABPM, and to the issuance or revocation of certification.</value>
+  </data>
+  <data name="Degree.Text" xml:space="preserve">
+    <value>Degree</value>
+  </data>
+  <data name="Education.Text" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="EmailAddress.Text" xml:space="preserve">
+    <value>Email address</value>
+  </data>
+  <data name="EmailAddressRequired.Text" xml:space="preserve">
+    <value>Email Address Required</value>
+  </data>
+  <data name="ExamAdministration.Text" xml:space="preserve">
+    <value>Exam Administration</value>
+  </data>
+  <data name="FirstName.Text" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="FirstNameRequired.Text" xml:space="preserve">
+    <value>First Name Required</value>
+  </data>
+  <data name="FormerName.Text" xml:space="preserve">
+    <value>Former name</value>
+  </data>
+  <data name="HomeAddress.Text" xml:space="preserve">
+    <value>Home address</value>
+  </data>
+  <data name="HomeTelephone.Text" xml:space="preserve">
+    <value>Home telephone</value>
+  </data>
+  <data name="IndicateExamChoice.Text" xml:space="preserve">
+    <value>Indicate the exam window you are applying for (only check one):</value>
+  </data>
+  <data name="InstitutionRequired.Text" xml:space="preserve">
+    <value>Institution Required</value>
+  </data>
+  <data name="LastName.Text" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="LastNameRequired.Text" xml:space="preserve">
+    <value>Last Name Required</value>
+  </data>
+  <data name="Licensure.Text" xml:space="preserve">
+    <value>Licensure</value>
+  </data>
+  <data name="MiddleName.Text" xml:space="preserve">
+    <value>Middle name</value>
+  </data>
+  <data name="MiddleNameRequired.Text" xml:space="preserve">
+    <value>Middle Name Required</value>
+  </data>
+  <data name="NameAppearOnCertificate.Text" xml:space="preserve">
+    <value>Name as you would like it to appear on Certificate</value>
+  </data>
+  <data name="NameOfInstitution.Text" xml:space="preserve">
+    <value>Name of Institution and Program. &lt;br/&gt; (eg, XYZ Medical Center, Anesthesiology)</value>
+  </data>
+  <data name="NameOfProgramRequired.Text" xml:space="preserve">
+    <value>Name Of Program Required</value>
+  </data>
+  <data name="NameOfPublisherRequired.Text" xml:space="preserve">
+    <value>Name Of Publisher Required</value>
+  </data>
+  <data name="Next.Text" xml:space="preserve">
+    <value>Save &amp; Next</value>
+  </data>
+  <data name="No.Text" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="OfficeTelephoneRequired.Text" xml:space="preserve">
+    <value>Office Telephone Required</value>
+  </data>
+  <data name="OtherEducation.Text" xml:space="preserve">
+    <value>Other (specify program) (Use separate sheets of paper if necessary) </value>
+  </data>
+  <data name="OtherEducationGrid.Text" xml:space="preserve">
+    <value>Other Education Program</value>
+  </data>
+  <data name="PagesRequired.Text" xml:space="preserve">
+    <value>Pages Required</value>
+  </data>
+  <data name="PointRequired.Text" xml:space="preserve">
+    <value>Point Required</value>
+  </data>
+  <data name="PostalCodeRequired.Text" xml:space="preserve">
+    <value>Postal Code Required</value>
+  </data>
+  <data name="PracticeExperienceDetails.Text" xml:space="preserve">
+    <value>Practice Experience Details</value>
+  </data>
+  <data name="RecertEligibility.Text" xml:space="preserve">
+    <value>Recert Eligibility Requirements</value>
+  </data>
+  <data name="RecertificateDateRequired.Text" xml:space="preserve">
+    <value>Recertificate Date Required</value>
+  </data>
+  <data name="ReferenceAndVerification.Text" xml:space="preserve">
+    <value>Reference and Verification</value>
+  </data>
+  <data name="Registration.Text" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="RequireSpecialTest.Text" xml:space="preserve">
+    <value>Do you require special testing arrangements?</value>
+  </data>
+  <data name="RequireSpecialTestDesc.Text" xml:space="preserve">
+    <value>If YES, please write brief description explaining your requirements</value>
+  </data>
+  <data name="Save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="StandardQuestionaire.Text" xml:space="preserve">
+    <value>Ethical and Professional Standards Questionaire</value>
+  </data>
+  <data name="State.Text" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="StateRequired.Text" xml:space="preserve">
+    <value>State Required</value>
+  </data>
+  <data name="Submit.Text" xml:space="preserve">
+    <value>Payment &amp; Submit</value>
+  </data>
+  <data name="TitlePresentationRequired.Text" xml:space="preserve">
+    <value>Title Presentation Required</value>
+  </data>
+  <data name="TitlePublicationRequired.Text" xml:space="preserve">
+    <value>Title Publication Required</value>
+  </data>
+  <data name="TitleRequired.Text" xml:space="preserve">
+    <value>Title Required</value>
+  </data>
+  <data name="UploadFileAttachmentRequired.Text" xml:space="preserve">
+    <value>Upload File Attachment Required</value>
+  </data>
+  <data name="WorkTelephone.Text" xml:space="preserve">
+    <value>Work telephone</value>
+  </data>
+  <data name="Yes.Text" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Zip.Text" xml:space="preserve">
+    <value>Zip</value>
+  </data>
+  <data name="ApprovedCERequired.Text" xml:space="preserve">
+    <value>Approved CE Required</value>
+  </data>
+  <data name="ApprovedRequired.Text" xml:space="preserve">
+    <value>Approved Required</value>
+  </data>
+  <data name="AuthorNumberRequired.Text" xml:space="preserve">
+    <value>Author Number Required</value>
+  </data>
+  <data name="DateOfBirthRequired.Text" xml:space="preserve">
+    <value>Date Of Birth Required</value>
+  </data>
+  <data name="DateOfOriginalIssueRequired.Text" xml:space="preserve">
+    <value>Date Of Original Issue Required</value>
+  </data>
+  <data name="DegreeRequired.Text" xml:space="preserve">
+    <value>Degree Required</value>
+  </data>
+  <data name="EdutcationNameRequired.Text" xml:space="preserve">
+    <value>Edutcation Name Required</value>
+  </data>
+  <data name="EmployerRequired.Text" xml:space="preserve">
+    <value>Employer Required</value>
+  </data>
+  <data name="EndDateRequired.Text" xml:space="preserve">
+    <value>End Date Required</value>
+  </data>
+  <data name="ExpirationDateRequired.Text" xml:space="preserve">
+    <value>Expiration Date Required</value>
+  </data>
+  <data name="FormerNameRequired.Text" xml:space="preserve">
+    <value>Former Name Required</value>
+  </data>
+  <data name="FullNameRequired.Text" xml:space="preserve">
+    <value>Full Name Required</value>
+  </data>
+  <data name="HomeAddressRequired.Text" xml:space="preserve">
+    <value>Home Address Required</value>
+  </data>
+  <data name="HomeEmailRequired.Text" xml:space="preserve">
+    <value>Home Email Required</value>
+  </data>
+  <data name="HomeMailingRequired.Text" xml:space="preserve">
+    <value>Home Mailing Required</value>
+  </data>
+  <data name="HomeTelephoneRequired.Text" xml:space="preserve">
+    <value>Home Telephone Required</value>
+  </data>
+  <data name="InstitudeNameRequired.Text" xml:space="preserve">
+    <value>Institude Name Required</value>
+  </data>
+  <data name="LicenseNumberRequired.Text" xml:space="preserve">
+    <value>License Number Required</value>
+  </data>
+  <data name="NameAppearOnCertificateRequired.Text" xml:space="preserve">
+    <value>Name Appear On Certificate Required</value>
+  </data>
+  <data name="NameOfOrganizationRequired.Text" xml:space="preserve">
+    <value>Name Of Organization Required</value>
+  </data>
+  <data name="NameRequired.Text" xml:space="preserve">
+    <value>Name Required</value>
+  </data>
+  <data name="NumberOfHoursRequired.Text" xml:space="preserve">
+    <value>Number Of Hours Required</value>
+  </data>
+  <data name="OrganizationRequired.Text" xml:space="preserve">
+    <value>Organization Required</value>
+  </data>
+  <data name="PositionRequired.Text" xml:space="preserve">
+    <value>Position Required</value>
+  </data>
+  <data name="ProgramDateRequired.Text" xml:space="preserve">
+    <value>Program Date Required</value>
+  </data>
+  <data name="ProgramTitleRequired.Text" xml:space="preserve">
+    <value>Program Title Required</value>
+  </data>
+  <data name="RequireSpecialTestDescRequired.Text" xml:space="preserve">
+    <value>Special Test Descriptions Required</value>
+  </data>
+  <data name="RequireSpecialTestRequired.Text" xml:space="preserve">
+    <value>Special Test Required</value>
+  </data>
+  <data name="ResearchCompletionDateRequired.Text" xml:space="preserve">
+    <value>Research Completion Date Required</value>
+  </data>
+  <data name="ResearchRequired.Text" xml:space="preserve">
+    <value>Research Required</value>
+  </data>
+  <data name="RoleRequired.Text" xml:space="preserve">
+    <value>Role Required</value>
+  </data>
+  <data name="StartDateRequired.Text" xml:space="preserve">
+    <value>Start Date Required</value>
+  </data>
+  <data name="StateProvinceRequired.Text" xml:space="preserve">
+    <value>State Province Required</value>
+  </data>
+  <data name="TermOfOfficeRequired.Text" xml:space="preserve">
+    <value>Term Of Office Required</value>
+  </data>
+  <data name="TypeOfActivityRequired.Text" xml:space="preserve">
+    <value>Type Of Activity Required</value>
+  </data>
+  <data name="TypeOfCERequired.Text" xml:space="preserve">
+    <value>Type Of CE Required</value>
+  </data>
+  <data name="WorkEmailRequired.Text" xml:space="preserve">
+    <value>Work Email Required</value>
+  </data>
+  <data name="WorkMailingRequired.Text" xml:space="preserve">
+    <value>Work Mailing Required</value>
+  </data>
+  <data name="WorkTelephoneRequired.Text" xml:space="preserve">
+    <value>Work Telephone Required</value>
+  </data>
+  <data name="DetailsRequired.Text" xml:space="preserve">
+    <value>Question Details Required</value>
+  </data>
+  <data name="RunSinceLastAudit.Text" xml:space="preserve">
+    <value>Run Since Last Audit</value>
+  </data>
+  <data name="Print.Text" xml:space="preserve">
+    <value>Print Application</value>
+  </data>
+  <data name="ExamChoice.Text" xml:space="preserve">
+    <value>Exam Choice</value>
+  </data>
+  <data name="RequirePDFFile.Text" xml:space="preserve">
+    <value>Must be pdf file</value>
+  </data>
+  <data name="NumberValues.Text" xml:space="preserve">
+    <value>Input value should be between 0 to 999</value>
+  </data>
+  <data name="EmailNotValid.Text" xml:space="preserve">
+    <value>Email is not valid</value>
+  </data>
+  <data name="cpWithToday.Text" xml:space="preserve">
+    <value>Date must be less than or equal to today</value>
+  </data>
+  <data name="IsNumber.Text" xml:space="preserve">
+    <value>Input value should be numbers</value>
+  </data>
+  <data name="DuplicateItemError.Text" xml:space="preserve">
+    <value>"Cannot add this item. The item is already existed."</value>
+  </data>
+  <data name="FieldIsRequired.Text" xml:space="preserve">
+    <value>Please Fill In All Required Fields (*).</value>
+  </data>
+  <data name="ErrorMessagesContinuingEducationOption2.Text" xml:space="preserve">
+    <value>Those who wish to recertify under Option 2 (4,160 work hours) must complete {0} CE with total CE points in this Category must be between {1} and {2}</value>
+  </data>
+  <data name="ErrorMessagesContinuingEducationOption3.Text" xml:space="preserve">
+    <value>Those who wish to recertify under Option 3 (2,500 work hours) must complete {0} CE with total CE points in this Category must be between {1} and {2}</value>
+  </data>
+  <data name="CheckBoxMustSelectedIssue.Text" xml:space="preserve">
+    <value>Questions must be completed</value>
+  </data>
+  <data name="ErrorMessagesSummaryOption2.Text" xml:space="preserve">
+    <value>Total CE points must be between {0} and {1} for option 2 required</value>
+  </data>
+  <data name="ErrorMessagesSummaryOption3.Text" xml:space="preserve">
+    <value>Total CE points must be between {0} and {1} for option 3 required</value>
+  </data>
+  <data name="LicensureAtLeastOneRecord.Text" xml:space="preserve">
+    <value>Licensure must have one record</value>
+  </data>
+  <data name="PhoneErrorFormat.Text" xml:space="preserve">
+    <value>Phone should be in format xxx.xxx.xxxx</value>
+  </data>
+  <data name="EanredCmeHoursError.Text" xml:space="preserve">
+    <value>You must have earned at least {0} hours of Category I certified CME</value>
+  </data>
+  <data name="ProPracQuestionnaireValidMonth.Text" xml:space="preserve">
+    <value>The number of months you were engaged in the Clinical Practice of Pain Medicine should be greater than or equal to {0} months</value>
+  </data>
+  <data name="MessagesContinuingEducationOption2.Text" xml:space="preserve">
+    <value>Applications can only be accepted at time of payment with CE points must be between {0} and {1} for those applying the Option 2</value>
+  </data>
+  <data name="MessagesContinuingEducationOption3.Text" xml:space="preserve">
+    <value>Applications can only be accepted at time of payment with CE points  must be between {0} and {1}  for those applying the Option 3</value>
+  </data>
+  <data name="ContinuingEducationSummaryTitle.Text" xml:space="preserve">
+    <value>minimum of {0} for option {1}  required</value>
+  </data>
+  <data name="NumberValuesConEducation.Text" xml:space="preserve">
+    <value>Input value should be between 0 to 999</value>
+  </data>
+  <data name="CheckBoxAgreementMustCheck.Text" xml:space="preserve">
+    <value>Agreement checkbox must be checked</value>
+  </data>
+  <data name="ConflictMessage.Text" xml:space="preserve">
+    <value>Validation rules in this page are conflicted.</value>
+  </data>
+  <data name="MessagesContinuingEducationARN.Text" xml:space="preserve">
+    <value>Approved hours must be 2/3 total Contact hours</value>
+  </data>
+  <data name="MessagesContinuingEducationARNWithForm.Text" xml:space="preserve">
+    <value>{0} Form: Approved hours must be 2/3 total Contact hours</value>
+  </data>
+  <data name="YesRadioButtonMustChecked.Text" xml:space="preserve">
+    <value>Yes radio button must be selected</value>
+  </data>
+  <data name="RecertCategoryInputValue.Text" xml:space="preserve">
+    <value>Input value must be greater than or equal to {0}</value>
+  </data>
+  <data name="MessagesARNAllowGreaterMaxHours.Text" xml:space="preserve">
+    <value>Total CE points must be equal to or  greater than {0}</value>
+  </data>
+  <data name="ReCertCMEQuestion1Error.Text" xml:space="preserve">
+    <value>Question a must be greater than or equal to {0}</value>
+  </data>
+  <data name="MessagesARNMustEqualMaxHours.Text" xml:space="preserve">
+    <value>Total CE points must be equal to {0}</value>
+  </data>
+  <data name="ValidationErrorMessageARN_equal.Text" xml:space="preserve">
+    <value>It is required that total CE points must be equal to {0}</value>
+  </data>
+  <data name="ReCertCMEQuestion2Error.Text" xml:space="preserve">
+    <value>Question b must be greater than or equal to {0}</value>
+  </data>
+  <data name="ReCertCMEQuestion3Error.Text" xml:space="preserve">
+    <value>Question c must be greater than or equal to {0}</value>
+  </data>
+  <data name="ValidationErrorMessageARN_greater.Text" xml:space="preserve">
+    <value>It is required that total CE points must be equal to or greater than {0}</value>
+  </data>
+  <data name="ReCertCMEQuestion4Error.Text" xml:space="preserve">
+    <value>Question d must be greater than or equal to {0}</value>
+  </data>
+  <data name="SummaryContinuingEducationCol3.Text" xml:space="preserve">
+    <value>Number of points Submitted</value>
+  </data>
+  <data name="SummaryContinuingEducationCol4.Text" xml:space="preserve">
+    <value>Number of points submitted that have been approved for nursing contact hours by a national or state nursing organization must be 2/3 of column 3</value>
+  </data>
+  <data name="AtleastExternalContact.Text" xml:space="preserve">
+    <value>Please provide CRRN or Immediate Supervisor and Professional Colleague</value>
+  </data>
+  <data name="DuplicateProfessionalObject.Text" xml:space="preserve">
+    <value>Professional reference already exists. Please add another reference.</value>
+    <comment>-</comment>
+  </data>
+  <data name="InvalidTimeFrame.Text" xml:space="preserve">
+    <value>Input value must be between {0} and {1}</value>
+  </data>
+  <data name="CommunityServiceName.Text" xml:space="preserve">
+    <value>Community Service</value>
+  </data>
+  <data name="InputValueNotCorrect.Text" xml:space="preserve">
+    <value>Input value is not valid</value>
+  </data>
+  <data name="SummaryTitleARN.Text" xml:space="preserve">
+    <value>Total number of points submitted</value>
+  </data>
+  <data name="ValidationErrorMessage_CommunityService_ARN.Text" xml:space="preserve">
+    <value>It is required that total CE points for Community Service must be equal to {0}, you have {1}</value>
+  </data>
+  <data name="ValidationErrorMessageABNN_MinMax.Text" xml:space="preserve">
+    <value>Total points of each CE type  must be between min and max CE points of themselves</value>
+  </data>
+  <data name="ValidationErrorMessageABNN_MinMaxPointsCEType.Text" xml:space="preserve">
+    <value>Total points of CE type " {0} " must be between {1} and {2} . Currently, you have {3}</value>
+  </data>
+  <data name="HaveTwoProfessionalReferencesError.Text" xml:space="preserve">
+    <value>Many professional references already exist. Please check your data.</value>
+  </data>
+  <data name="NoneRecertDateValue.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="AddInformation.Text" xml:space="preserve">
+    <value>Add Information</value>
+  </data>
+  <data name="MustFillInCommentOrUploadDocument.Text" xml:space="preserve">
+    <value>If yes, please fill in details or upload document</value>
+  </data>
+  <data name="AnswerContraintError.Text" xml:space="preserve">
+    <value>Your chosen answer has been removed by admin. Please choose another answer.</value>
+  </data>
+  <data name="IsNotPdfFile.Text" xml:space="preserve">
+    <value>Please attach only PDF file</value>
+  </data>
+  <data name="ErrorMessageCarryOverPointOnSummary.Text" xml:space="preserve">
+    <value>{0} Form: The Total CE Point carried over to Summary Form must be {1}. Currently, Total CE Point is {2}</value>
+  </data>
+  <data name="ErrorMessagesContinuingEducationARN.Text" xml:space="preserve">
+    <value>Approved hours must be 2/3 total Contact Hours. Currently total Contact Hours is {0}</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChooseOptionMessage.Text" xml:space="preserve">
+    <value>Please select at least one item (*)</value>
+  </data>
+  <data name="CommentEducation.Text" xml:space="preserve">
+    <value>Please Fill In Comments</value>
+  </data>
+  <data name="CompareDateBoardCert.Text" xml:space="preserve">
+    <value>Recertification date must be greater than certification date</value>
+  </data>
+  <data name="CompareDateCommon.Text" xml:space="preserve">
+    <value>Start Date must be less than End Date</value>
+  </data>
+  <data name="CompareDateControlSubs.Text" xml:space="preserve">
+    <value>Date of Original Issue must be less than Expiration Date</value>
+  </data>
+  <data name="CompareDateDemoGraphic.Text" xml:space="preserve">
+    <value>The date must not be greater than today</value>
+  </data>
+  <data name="CompareDateEducationCourse.Text" xml:space="preserve">
+    <value>Completion Date must be greater than Start Date</value>
+  </data>
+  <data name="CompareDateLeaderShip.Text" xml:space="preserve">
+    <value>Term of office End Date must be greater than Term of office Start Date</value>
+  </data>
+  <data name="CompareDateLicensure.Text" xml:space="preserve">
+    <value>Date of Original Issue must be less than Expiration Date</value>
+  </data>
+  <data name="AnswerScope.Text" xml:space="preserve">
+    <value>Input value should be less than 999999999999</value>
+  </data> 
+  <data name="PleaseAttachDocument.Text" xml:space="preserve">
+    <value> Please attach document.</value>
+  </data>
+
+</root>

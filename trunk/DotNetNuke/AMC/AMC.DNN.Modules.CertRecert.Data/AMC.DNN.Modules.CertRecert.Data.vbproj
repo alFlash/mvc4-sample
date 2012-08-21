@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{2DA9FAC8-2311-473B-B5AF-616E41ADE218}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AMC.DNN.Modules.CertRecert.Data</RootNamespace>
+    <AssemblyName>AMC.DNN.Modules.CertRecert.Data</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>AMC.DNN.Modules.CertRecert.Data.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AMC.DNN.Modules.CertRecert.Data.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetNuke, Version=4.8.4.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\Lib\DotNetNuke.dll</HintPath>
+    </Reference>
+    <Reference Include="Personify.API.User.Generated">
+      <HintPath>..\Lib\Lib\Personify.API.User.Generated.dll</HintPath>
+    </Reference>
+    <Reference Include="Personify.ApplicationManager">
+      <HintPath>..\ARNTEST\Bin\Personify.ApplicationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TIMSS.API.Base, Version=1.0.0.773, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\Lib\TIMSS.API.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.API.Core">
+      <HintPath>..\ARNTEST\Bin\TIMSS.API.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.API.Generated, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\Lib\TIMSS.API.Generated.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.API.Interfaces, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Lib\Lib\TIMSS.API.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="TIMSS.Shared">
+      <HintPath>..\ARNTEST\Bin\TIMSS.Shared.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CertificationCEWeightSettingsDataProvider.vb" />
+    <Compile Include="CertificationCustomerCertificationDataProvider.vb" />
+    <Compile Include="CertificationApplicationExamPeriodDataProvider.vb" />
+    <Compile Include="CustomerEducationDataProvider.vb" />
+    <Compile Include="CustomerInfoDataProvider.vb" />
+    <Compile Include="DataProvider.vb" />
+    <Compile Include="Entities\InActiveStatus.vb" />
+    <Compile Include="Entities\NotificationInfo.vb" />
+    <Compile Include="Enums\DataAccessConstants.vb" />
+    <Compile Include="Enums\Enums.vb" />
+    <Compile Include="Exception\DataAccessException.vb" />
+    <Compile Include="Exception\DataAccessExceptionHandler.vb" />
+    <Compile Include="ExternalCustomerActivityDataProvider.vb" />
+    <Compile Include="ExternalCustomerContactDataProvider.vb" />
+    <Compile Include="ExternalCustomerDocumentationDataProvider.vb" />
+    <Compile Include="IssuesDataProvider.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NotificationserviceNotificationDataProvider.vb" />
+    <Compile Include="PersonifyDataProvider.vb" />
+    <Compile Include="ShoppingCartDataProvider.vb" />
+    <Compile Include="UserDefinedCustomerCEActivitieDataProvider.vb" />
+    <Compile Include="UserDefinedCustomerPracticeScopeDataProvider.vb" />
+    <Compile Include="UserDefinedSurveyDataProvider.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ArrayOfProgramTypeSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="COMMSERV"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="COMMSERVPRES"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="COMMSERVPUB"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="COMMSERVR"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="COMMSERVVL"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="COMMSERVVS"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="CONTEDUCATION"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="EDUCATION"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="ORGINVOLVE"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="PRACTICEEXP"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="PROGPROJECT"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="PUBLICATION"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="RESEARCH"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="SUMMARY"/>
+  <ProgramTypeSettings MaxCEOpt3="100" MinCEOpt3="40" MaxCEOpt2="100" MinCEOpt2="30" ProgramTypeCode="TEACHINGPRESN"/>
+</ArrayOfProgramTypeSettings>

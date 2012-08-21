@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<CertificationAuditSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StartDate>2012-04-21T17:14:59.7525746+07:00</StartDate>
+  <EndDate>2012-04-21T17:14:59.7525746+07:00</EndDate>
+  <LastAuditRun>2012-04-21T17:14:59.7545746+07:00</LastAuditRun>
+  <SelectionRatio>0</SelectionRatio>
+</CertificationAuditSetting>

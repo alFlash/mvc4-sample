@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://personify.tmaresources.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://personify.tmaresources.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://personify.tmaresources.com/">
+      <s:element name="Connect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Login" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aOrgId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aOrgUnitId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConnectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConnectResult" type="tns:Result_Message" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Result_Message">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Disconnect">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DisconnectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DisconnectResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMainProductToCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BillMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BillSubCustomerId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProductId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShipSubCustomerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RateStructure" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RateCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MarketCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMainProductToCartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddMainProductToCartResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ItemId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddFundEventToCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BillMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BillSubCustomerId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProductId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShipSubCustomerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RateStructure" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RateCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MarketCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsFundEvent" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFundEventToCartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddFundEventToCartResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMainProductToWishList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BillMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BillSubCustomerId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProductId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShipSubCustomerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RateStructure" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RateCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MarketCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMainProductToWishListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddMainProductToWishListResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSubProductToCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BillMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BillSubCustomerId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProductId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SubProductId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="RelatedCartItemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShipSubCustomerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RateStructure" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RateCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MarketCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSubProductToCartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddSubProductToCartResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSubProductToWishList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BillMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BillSubCustomerId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProductId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SubProductId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="RelatedCartItemId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ShipSubCustomerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RateStructure" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RateCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MarketCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSubProductToWishListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddSubProductToWishListResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDCDFilesToCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CartItemId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BillMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BillSubCustomerId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProductId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FileId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDCDFilesToCartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddDCDFilesToCartResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDCDFilesToWishList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CartItemId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BillMasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BillSubCustomerId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProductId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="FileId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDCDFilesToWishListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddDCDFilesToWishListResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmptyCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SubCustomerId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EmptyCartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmptyCartResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteProductFromCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MasterCustomerId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SubCustomerId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ProductId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsWishList" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteProductFromCartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteProductFromCartResult" type="tns:Result" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddListOfProductsToCart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListOfShoppingCartItems" type="tns:ArrayOfShoppingCartItem" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfShoppingCartItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ShoppingCartItem" nillable="true" type="tns:ShoppingCartItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ShoppingCartItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ProductInfo" type="tns:ProductInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListOfSubProducts" type="tns:ArrayOfProductInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProductInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MasterCustomerId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubCustomerId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RateCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RateStructure" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsWishList" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipMasterCustomerId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipSubCustomerId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserDefinedField3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MarketCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrderNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderLineNo" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProductInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProductInfo" nillable="true" type="tns:ProductInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddListOfProductsToCartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddListOfProductsToCartResult" type="tns:ArrayOfResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Result" nillable="true" type="tns:Result" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConnectSoapIn">
+    <wsdl:part name="parameters" element="tns:Connect" />
+  </wsdl:message>
+  <wsdl:message name="ConnectSoapOut">
+    <wsdl:part name="parameters" element="tns:ConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisconnectSoapIn">
+    <wsdl:part name="parameters" element="tns:Disconnect" />
+  </wsdl:message>
+  <wsdl:message name="DisconnectSoapOut">
+    <wsdl:part name="parameters" element="tns:DisconnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMainProductToCartSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMainProductToCart" />
+  </wsdl:message>
+  <wsdl:message name="AddMainProductToCartSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMainProductToCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFundEventToCartSoapIn">
+    <wsdl:part name="parameters" element="tns:AddFundEventToCart" />
+  </wsdl:message>
+  <wsdl:message name="AddFundEventToCartSoapOut">
+    <wsdl:part name="parameters" element="tns:AddFundEventToCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMainProductToWishListSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMainProductToWishList" />
+  </wsdl:message>
+  <wsdl:message name="AddMainProductToWishListSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMainProductToWishListResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSubProductToCartSoapIn">
+    <wsdl:part name="parameters" element="tns:AddSubProductToCart" />
+  </wsdl:message>
+  <wsdl:message name="AddSubProductToCartSoapOut">
+    <wsdl:part name="parameters" element="tns:AddSubProductToCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSubProductToWishListSoapIn">
+    <wsdl:part name="parameters" element="tns:AddSubProductToWishList" />
+  </wsdl:message>
+  <wsdl:message name="AddSubProductToWishListSoapOut">
+    <wsdl:part name="parameters" element="tns:AddSubProductToWishListResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDCDFilesToCartSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDCDFilesToCart" />
+  </wsdl:message>
+  <wsdl:message name="AddDCDFilesToCartSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDCDFilesToCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDCDFilesToWishListSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDCDFilesToWishList" />
+  </wsdl:message>
+  <wsdl:message name="AddDCDFilesToWishListSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDCDFilesToWishListResponse" />
+  </wsdl:message>
+  <wsdl:message name="EmptyCartSoapIn">
+    <wsdl:part name="parameters" element="tns:EmptyCart" />
+  </wsdl:message>
+  <wsdl:message name="EmptyCartSoapOut">
+    <wsdl:part name="parameters" element="tns:EmptyCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProductFromCartSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteProductFromCart" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProductFromCartSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteProductFromCartResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddListOfProductsToCartSoapIn">
+    <wsdl:part name="parameters" element="tns:AddListOfProductsToCart" />
+  </wsdl:message>
+  <wsdl:message name="AddListOfProductsToCartSoapOut">
+    <wsdl:part name="parameters" element="tns:AddListOfProductsToCartResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PersonifyShoppingCartSoap">
+    <wsdl:operation name="Connect">
+      <wsdl:input message="tns:ConnectSoapIn" />
+      <wsdl:output message="tns:ConnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <wsdl:input message="tns:DisconnectSoapIn" />
+      <wsdl:output message="tns:DisconnectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMainProductToCart">
+      <wsdl:input message="tns:AddMainProductToCartSoapIn" />
+      <wsdl:output message="tns:AddMainProductToCartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMainProductToCart">
+      <wsdl:input name="AddFundEventToCart" message="tns:AddFundEventToCartSoapIn" />
+      <wsdl:output name="AddFundEventToCart" message="tns:AddFundEventToCartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMainProductToWishList">
+      <wsdl:input message="tns:AddMainProductToWishListSoapIn" />
+      <wsdl:output message="tns:AddMainProductToWishListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubProductToCart">
+      <wsdl:input message="tns:AddSubProductToCartSoapIn" />
+      <wsdl:output message="tns:AddSubProductToCartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubProductToWishList">
+      <wsdl:input message="tns:AddSubProductToWishListSoapIn" />
+      <wsdl:output message="tns:AddSubProductToWishListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDCDFilesToCart">
+      <wsdl:input message="tns:AddDCDFilesToCartSoapIn" />
+      <wsdl:output message="tns:AddDCDFilesToCartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDCDFilesToWishList">
+      <wsdl:input message="tns:AddDCDFilesToWishListSoapIn" />
+      <wsdl:output message="tns:AddDCDFilesToWishListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EmptyCart">
+      <wsdl:input message="tns:EmptyCartSoapIn" />
+      <wsdl:output message="tns:EmptyCartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductFromCart">
+      <wsdl:input message="tns:DeleteProductFromCartSoapIn" />
+      <wsdl:output message="tns:DeleteProductFromCartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddListOfProductsToCart">
+      <wsdl:input message="tns:AddListOfProductsToCartSoapIn" />
+      <wsdl:output message="tns:AddListOfProductsToCartSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PersonifyShoppingCartSoap" type="tns:PersonifyShoppingCartSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Connect">
+      <soap:operation soapAction="http://personify.tmaresources.com/Connect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <soap:operation soapAction="http://personify.tmaresources.com/Disconnect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMainProductToCart">
+      <soap:operation soapAction="http://personify.tmaresources.com/AddMainProductToCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMainProductToCart">
+      <soap:operation soapAction="http://personify.tmaresources.com/AddFundEventToCart" style="document" />
+      <wsdl:input name="AddFundEventToCart">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddFundEventToCart">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMainProductToWishList">
+      <soap:operation soapAction="http://personify.tmaresources.com/AddMainProductToWishList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubProductToCart">
+      <soap:operation soapAction="http://personify.tmaresources.com/AddSubProductToCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubProductToWishList">
+      <soap:operation soapAction="http://personify.tmaresources.com/AddSubProductToWishList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDCDFilesToCart">
+      <soap:operation soapAction="http://personify.tmaresources.com/AddDCDFilesToCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDCDFilesToWishList">
+      <soap:operation soapAction="http://personify.tmaresources.com/AddDCDFilesToWishList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmptyCart">
+      <soap:operation soapAction="http://personify.tmaresources.com/EmptyCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductFromCart">
+      <soap:operation soapAction="http://personify.tmaresources.com/DeleteProductFromCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddListOfProductsToCart">
+      <soap:operation soapAction="http://personify.tmaresources.com/AddListOfProductsToCart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PersonifyShoppingCartSoap12" type="tns:PersonifyShoppingCartSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Connect">
+      <soap12:operation soapAction="http://personify.tmaresources.com/Connect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disconnect">
+      <soap12:operation soapAction="http://personify.tmaresources.com/Disconnect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMainProductToCart">
+      <soap12:operation soapAction="http://personify.tmaresources.com/AddMainProductToCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMainProductToCart">
+      <soap12:operation soapAction="http://personify.tmaresources.com/AddFundEventToCart" style="document" />
+      <wsdl:input name="AddFundEventToCart">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddFundEventToCart">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMainProductToWishList">
+      <soap12:operation soapAction="http://personify.tmaresources.com/AddMainProductToWishList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubProductToCart">
+      <soap12:operation soapAction="http://personify.tmaresources.com/AddSubProductToCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubProductToWishList">
+      <soap12:operation soapAction="http://personify.tmaresources.com/AddSubProductToWishList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDCDFilesToCart">
+      <soap12:operation soapAction="http://personify.tmaresources.com/AddDCDFilesToCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDCDFilesToWishList">
+      <soap12:operation soapAction="http://personify.tmaresources.com/AddDCDFilesToWishList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmptyCart">
+      <soap12:operation soapAction="http://personify.tmaresources.com/EmptyCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductFromCart">
+      <soap12:operation soapAction="http://personify.tmaresources.com/DeleteProductFromCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddListOfProductsToCart">
+      <soap12:operation soapAction="http://personify.tmaresources.com/AddListOfProductsToCart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PersonifyShoppingCart">
+    <wsdl:port name="PersonifyShoppingCartSoap" binding="tns:PersonifyShoppingCartSoap">
+      <soap:address location="http://localhost/arntest/personifyshoppingcart.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PersonifyShoppingCartSoap12" binding="tns:PersonifyShoppingCartSoap12">
+      <soap12:address location="http://localhost/arntest/personifyshoppingcart.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

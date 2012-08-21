@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="18072f3c-f83a-41fb-b372-1ac231c7a72d" name="RecertDomain" linkedPackageId="73c7e3f8-a1d3-4854-87fd-9e01e5c3d9fe" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="4b057020-0f6f-4ca3-bd68-f317d33634de" name="AMC.DNN.Modules.CerRecert.Business">
+        <elementDefinition Id="efce4fef-5d14-4ffb-bcb7-9c74dd0c3237" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="ed94b26d-faa8-4996-99d4-6255c5551b4b" name="CertRecertBase" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="ecd95287-c00a-46bc-922e-f554e6e9c54a" />
+              <suppliersInternal>
+                <dependency Id="0f1f3c39-362c-4ac1-8375-5c842da01267">
+                  <classMoniker Id="9d767d0f-fc63-445d-bd45-fd512e18095c" LastKnownName="ReferenceVerification" />
+                  <elementDefinition Id="f24b3f8b-0a43-4537-a623-bee1079ab19e" />
+                </dependency>
+                <dependency Id="35042f5e-493b-492c-a26d-0ded47c7d52f">
+                  <classMoniker Id="a8e83c12-b895-4535-a1f5-e772e6172897" LastKnownName="SupervisorEmployer" />
+                  <elementDefinition Id="a9fe6cd2-14ad-4ace-a12c-fc889f220df0" />
+                </dependency>
+                <dependency Id="6fe62aea-eacd-4661-ab37-b980170c7627">
+                  <classMoniker Id="704df694-440f-4d03-810e-d3de8ed8fa46" LastKnownName="Experience" />
+                  <elementDefinition Id="792aaa75-192f-4f10-b27e-ff2d42d9d3df" />
+                </dependency>
+                <dependency Id="0f186fbd-733a-482d-884d-cbbd27bbd6a4">
+                  <classMoniker Id="edba82dc-47b3-42b5-be1a-f63467881770" LastKnownName="SubstanceAuthorization" />
+                  <elementDefinition Id="a00d5f08-5add-48b8-a6d5-b6f0dc71b6c6" />
+                </dependency>
+                <dependency Id="896485df-7af6-4f5c-8138-d94bfc5d313f">
+                  <classMoniker Id="8e144a64-3d1e-4a4d-8aec-19c468a3cbff" LastKnownName="EthicalProfessionalQuestionnaire" />
+                  <elementDefinition Id="86a0de1f-ac25-48fd-b5dc-bb631dea88d9" />
+                </dependency>
+                <dependency Id="b51c1e89-a72a-429e-9757-6950c96021c5">
+                  <classMoniker Id="fdfab574-4990-486e-9218-d2704a86d037" LastKnownName="ExamChoice" />
+                  <elementDefinition Id="b892fb68-c1b0-4c6f-9540-65a4ae909a10" />
+                </dependency>
+                <dependency Id="722c8a4d-17f9-4913-a790-77bdd5416294">
+                  <classMoniker Id="ca9d78c1-f183-44bf-b55c-c67eee853dd7" LastKnownName="Payment" />
+                  <elementDefinition Id="fddf02b1-da42-45e7-9d64-67e45383a182" />
+                </dependency>
+                <dependency Id="2e0cf513-16c1-4ba6-b1cc-c6027270e2a0">
+                  <classMoniker Id="4ff0b361-5dfa-41fe-b309-847b5953150b" LastKnownName="BoardCertification" />
+                  <elementDefinition Id="daf3a6c8-7616-4551-9d68-c6728c6682e0" />
+                </dependency>
+                <dependency Id="6ac98b78-f274-410b-b1f5-bf9c9ac0b3e1">
+                  <classMoniker Id="6bc3fa69-4c9f-4a58-9569-5542f852dc2b" LastKnownName="Licensure" />
+                  <elementDefinition Id="3fac3d6a-d259-477f-af91-32da522c4780" />
+                </dependency>
+                <dependency Id="7d7c5496-c05d-4b0f-a647-258c626e2b09">
+                  <classMoniker Id="3f025c68-6df2-402a-a551-08bfb5a4355a" LastKnownName="ReCertEligibility" />
+                  <elementDefinition Id="076ea9e3-d5ac-4ebb-a2af-17170f8bbfeb" />
+                </dependency>
+                <dependency Id="be2bad0d-8723-4dc0-acdc-4a07c1e6f45a">
+                  <classMoniker Id="ce5ec928-2789-4a56-8b3d-ddc513d99964" LastKnownName="Education" />
+                  <elementDefinition Id="e5686b15-19b7-4259-af59-1ebe61584d79" />
+                </dependency>
+                <dependency Id="d8d40570-ad67-4321-8efa-49881f1cc15a">
+                  <classMoniker Id="b61c3028-587c-4bed-b3ec-49372111c80b" LastKnownName="DeclarationConsent" />
+                  <elementDefinition Id="04709fb8-14ce-4cb3-9099-d3aec13070e2" />
+                </dependency>
+                <dependency Id="c8eb528c-50df-41d8-898e-776ef561fc65">
+                  <classMoniker Id="4be8248b-e76e-4edf-af2a-dbc1cc57d918" LastKnownName="PracticeExperienceDetail" />
+                  <elementDefinition Id="96bbae35-bb5f-45dd-bdb5-d8c25cdde4da" />
+                </dependency>
+                <dependency Id="7b0dcb39-edc0-4a6f-b14d-831eaedf6d61">
+                  <classMoniker Id="9790dcbd-a787-4248-985d-22c1cd85fc94" LastKnownName="Registration" />
+                  <elementDefinition Id="1f939e57-e00f-495a-9ed1-a47ea159ae62" />
+                </dependency>
+                <dependency Id="18aca298-5a00-40b5-b404-67a0c336f41d">
+                  <classMoniker Id="989690bf-a06c-41ae-8252-68fd50151fff" LastKnownName="RegistrstionOption" />
+                  <elementDefinition Id="cfd4c672-fa6b-45dd-b695-66aa0db586a6" />
+                </dependency>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="4ff0b361-5dfa-41fe-b309-847b5953150b" name="BoardCertification" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="61fc0894-959c-4e8b-a1db-39c23969eab0" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="ca9d78c1-f183-44bf-b55c-c67eee853dd7" name="Payment" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b4d4eb05-8105-4c7f-8d5d-87caeaf8fb6e" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="fdfab574-4990-486e-9218-d2704a86d037" name="ExamChoice" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="ae863f8f-9fec-4493-a863-b98f31726368" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="9790dcbd-a787-4248-985d-22c1cd85fc94" name="Registration" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="7bbc3620-fb8c-4fe1-8645-797426fce538" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="6bc3fa69-4c9f-4a58-9569-5542f852dc2b" name="Licensure" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c23cb389-11ee-42ec-ac51-c4ef299c5534" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="edba82dc-47b3-42b5-be1a-f63467881770" name="SubstanceAuthorization" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="3132e38e-5e2c-4c7d-baff-455cdf6ca661" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="704df694-440f-4d03-810e-d3de8ed8fa46" name="Experience" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="28ca7ec9-3ab6-40a6-8cc6-b796daaabcc2" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a8e83c12-b895-4535-a1f5-e772e6172897" name="SupervisorEmployer" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="7c605586-3eb9-48dd-b713-37763dfb8a24" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="b61c3028-587c-4bed-b3ec-49372111c80b" name="DeclarationConsent" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="26ed8eac-c564-4a44-98f0-73270c001958" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="ce5ec928-2789-4a56-8b3d-ddc513d99964" name="Education" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="3a00ac88-f7c3-4077-adc7-2ddada2b6eaa" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="4be8248b-e76e-4edf-af2a-dbc1cc57d918" name="PracticeExperienceDetail" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="6ebc69d3-a9de-4887-956a-c414e215f08c" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="9d767d0f-fc63-445d-bd45-fd512e18095c" name="ReferenceVerification" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="56af06b1-dbdb-41e5-923e-0c6a9c8be1dc" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="8e144a64-3d1e-4a4d-8aec-19c468a3cbff" name="EthicalProfessionalQuestionnaire" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="e37e5c8b-a10c-4950-bb26-2af35ac2cfe5" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="3f025c68-6df2-402a-a551-08bfb5a4355a" name="ReCertEligibility" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="27a6d50e-6563-46f4-9ea8-a93383171b53" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="989690bf-a06c-41ae-8252-68fd50151fff" name="RegistrstionOption" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="7346efdc-cf24-403c-8f44-a7ad86a534ee" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="73c7e3f8-a1d3-4854-87fd-9e01e5c3d9fe" name="Amc.Models">
+    <elementDefinition Id="4f83f312-0e7b-4923-b2a4-143ad7ce0d25" />
+    <profileInstances>
+      <packageHasProfileInstances Id="9953eb2d-91a9-4c92-ba67-acd64b840b8a">
+        <profileInstance Id="da7beb44-36be-40d2-8095-c51c8c03cdaa" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="90b48a08-4ad1-4e76-966f-d6bd942916cd">
+        <profileInstance Id="03baddf4-72a4-4f46-ab0c-1cd72af6bb6d" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

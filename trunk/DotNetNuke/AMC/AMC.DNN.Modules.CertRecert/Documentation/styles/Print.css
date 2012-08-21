@@ -1,0 +1,7 @@
+﻿
+@media print {
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+.page-break{display:block;page-break-after: always;height: 0px !important;border: none !important;}
+.noPrint { display: none; } 
+}
