@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using MVP.Base.BaseUserControl;
+using MVP.Base.Common;
+using MVP.Sample.Web.IViews;
+using MVP.Sample.Web.Presenters;
 
 namespace MVP.Sample.Web.UserControls
 {
-    public partial class DependencyUC2 : BaseUserControl
+    public partial class DependencyUC2 : BaseUserControl<DependencyUC2Presenter>, IDependencyUC2View
     {
         #region Members
         
@@ -32,7 +36,7 @@ namespace MVP.Sample.Web.UserControls
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Presenter.DoAction();
         }
 
         public override void AttachEventHandler()
@@ -45,5 +49,23 @@ namespace MVP.Sample.Web.UserControls
         {
             CommitChanges();
         }
+
+        #region Implementation of IBaseView
+
+        public PageMode PageMode { get; set; }
+        public string PageTitle { get; set; }
+        public PageStatus PageStatus { get; set; }
+        public List<string> ErrorMessages { get; set; }
+        public void ShowErrorMessage()
+        {
+            //throw new NotImplementedException();
+        }
+
+        public void AddErrorMessage(string errorMessage)
+        {
+            //throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }

@@ -5,11 +5,11 @@ using MVP.Base.BasePresenter;
 
 namespace MVP.Base.BaseUserControl
 {
-    public class BaseUserControl : UserControl, IBaseUserControl
+    public class BaseUserControl<TPresenter> : UserControl, IBaseUserControl where TPresenter : class, IBasePresenter
     {
         #region Properties
-        
-        public IBasePresenter Presenter { get; set; }
+
+        public TPresenter Presenter { get; set; }
         public virtual string ParentControl { get; set; }
         public virtual List<string> RelatedControls { get; set; }
 
@@ -82,6 +82,12 @@ namespace MVP.Base.BaseUserControl
 
         #region Event Handlers
 
+        protected override void OnInit(EventArgs e)
+        {
+            base.OnInit(e);
+            Presenter = (TPresenter)Activator.CreateInstance(typeof(TPresenter), this);
+        }
+
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Load"/> event.
         /// </summary>
@@ -93,6 +99,9 @@ namespace MVP.Base.BaseUserControl
             AttachEventHandler();
         }
 
+        #endregion
+
+        #region Implementation of IBaseUserControl
         #endregion
     }
 }
