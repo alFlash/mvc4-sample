@@ -12,9 +12,7 @@ Option Strict Off
 Option Explicit On
 
 
-Namespace YourCompany.Modules.ModuleName1
-    Partial Public Class Settings
-        Protected WithEvents lblTemplate As System.Web.UI.UserControl
-        Protected WithEvents txtTemplate As System.Web.UI.WebControls.TextBox
-    End Class
-End Namespace
+Partial Public Class Settings
+    Protected WithEvents lblTemplate As System.Web.UI.UserControl
+    Protected WithEvents txtTemplate As System.Web.UI.WebControls.TextBox
+End Class

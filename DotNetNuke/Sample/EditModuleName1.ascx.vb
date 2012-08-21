@@ -17,25 +17,22 @@
 ' CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
 ' DEALINGS IN THE SOFTWARE.
 '
-
 Imports DotNetNuke
 Imports DotNetNuke.Common
 Imports DotNetNuke.Services.Exceptions
 Imports DotNetNuke.Services.Localization
 
-Namespace YourCompany.Modules.ModuleName1
-
-    ''' -----------------------------------------------------------------------------
-    ''' <summary>
-    ''' The EditModuleName1 class is used to manage content
-    ''' </summary>
-    ''' <remarks>
-    ''' </remarks>
-    ''' <history>
-    ''' </history>
-    ''' -----------------------------------------------------------------------------
-    Partial Class EditModuleName1
-        Inherits Entities.Modules.PortalModuleBase
+''' -----------------------------------------------------------------------------
+''' <summary>
+''' The EditModuleName1 class is used to manage content
+''' </summary>
+''' <remarks>
+''' </remarks>
+''' <history>
+''' </history>
+''' -----------------------------------------------------------------------------
+Partial Class EditModuleName1
+    Inherits Entities.Modules.PortalModuleBase
 
 #Region "Private Members"
 
@@ -43,25 +40,23 @@ Namespace YourCompany.Modules.ModuleName1
 
 #Region "Event Handlers"
 
-        ''' -----------------------------------------------------------------------------
-        ''' <summary>
-        ''' Page_Load runs when the control is loaded
-        ''' </summary>
-        ''' <remarks>
-        ''' </remarks>
-        ''' <history>
-        ''' </history>
-        ''' -----------------------------------------------------------------------------
-        Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-            Try
+    ''' -----------------------------------------------------------------------------
+    ''' <summary>
+    ''' Page_Load runs when the control is loaded
+    ''' </summary>
+    ''' <remarks>
+    ''' </remarks>
+    ''' <history>
+    ''' </history>
+    ''' -----------------------------------------------------------------------------
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Try
 
-            Catch exc As Exception    'Module failed to load
-                ProcessModuleLoadException(Me, exc)
-            End Try
-        End Sub
+        Catch exc As Exception    'Module failed to load
+            ProcessModuleLoadException(Me, exc)
+        End Try
+    End Sub
 
 #End Region
 
-    End Class
-
-End Namespace
+End Class

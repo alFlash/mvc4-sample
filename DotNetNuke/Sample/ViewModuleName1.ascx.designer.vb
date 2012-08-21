@@ -12,8 +12,6 @@ Option Strict Off
 Option Explicit On
 
 
-Namespace YourCompany.Modules.ModuleName1
-    Partial Public Class ViewModuleName1
-        Protected WithEvents lstContent As System.Web.UI.WebControls.DataList
-    End Class
-End Namespace
+Partial Public Class ViewModuleName1
+    Protected WithEvents lstContent As System.Web.UI.WebControls.DataList
+End Class
