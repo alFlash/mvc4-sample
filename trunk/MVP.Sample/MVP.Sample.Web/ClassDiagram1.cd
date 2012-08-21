@@ -31,7 +31,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="MVP.Sample.Web.IViews.IDependencyUC1" Collapsed="true">
-    <Position X="4.25" Y="2.5" Width="1.5" />
+    <Position X="4.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IViews\IDependencyUC1.cs</FileName>
