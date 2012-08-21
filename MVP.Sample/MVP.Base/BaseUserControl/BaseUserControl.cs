@@ -10,7 +10,6 @@ namespace MVP.Base.BaseUserControl
         #region Properties
         
         public IBasePresenter Presenter { get; set; }
-        public virtual List<string> ChildControls { get; set; } //Store the fullname of (Children)Usercontrols' Type 
         public virtual string ParentControl { get; set; }
         public virtual List<string> RelatedControls { get; set; }
 
@@ -21,17 +20,6 @@ namespace MVP.Base.BaseUserControl
         /// Attaches the event handler.
         /// </summary>
         public virtual void AttachEventHandler() { }
-
-        /// <summary>
-        /// Shows the error message.
-        /// </summary>
-        /// <param name="message">The message.</param>
-        public void ShowErrorMessage(string message)
-        {
-            if (Page.Master == null || !(Page.Master is IMasterPage)) return;
-            var masterPage = (IMasterPage)Page.Master;
-            masterPage.ShowErrorMessage(message);
-        }
 
         /// <summary>
         /// Gets the resource.
