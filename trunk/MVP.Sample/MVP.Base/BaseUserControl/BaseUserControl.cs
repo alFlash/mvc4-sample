@@ -52,32 +52,6 @@ namespace MVP.Base.BaseUserControl
             return "Common";
         }
 
-        /// <summary>
-        /// Re-load the page.
-        /// </summary>
-        public virtual void ReLoad (){}
-
-        /// <summary>
-        /// Commits the changes.
-        /// </summary>
-        public void CommitChanges()
-        {
-            if (!string.IsNullOrEmpty(ParentControl) && RelatedControls != null && RelatedControls.Count > 0)
-            {
-                if (BaseControlCollection.Controls.ContainsKey(ParentControl))
-                {
-                    var parentControl = BaseControlCollection.Controls[ParentControl];
-                    if (parentControl != null)
-                    {
-                        foreach (var controlKey in RelatedControls)
-                        {
-                            parentControl[controlKey].ReLoad();
-                        }
-                    }
-                }
-            }
-        }
-
         #endregion
 
         #region Event Handlers
@@ -102,6 +76,33 @@ namespace MVP.Base.BaseUserControl
         #endregion
 
         #region Implementation of IBaseUserControl
+
+        /// <summary>
+        /// Re-load the page.
+        /// </summary>
+        public virtual void ReLoad() { }
+
+        /// <summary>
+        /// Commits the changes.
+        /// </summary>
+        public void CommitChanges()
+        {
+            if (!string.IsNullOrEmpty(ParentControl) && RelatedControls != null && RelatedControls.Count > 0)
+            {
+                if (BaseControlCollection.Controls.ContainsKey(ParentControl))
+                {
+                    var parentControl = BaseControlCollection.Controls[ParentControl];
+                    if (parentControl != null)
+                    {
+                        foreach (var controlKey in RelatedControls)
+                        {
+                            parentControl[controlKey].ReLoad();
+                        }
+                    }
+                }
+            }
+        }
+
         #endregion
     }
 }
