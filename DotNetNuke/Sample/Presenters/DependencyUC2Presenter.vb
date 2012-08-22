@@ -9,22 +9,22 @@ Namespace Presenters
             MyBase.New(view)
         End Sub
 
-        Public Overrides Sub ViewAction()
+        Protected Overrides Sub ViewAction()
         End Sub
 
-        Public Overrides Sub UpdateAction()
+        Protected Overrides Sub UpdateAction()
         End Sub
 
-        Public Overrides Sub DeleteAction()
+        Protected Overrides Sub DeleteAction()
         End Sub
 
-        Public Overrides Sub InsertAction()
+        Protected Overrides Sub InsertAction()
         End Sub
 
-        Public Overrides Sub InitializeAction()
+        Protected Overrides Sub InitializeAction()
         End Sub
 
-        Public Overrides Sub SearchAction()
+        Protected Overrides Sub SearchAction()
         End Sub
 
         Public Overrides Sub Validate()

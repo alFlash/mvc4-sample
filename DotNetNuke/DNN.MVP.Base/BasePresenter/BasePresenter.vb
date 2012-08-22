@@ -24,12 +24,12 @@ Namespace BasePresenter
 #End Region
 
 #Region "Actions"
-        Public MustOverride Sub ViewAction()
-        Public MustOverride Sub UpdateAction()
-        Public MustOverride Sub DeleteAction()
-        Public MustOverride Sub InsertAction()
-        Public MustOverride Sub InitializeAction()
-        Public MustOverride Sub SearchAction()
+        Protected MustOverride Sub ViewAction()
+        Protected MustOverride Sub UpdateAction()
+        Protected MustOverride Sub DeleteAction()
+        Protected MustOverride Sub InsertAction()
+        Protected MustOverride Sub InitializeAction()
+        Protected MustOverride Sub SearchAction()
 
         Public Overridable Sub DoAction() Implements IBasePresenter.DoAction
             Select Case View.PageMode
