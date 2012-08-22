@@ -11,7 +11,7 @@ namespace MVP.Base.BasePresenter
         where TRepository : class
     {
         #region IView
-        protected TView View;
+        private readonly TView _view;
         #endregion
 
         #region Repository
@@ -27,7 +27,7 @@ namespace MVP.Base.BasePresenter
         /// <param name="view">The view.</param>
         protected BasePresenter(TView view)
         {
-            View = view;
+            _view = view;
         }
 
         #endregion
@@ -46,7 +46,7 @@ namespace MVP.Base.BasePresenter
         /// </summary>
         public virtual void DoAction()
         {
-            switch (View.PageMode)
+            switch (_view.PageMode)
             {
                 case PageMode.None:
                     InitializeAction();
