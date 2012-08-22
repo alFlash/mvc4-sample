@@ -1,7 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="MVP.Sample.Web.UserControls.DependencyUC1" BaseTypeListCollapsed="true">
-    <Position X="4.5" Y="4" Width="2.5" />
+    <Position X="4.25" Y="2.5" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAAQAAABAACkIQAAAggACAAAAAIAAAA=</HashCode>
       <FileName>UserControls\DependencyUC1.ascx.cs</FileName>
@@ -9,11 +14,20 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="MVP.Sample.Web.Presenters.DependencyUC1Presenter">
-    <Position X="1.5" Y="4" Width="2.5" />
+    <Position X="1.25" Y="2" Width="2.5" />
+    <Members>
+      <Method Name="DependencyUC1Presenter" Hidden="true" />
+      <Method Name="InitializeAction" Hidden="true" />
+      <Property Name="Repository" Hidden="true" />
+      <Method Name="Validate" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <InheritanceLine Type="MVP.Base.BasePresenter.BasePresenter&lt;TView, TRepository&gt;" FixedFromPoint="true">
       <Path>
-        <Point X="2.75" Y="3.56" />
-        <Point X="2.75" Y="4" />
+        <Point X="2.5" Y="1.481" />
+        <Point X="2.5" Y="2" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -22,16 +36,30 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MVP.Base.BaseUserControl.BaseControlCollection">
-    <Position X="6" Y="1.25" Width="1.75" />
+    <Position X="10.5" Y="1.25" Width="1.75" />
     <TypeIdentifier />
   </Class>
   <Class Name="MVP.Base.BasePresenter.BasePresenter&lt;TView, TRepository&gt;">
     <Position X="1.25" Y="0.5" Width="2.75" />
+    <Members>
+      <Method Name="BasePresenter" Hidden="true" />
+      <Method Name="DeleteAction" Hidden="true" />
+      <Method Name="InitializeAction" Hidden="true" />
+      <Method Name="InsertAction" Hidden="true" />
+      <Property Name="Repository" Hidden="true" />
+      <Method Name="SearchAction" Hidden="true" />
+      <Method Name="UpdateAction" Hidden="true" />
+      <Method Name="Validate" Hidden="true" />
+      <Method Name="ViewAction" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier />
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="MVP.Sample.Web.IViews.IDependencyUC1" Collapsed="true">
-    <Position X="4.25" Y="2.75" Width="1.5" />
+    <Position X="4.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IViews\IDependencyUC1.cs</FileName>
@@ -39,14 +67,21 @@
   </Interface>
   <Interface Name="MVP.Base.BaseView.IBaseView">
     <Position X="4.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="AddErrorMessage" Hidden="true" />
+      <Property Name="ErrorMessages" Hidden="true" />
+      <Property Name="PageStatus" Hidden="true" />
+      <Property Name="PageTitle" Hidden="true" />
+      <Method Name="ShowErrorMessage" Hidden="true" />
+    </Members>
     <TypeIdentifier />
   </Interface>
   <Interface Name="MVP.Base.BaseUserControl.IBaseUserControl">
-    <Position X="6" Y="2.75" Width="1.5" />
+    <Position X="10.5" Y="2.75" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Interface Name="MVP.Base.BasePresenter.IBasePresenter" Collapsed="true">
-    <Position X="6" Y="0.5" Width="1.5" />
+    <Position X="10.5" Y="0.5" Width="1.5" />
     <TypeIdentifier />
   </Interface>
   <Font Name="Tahoma" Size="8.25" />
