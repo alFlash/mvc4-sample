@@ -50,7 +50,7 @@ namespace MVC4.Sample.Web.Controllers.Home
         }
 
         [HttpPost]
-        [ActionCommand(ButtonName = "SaveWholePage")]
+        [ActionCommand(Name = "SaveWholePage")]
         public ActionResult Index(HomeViewModel viewModel)
         {
             ModelState.Clear();
@@ -72,7 +72,7 @@ namespace MVC4.Sample.Web.Controllers.Home
         }
 
         [HttpPost]
-        [ActionCommand(ButtonName = "ChangeWelcomeText")]
+        [ActionCommand(Name = "ChangeWelcomeText")]
         public ActionResult ChangeWelcomeText(HomeViewModel viewModel)
         {
             ModelState.Clear();
@@ -89,7 +89,7 @@ namespace MVC4.Sample.Web.Controllers.Home
         }
 
         [HttpPost]
-        [ActionCommand(ButtonName = "SaveUsers")]
+        [ActionCommand(Name = "SaveUsers")]
         public ActionResult SaveUsers(HomeViewModel viewModel)
         {
             ModelState.Clear();
