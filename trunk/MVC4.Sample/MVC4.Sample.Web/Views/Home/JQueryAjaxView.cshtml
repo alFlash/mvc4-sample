@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "JQueryAjaxView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        //                    readyState: 4
+        //                    responseText: "True"
+        //                    status: 200
+        //                    statusText: "OK"
+
+
+        $('#GetUserInfos').click(function () {
+
+            var userInfos = new Array();
+            userInfos.push({
+                UserName: "HoangGia",
+                Password: "hoanggia"
+            });
+            var postData = { userInfos: userInfos };
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                url: 'JQueryAjax/GetUserInfo',
+                data: JSON.stringify(postData),
+                traditional: true,
+                success: function (d) {
+                    alert($.validator.format("UserName: {0}; Password: {1}", d[0].UserName, d[0].Password));
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+            return false;
+        });
+        $('#GetUserInfo').click(function () {
+
+            var userInfo = {
+                UserName: "Hoang Gia",
+                Password: "hoanggia"
+            };
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                url: 'JQueryAjax/GetOneUser',
+                data: JSON.stringify(userInfo),
+                traditional: true,
+                success: function (d) {
+                    alert($.validator.format("UserName: {0}; Password: {1}", d.UserName, d.Password));
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+            return false;
+        });
+    });
+</script>
+<h2>
+    JQueryAjaxView</h2>
+Username:
+<label id="UserName">
+</label>
+<br />
+Password:
+<label id="Password">
+</label>
+<br />
+<input type="button" id="GetUserInfos" value="Get Users" />
+<input type="button" id="GetUserInfo" value="Get User" />

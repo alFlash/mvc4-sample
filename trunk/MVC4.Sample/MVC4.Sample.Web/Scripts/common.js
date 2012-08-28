@@ -1,6 +1,8 @@
 var JsCommon = new Object();
 /*
-jQuery BlockUI: $.blockUI({ message: '<h1><img src="/images/busy.gif" class="padr10" /> Please wait...</h1>' });
+jQuery BlockUI: 
+    - $.blockUI({ message: '<h1><img src="/images/busy.gif" class="padr10" /> Please wait...</h1>' });
+    - Default: $(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
 jQuery Dialog: 
 $('.<your-selector>').dialog({
 autoOpen: false;
