@@ -5,6 +5,7 @@ using MVC.Core.Attributes;
 
 namespace MVC4.Sample.Common.Entities
 {
+    [Serializable]
     public class UserInfo
     {
         public Guid Id { get; set; }
@@ -12,5 +13,7 @@ namespace MVC4.Sample.Common.Entities
         [StringLength(10, MinimumLength = 5)]
         [ValidationGroup("Users")]
         public string UserName { get; set; }
+
+        public string Password { get; set; }
     }
 }

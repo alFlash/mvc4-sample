@@ -28,22 +28,18 @@ namespace MVC4.Sample.Web.Controllers.Home
             };
             viewModel.UserListViewModel.Users.Add(new UserInfo
             {
-                Id = Guid.NewGuid(),
                 UserName = "Gia Le"
             });
             viewModel.UserListViewModel.Users.Add(new UserInfo
             {
-                Id = Guid.NewGuid(),
                 UserName = "Khoa Tran"
             });
             viewModel.UserListViewModel.Users.Add(new UserInfo
             {
-                Id = Guid.NewGuid(),
                 UserName = "Duy Truong"
             });
             viewModel.UserListViewModel.Users.Add(new UserInfo
             {
-                Id = Guid.NewGuid(),
                 UserName = "Hai Nguyen"
             });
             return View(viewModel);
