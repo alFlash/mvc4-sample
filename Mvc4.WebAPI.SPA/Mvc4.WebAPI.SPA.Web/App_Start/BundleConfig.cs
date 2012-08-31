@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace Mvc4.WebAPI.SPA.Web
+namespace Mvc4.WebAPI.SPA.Web.App_Start
 {
     public class BundleConfig
     {
