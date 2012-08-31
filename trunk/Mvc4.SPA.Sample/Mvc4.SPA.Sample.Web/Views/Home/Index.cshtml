@@ -1,4 +1,11 @@
-﻿<header>
+﻿@using Mvc4.SPA.Sample.Web.Controllers
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header>
     <div class="content-wrapper">
         <div class="float-left">
             <p class="site-title">
@@ -55,3 +62,14 @@
         </ol>
     </section>
 </div>
+
+
+@( Html.UpshotContext().DataSource<DeliveryServiceController>(x => x.GetDeliveries()))
+<script>
+    $(function () {
+        var datasource = upshot.dataSources.DeliveriesForToday;
+        datasource.refresh(function (results) {
+            alert(results);
+        });
+    })
+</script>

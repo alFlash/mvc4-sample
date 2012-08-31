@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Data;
 using System.Web.Http.Data.EntityFramework;
+using System.Web.Mvc;
 using Mvc4.SPA.Sample.Web.ViewModels.Models;
 using Mvc4.SPA.Sample.Web.ViewModels.Repositories;
 
 namespace Mvc4.SPA.Sample.Web.Controllers
 {
-    public class DeliveryServiceController : ApiController
+    public class DeliveryServiceController : DataController
     {
         //
         // GET: /DeliveryService/
@@ -16,7 +18,7 @@ namespace Mvc4.SPA.Sample.Web.Controllers
         {
             var dbContext = new RepositoryContext();
             dbContext.Configuration.ProxyCreationEnabled = false;
-            var result = dbContext.Deliveries.OrderBy(x => x.DeliveryId).ToList();
+            var result = dbContext.Deliveries.Include("Customer").OrderBy(x => x.DeliveryId).ToList();
             return result;
         }
 
