@@ -1,12 +1,13 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace Mvc4.WebAPI.SPA.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public List<FakeData.FakeData> Index()
         {
-            return View();
+            return FakeData.FakeData.GetList();
         }
     }
 }
