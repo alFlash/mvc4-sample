@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace Mvc4.WebAPI.SPA.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public List<FakeData.FakeData> Index()
+        public IQueryable<FakeData.FakeData> Index()
         {
-            return FakeData.FakeData.GetList();
+            return FakeData.FakeData.GetList().AsQueryable();
         }
     }
 }
