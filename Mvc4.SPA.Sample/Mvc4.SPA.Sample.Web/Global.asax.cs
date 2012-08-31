@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Mvc4.SPA.Sample.Web.App_Start;
 
 namespace Mvc4.SPA.Sample.Web
 {
