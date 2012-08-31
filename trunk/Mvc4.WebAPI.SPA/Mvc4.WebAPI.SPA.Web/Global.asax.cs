@@ -3,6 +3,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Mvc4.WebAPI.SPA.Web.App_Start;
+using Mvc4.WebAPI.SPA.Web.Controllers;
 
 namespace Mvc4.WebAPI.SPA.Web
 {
@@ -14,7 +15,7 @@ namespace Mvc4.WebAPI.SPA.Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
+            
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
