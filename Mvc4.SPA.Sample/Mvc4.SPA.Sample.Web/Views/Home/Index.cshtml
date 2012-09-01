@@ -29,13 +29,10 @@
         self.firstName = ko.observable("Bert");
         self.lastName = ko.observable("Bertington");
         self.saveButtonText = ko.observable("Save");
-
-        self.fullName = ko.computed(function() {
-            return self.firstName() + ' ' + self.lastName();
-        });
+        self.fullName = ko.observable("Initialized");
 
         self.combind = function() {
-            self.firstName("Hoang Gia");
+            self.fullName(self.firstName() + ' ' + self.lastName());
         };
     }
 
