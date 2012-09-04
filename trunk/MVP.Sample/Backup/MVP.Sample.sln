@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVP.Sample.Web", "MVP.Sample.Web\MVP.Sample.Web.csproj", "{9D684F8B-2F92-4A61-8908-FFEABF39E465}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVP.Base", "MVP.Base\MVP.Base.csproj", "{16A5B83B-C16F-4224-A217-554AA7736CFD}"
