@@ -1,5 +1,4 @@
 ﻿using MVP.Base.BasePresenter;
-using MVP.Base.BaseRepository;
 using MVP.Sample.Web.IRepositories;
 using MVP.Sample.Web.IViews;
 using MVP.Sample.Web.Repositories;
@@ -24,17 +23,14 @@ namespace MVP.Sample.Web.Presenters
 
         protected override void ViewAction()
         {
-            //throw new NotImplementedException();
         }
 
         protected override void UpdateAction()
         {
-            //throw new NotImplementedException();
         }
 
         protected override void DeleteAction()
         {
-            //throw new NotImplementedException();
         }
 
         protected override void InsertAction()
@@ -44,17 +40,14 @@ namespace MVP.Sample.Web.Presenters
 
         protected override void InitializeAction()
         {
-            //throw new NotImplementedException();
         }
 
         protected override void SearchAction()
         {
-            //throw new NotImplementedException();
         }
 
         public override void Validate()
         {
-            //throw new NotImplementedException();
         }
 
         #endregion
