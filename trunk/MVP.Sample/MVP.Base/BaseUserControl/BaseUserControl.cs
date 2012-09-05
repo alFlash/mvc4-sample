@@ -5,7 +5,8 @@ using MVP.Base.BasePresenter;
 
 namespace MVP.Base.BaseUserControl
 {
-    public class BaseUserControl<TPresenter> : UserControl, IBaseUserControl where TPresenter : class, IBasePresenter
+    public class BaseUserControl<TPresenter> : UserControl, IBaseUserControl 
+        where TPresenter : class, IBasePresenter
     {
         #region Properties
 
