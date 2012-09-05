@@ -8,7 +8,7 @@ namespace MVP.Base.BasePresenter
     /// 
     /// </summary>
     public abstract class BasePresenter<TView, TRepository> : IBasePresenter
-        where TView : IBaseView
+        where TView : class, IBaseView
         where TRepository : IBaseRepository
     {
         #region IView
