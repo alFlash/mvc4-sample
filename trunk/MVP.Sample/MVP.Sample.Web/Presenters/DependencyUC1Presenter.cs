@@ -1,5 +1,4 @@
 ﻿using MVP.Base.BasePresenter;
-using MVP.Base.BaseRepository;
 using MVP.Sample.Web.IViews;
 using MVP.Sample.Web.Repositories;
 
