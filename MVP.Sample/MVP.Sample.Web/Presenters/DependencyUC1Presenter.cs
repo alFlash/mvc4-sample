@@ -1,20 +1,25 @@
 ﻿using MVP.Base.BasePresenter;
+using MVP.Base.BaseRepository;
 using MVP.Sample.Web.IViews;
+using MVP.Sample.Web.Repositories;
 
 namespace MVP.Sample.Web.Presenters
 {
-    public class DependencyUC1Presenter : BasePresenter<IDependencyUC1, object>
+    public class DependencyUC1Presenter : BasePresenter<IDependencyUC1, DependencyUC1Repository>
     {
-        public DependencyUC1Presenter(IDependencyUC1 view) : base(view)
+        #region Constructors
+
+        public DependencyUC1Presenter(IDependencyUC1 view)
+            : base(view)
         {
+            Repository = new DependencyUC1Repository();
         }
+
+        #endregion
+
+
 
         #region Overrides of BasePresenter<IDependencyUC1,object>
-
-        protected override object Repository
-        {
-            get { return null; }
-        }
 
         protected override void ViewAction()
         {

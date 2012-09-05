@@ -32,10 +32,14 @@ namespace MVP.Sample.Web.UserControls
                 result += (count + 1);
                 lblContent.Text = result;
             }
+
+            PageMode = PageMode.View;
+            Presenter.DoAction();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            PageMode = PageMode.View;
             Presenter.DoAction();
         }
 

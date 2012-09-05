@@ -1,4 +1,5 @@
-﻿using MVP.Base.BaseView;
+﻿using MVP.Base.BaseRepository;
+using MVP.Base.BaseView;
 using MVP.Base.Common;
 
 namespace MVP.Base.BasePresenter
@@ -8,15 +9,15 @@ namespace MVP.Base.BasePresenter
     /// </summary>
     public abstract class BasePresenter<TView, TRepository> : IBasePresenter
         where TView : IBaseView
-        where TRepository : class
+        where TRepository : IBaseRepository
     {
         #region IView
-        private readonly TView _view;
+        protected readonly TView View;
         #endregion
 
         #region Repository
 
-        protected abstract TRepository Repository { get; }
+        protected TRepository Repository;
         #endregion
 
         #region IBasePresenter
@@ -27,7 +28,18 @@ namespace MVP.Base.BasePresenter
         /// <param name="view">The view.</param>
         protected BasePresenter(TView view)
         {
-            _view = view;
+            View = view;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BasePresenter{TView,TRepository}"/> class.
+        /// </summary>
+        /// <param name="view">The view.</param>
+        /// <param name="repository">The repository.</param>
+        protected BasePresenter(TView view, TRepository repository)
+        {
+            View = view;
+            Repository = repository;
         }
 
         #endregion
@@ -46,7 +58,7 @@ namespace MVP.Base.BasePresenter
         /// </summary>
         public virtual void DoAction()
         {
-            switch (_view.PageMode)
+            switch (View.PageMode)
             {
                 case PageMode.None:
                     InitializeAction();

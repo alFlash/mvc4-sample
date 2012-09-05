@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="BasePresenter\BasePresenter.cs" />
     <Compile Include="BasePresenter\IBasePresenter.cs" />
+    <Compile Include="BaseRepository\IBaseRepository.cs" />
+    <Compile Include="BaseRepository\IRepository.cs" />
+    <Compile Include="BaseRepository\BaseRepository.cs" />
     <Compile Include="BaseUserControl\BaseControlCollection.cs" />
     <Compile Include="BaseUserControl\BaseUserControl.cs">
       <SubType>ASPXCodeBehind</SubType>
