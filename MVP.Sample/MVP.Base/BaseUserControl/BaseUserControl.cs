@@ -5,7 +5,7 @@ using MVP.Base.BasePresenter;
 
 namespace MVP.Base.BaseUserControl
 {
-    public class BaseUserControl<TPresenter> : UserControl, IBaseUserControl 
+    public class BaseUserControl<TPresenter> : UserControl, IBaseUserControl
         where TPresenter : class, IBasePresenter
     {
         #region Properties
@@ -41,14 +41,14 @@ namespace MVP.Base.BaseUserControl
         /// <returns></returns>
         public string GetResource(string resourceKey)
         {
-            return GetResource(GetDefautResourceClassName(), resourceKey);
+            return GetResource(GetDefaultResourceClassName(), resourceKey);
         }
 
         /// <summary>
-        /// Gets the name of the defaut resource class.
+        /// Gets the name of the default resource class.
         /// </summary>
         /// <returns></returns>
-        public virtual string GetDefautResourceClassName()
+        public virtual string GetDefaultResourceClassName()
         {
             return "Common";
         }
