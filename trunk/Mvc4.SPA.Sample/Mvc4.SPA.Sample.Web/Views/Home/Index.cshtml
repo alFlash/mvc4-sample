@@ -1,0 +1,23 @@
+﻿@using Mvc4.SPA.Sample.Web.Controllers
+<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">ASP.NET Web API</a></p>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>
+                    Get Deliveries for today!
+                </h1>
+            </hgroup>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        @(Html.UpshotContext().DataSource<DataServiceController>(x => x.GetDeliveries()))
+    </section>
+</div>
