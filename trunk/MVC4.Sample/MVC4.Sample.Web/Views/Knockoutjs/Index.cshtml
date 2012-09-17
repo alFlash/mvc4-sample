@@ -1,0 +1,35 @@
+﻿@using System.Web.Script.Serialization
+@model MVC4.Sample.Web.ViewModels.Vehicle
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>title</h2>
+<script src="@Url.Content("~/Scripts/knockout-2.1.0.js")"></script>
+<script type="text/javascript" language="javascript">
+    var ViewModel = function () {
+        var self = this;
+        self.Vehicle = eval('(@(Html.Raw(new JavaScriptSerializer().Serialize(Model))))');
+        self.Expand = function (targetId) {
+            $('#' + targetId).slideToggle(300);
+        };
+    };
+    $(function () {
+        ko.applyBindings(new ViewModel());
+    });
+</script>
+
+<div data-bind="foreach: Vehicle.Cars">
+    <strong data-bind="
+        text: Name,
+        attr: {id: 'header-' + $index()},
+        click: function(){$root.Expand('content-' + $index())}"></strong>
+    <div data-bind="
+        attr: {id: 'content-' + $index()}, 
+        foreach: Wheels" style="display: none;">
+        <span data-bind="text: WheelName"></span>
+        <br />
+    </div>
+    <div style="clear: both;"></div>
+</div>
