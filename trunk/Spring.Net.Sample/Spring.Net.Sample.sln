@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring.Net.Sample.Web", "Spring.Net.Sample.Web\Spring.Net.Sample.Web.csproj", "{96203CC3-0B79-4C6F-9A29-3D422F2C123E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spring.Net.Sample.ConsoleApp", "Spring.Net.Sample.ConsoleApp\Spring.Net.Sample.ConsoleApp.csproj", "{C0C6F05C-D6E3-4A44-BC2F-CE862F4AB704}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{96203CC3-0B79-4C6F-9A29-3D422F2C123E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96203CC3-0B79-4C6F-9A29-3D422F2C123E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96203CC3-0B79-4C6F-9A29-3D422F2C123E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C6F05C-D6E3-4A44-BC2F-CE862F4AB704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C6F05C-D6E3-4A44-BC2F-CE862F4AB704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C6F05C-D6E3-4A44-BC2F-CE862F4AB704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C6F05C-D6E3-4A44-BC2F-CE862F4AB704}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
