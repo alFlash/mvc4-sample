@@ -7,27 +7,66 @@
 }
 <h2>title</h2>
 <script src="@Url.Content("~/Scripts/knockout-2.1.0.js")"></script>
+<script src="@Url.Content("~/Scripts/knockout.mapping-latest.js")"></script>
 <script type="text/javascript" language="javascript">
-    var ViewModel = function () {
+
+    var ViewModel = ko.mapping.fromJS(eval('(@(Html.Raw(new JavaScriptSerializer().Serialize(Model))))'));
+    var ActionModel = function () {
         var self = this;
-        self.Vehicle = eval('(@(Html.Raw(new JavaScriptSerializer().Serialize(Model))))');
         self.Expand = function (targetId) {
-            $('#' + targetId).slideToggle(300);
+            var target = $('#' + targetId);
+            target.slideToggle(300, function () {
+                self.ExpandedList[targetId] = target.css('display');
+            });
+        };
+        self.ExpandedList = ko.observableArray([]);
+        self.GetDisplay = function(targetId) {
+            if (self.ExpandedList[targetId] !== null && typeof self.ExpandedList[targetId] !== 'undefined') {
+                return self.ExpandedList[targetId];
+            } else {
+                return 'none';
+            }
         };
     };
+
     $(function () {
-        ko.applyBindings(new ViewModel());
+        $.extend(ViewModel, new ActionModel());
+        ko.applyBindings(ViewModel);
+        GetVehicle(0);
     });
+
+    function GetVehicle(id) {
+        var idx = { id: id };
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            contentType: 'application/json',
+            url: 'GetVehicle',
+            data: JSON.stringify(idx),
+            traditional: true,
+            success: function (d) {
+                ko.mapping.fromJS(d, ViewModel);
+                var inv = setInterval(function () {
+                    GetVehicle(id + 1);
+                    clearInterval(inv);
+                }, 7000);
+            },
+            error: function (e) {
+                alert(e.responseText);
+            }
+        });
+    }
 </script>
 
-<div data-bind="foreach: Vehicle.Cars">
+<div data-bind="foreach: Cars">
     <strong data-bind="
         text: Name,
         attr: {id: 'header-' + $index()},
         click: function(){$root.Expand('content-' + $index())}"></strong>
     <div data-bind="
         attr: {id: 'content-' + $index()}, 
-        foreach: Wheels" style="display: none;">
+        foreach: Wheels,
+        style: {display: $root.GetDisplay('content-' + $index())}">
         <span data-bind="text: WheelName"></span>
         <br />
     </div>
