@@ -1,0 +1,52 @@
+﻿@using System.Web.Script.Serialization
+@model MVC4.Sample.Web.ViewModels.Vehicle
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Nested Array</h2>
+<script src="@Url.Content("~/Scripts/knockout-2.1.0.js")"></script>
+<script src="@Url.Content("~/Scripts/knockout.mapping-latest.js")"></script>
+<script type="text/javascript">
+    var carTemplate = {
+        Name : '',
+        Wheels : ko.observableArray([{
+            WheelName: ''
+        }])
+    };
+    var wheelTemplate = {
+        WheelName: ''
+    };
+    
+    var ViewModel = ko.mapping.fromJS(JSON.parse('@(Html.Raw(new JavaScriptSerializer().Serialize(Model.Cars)))'));
+    var ActionModel = function (viewModel) {
+        var self = this;
+        self.Model = ko.observableArray(viewModel);
+        self.AddWheel = function (car) {
+            car.Wheels.push(wheelTemplate);
+        };
+        self.AddCart = function () {
+            self.Model.push(carTemplate);
+        };
+    };
+    $(function () {
+        ko.applyBindings(new ActionModel(ViewModel));
+    });
+    
+</script>
+<div data-bind="foreach: Model()">
+    <div style="padding: 20px;">
+        Car's Type: <input type="text" data-bind="value: Name"/>
+        <br/>
+        <div style="padding: 10px 10px 10px 20px;">
+            <!-- ko foreach: Wheels -->
+            Wheel name: <input type="text" data-bind="value: WheelName"/> <br/>
+            <!-- /ko -->
+            <input type="button" value="Add Wheel" data-bind="click: function(){$root.AddWheel($data);}"/>
+        </div>
+        <br/>
+        
+    </div>
+</div>
+<input type="button" value="Add Car" data-bind="click: function(){$root.AddCart();}"/>
