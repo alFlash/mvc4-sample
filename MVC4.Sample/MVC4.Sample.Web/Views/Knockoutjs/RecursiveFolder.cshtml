@@ -1,0 +1,148 @@
+﻿@using System.Web.Script.Serialization
+@model MVC4.Sample.Common.ViewModels.Knockoutjs.RecursiveFolderViewModel
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Recursive Folder</h2>
+<script src="@Url.Content("~/Scripts/knockout-2.1.0.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/knockout.mapping-latest.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    var viewModel = ko.mapping.fromJS(JSON.parse('@Html.Raw(new JavaScriptSerializer().Serialize(Model))'));
+
+    var ViewModel = function (viewModel) {
+        var self = this;
+        self.Model = viewModel;
+        self.GetChildren = function (parentId, folders) {
+            var result = [];
+            for (var i = 0; i < folders.length; i++) {
+                if (folders[i].ParentId() == parentId) {
+                    result.push(folders[i]);
+                }
+            }
+            //TODO: sort array
+            return result;
+        };
+        self.FoldersTree = ko.observableArray(self.GetChildren(null, self.Model.Folders()));
+        self.AddNode = function () {
+            var isvalid = self.ValidateFolder($('#new-node-id').val(), $('#new-node-parentid').val());
+            if (isvalid) {
+                var newNode = {
+                    Id: parseInt($('#new-node-id').val()),
+                    Name: $('#new-node-name').val(),
+                    ParentId: !String.IsNullOrWhiteSpace($('#new-node-parentid').val()) ? parseInt($('#new-node-parentid').val()) : null
+                };
+                var mapping = ko.mapping.fromJS(newNode);
+                self.FoldersTree.push(mapping);
+            }
+        };
+
+        self.ValidateFolder = function (nodeId, parentId) {
+            if ($("#commentForm").valid()) {
+                if (nodeId !== parentId) {
+                    var duplicated = false;
+                    for (var i = 0; i < self.FoldersTree().length; i++) {
+                        var currentFolder = self.FoldersTree()[i];
+                        if (currentFolder.Id().toString() === nodeId) {
+                            duplicated = true;
+                            break;
+                        }
+                    }
+                    if (!duplicated)
+                        return true;
+                    else { //The folder is already exists
+                        $('[data-valmsg-for="new-node-id"]').text("The folder is already existed.");
+                    }
+                } else { //the parentId == nodeId
+                    $('[data-valmsg-for="new-node-id"]').text("The folder cannot be its parent.");
+                }
+            }
+            return false;
+        };
+        self.IsNodeExist = function (node) {
+            var folders = self.FoldersTree;
+            for (var i = 0; i < folders().length; i++) {
+                if (folders()[i].Id() == node.Id) {
+                    return true;
+                }
+            }
+            return false;
+        };
+    };
+
+    (function () {
+        String.IsNullOrWhiteSpace = function (str) {
+            var isNullOrWhiteSpace = false;
+            if (typeof str === "undefined") {
+                isNullOrWhiteSpace = true;
+            }
+            else if (typeof str === "string") {
+                if (str === "undefined" || str == null || str.replace(/\s/g, '').length < 1) isNullOrWhiteSpace = true;
+            }
+            return isNullOrWhiteSpace;
+        };
+    })();
+
+    $(function () {
+        ko.applyBindings(new ViewModel(viewModel)); //register the ko-binding
+        $.validator.unobtrusive.parse('#commentForm'); //register the jQuery Unobstrusive Validator
+    });
+</script>
+<script type="text/html" id="recursiveFolder">
+    <!-- ko foreach: Folders() -->
+        <!-- ko if: (ParentId() == null && $parent.Level == 0) || ($parent.Level > 0 && ParentId() != null && ParentId() != '' && ParentId() == $parent.ParentId) -->
+        <li data-bind="click: function(){$root.GetChildrenTree(ParentId(), $root.AllFolders);}">
+            <span data-bind="text: Name"></span>
+            <ul data-bind="template: { name: 'recursiveFolder', data: { Folders: $parent.Folders , Level : $parent.Level + 1, ParentId : $data.Id() } }"></ul>
+        </li>
+        <!-- /ko -->
+    <!-- /ko -->
+</script>
+<ul data-bind="template: { name: 'recursiveFolder', data: { Folders: FoldersTree , Level : 0, ParentId : null } }" style="float: left; width: 200px">
+</ul>
+<table id="add-folder" style="float: left; padding: 20px;">
+    <tr>
+        <td colspan="2">
+            <span id="instructions"> Please enter new folder's information: </span>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 70px;">
+            Id:
+        </td>
+        <td>
+            <input id="new-node-id" name="new-node-id" data-val="true" data-val-required="This field is required"
+                data-val-number="Please enter a valid number" />
+            <span class="field-validation-valid" data-valmsg-for="new-node-id" data-valmsg-replace="true">
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Name:
+        </td>
+        <td>
+            <input id="new-node-name" name="new-node-name" data-val="true" data-val-required="This field is required" />
+            <span class="field-validation-valid" data-valmsg-for="new-node-name" data-valmsg-replace="true">
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ParentId:
+        </td>
+        <td>
+            <input type="text" id="new-node-parentid" name="new-node-parentid" data-val="true"
+                data-val-number="Please enter a valid number" />
+            <span class="field-validation-valid" data-valmsg-for="new-node-parentid" data-valmsg-replace="true">
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Add Node" data-bind="click: function(){$root.AddNode();}" />
+        </td>
+    </tr>
+</table>
+<br style="clear: both;"/>

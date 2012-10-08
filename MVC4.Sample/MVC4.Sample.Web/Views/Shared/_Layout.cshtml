@@ -2,17 +2,21 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>_Layout</title>
-    <script type="text/javascript" src="@Url.Content("/Scripts/jquery-1.8.0.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("/Scripts/jquery-1.8.2.js")"></script>
     <script type="text/javascript" src="@Url.Content("/Scripts/jquery.validate.js")"></script>
     <script type="text/javascript" src="@Url.Content("/Scripts/jquery.validate.unobtrusive.js")"></script>
-    <script type="text/javascript" src="@Url.Content("/Scripts/jquery.validate.unobtrusive.validationgroups.js")"></script>
+@*    <script type="text/javascript" src="@Url.Content("/Scripts/jquery.validate.unobtrusive.validationgroups.js")"></script>*@
     <script type="text/javascript" src="@Url.Content("/Scripts/jquery-ui-1.8.22.custom.min.js")"></script>
     <script type="text/javascript" src="@Url.Content("/Scripts/common.js")"></script>
 </head>
 <body>
+    <script type="text/javascript" language="javascript">
+        var $ = jQuery.noConflict();
+    </script>
+    <form class="cmxform" id="commentForm" method="get" action="">
     <div>
         @RenderBody()
     </div>
+    </form>
 </body>
 </html>

@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using MVC4.Sample.Common.Entities;
+using MVC4.Sample.Common.ViewModels.Knockoutjs;
 using MVC4.Sample.Web.ViewModels;
 
 namespace MVC4.Sample.Web.Controllers.Knockout
 {
     public class KnockoutjsController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string viewName)
         {
             var viewModel = new Vehicle
                                 {
@@ -39,7 +38,7 @@ namespace MVC4.Sample.Web.Controllers.Knockout
                                                        }
                                                }
                                 };
-            return View(viewModel);
+            return !string.IsNullOrWhiteSpace(viewName) ? View(viewName, viewModel) : View(viewModel);
         }
 
         public ActionResult GetVehicle(int id)
@@ -73,6 +72,25 @@ namespace MVC4.Sample.Web.Controllers.Knockout
                                                }
                                 };
             return Json(viewModel);
+        }
+
+        public ActionResult RecursiveFolder()
+        {
+            var viewModel = new RecursiveFolderViewModel
+                {
+                    Template = new RecursiveFolder(),
+                    Folders = new List<RecursiveFolder>()
+                };
+            for (var i = 0; i < 10; i++)
+            {
+                viewModel.Folders.Add(new RecursiveFolder
+                    {
+                        Id = i,
+                        Name = string.Format("Folder {0}", i),
+                        ParentId = null
+                    });
+            }
+            return View(viewModel);
         }
 
     }
