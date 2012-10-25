@@ -1,0 +1,70 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Home";
+    Layout = null;
+}
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>JQuery Touch</title>
+    <script type="text/javascript" src="@Url.Content("/Scripts/jquery-1.7.min.js")" charset="utf-8"></script>
+    <script src="@Url.Content("~/Scripts/knockout-2.1.0.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/knockout.mapping-latest.js")" type="text/javascript"></script>
+    <script type="text/javascript" src="@Url.Content("/Scripts/nav.js")" charset="utf-8"></script>
+    <script type="text/javascript" src="@Url.Content("/Scripts/native.history.js")" charset="utf-8"></script>
+
+    <script type="text/javascript" charset="utf-8">
+        var ViewModel = null;
+        var SPAViewModel = function () {
+            var self = this;
+            self.nav = new NavHistory({
+                params: { view: "Page1", animation: "slideleft" },
+                onNavigate: function (navEntry) {
+                    var currentView = navEntry.params.view;
+                    self.CurrentPage(currentView);
+                }
+            });
+
+            self.GotoView = function (view) {
+                self.nav.navigate({ view: view });
+            };
+
+            self.CurrentPage = ko.observable(self.nav.params().view);
+            self.CurrentPage.subscribe(function (newValue) {
+                alert(self.nav.params().animation);
+                $('#[id*=Page][id!=' + newValue + ']').stop().hide(300, function () {
+                    $('#' + newValue).show(300);
+                });
+            });
+
+            self.nav.initialize({ linkToUrl: true });
+        };
+
+        $(function () {
+            ViewModel = new SPAViewModel();
+            ko.applyBindings(ViewModel, document.getElementById('Main'));
+        });
+    </script>
+</head>
+<body>
+    <div id="Main" data-bind="attr: {currentPage: CurrentPage()}">
+
+        <div id="Page1" data-bind="click: function(){$root.GotoView('Page2')}">
+            This is the Page1
+        </div>
+        <div id="Page2" style="display: none;" data-bind="click: function(){$root.GotoView('Page3')}">
+            This is the Page2
+        </div>
+        <div id="Page3" style="display: none;" data-bind="click: function(){$root.GotoView('Page1')}">
+            This is the Page3
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
