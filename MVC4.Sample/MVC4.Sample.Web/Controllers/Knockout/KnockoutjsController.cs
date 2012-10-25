@@ -93,5 +93,9 @@ namespace MVC4.Sample.Web.Controllers.Knockout
             return View(viewModel);
         }
 
+        public ActionResult NavigationJs()
+        {
+            return View();
+        }
     }
 }

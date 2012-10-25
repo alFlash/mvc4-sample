@@ -9,9 +9,8 @@
 <script src="@Url.Content("~/Scripts/knockout-2.1.0.js")"></script>
 <script src="@Url.Content("~/Scripts/knockout.mapping-latest.js")"></script>
 <script type="text/javascript">
-
-    var ViewModel = ko.mapping.fromJS(eval('(@(Html.Raw(new JavaScriptSerializer().Serialize(Model))))'));
-    var ActionModel = function () {
+    var DataModel = ko.mapping.fromJS(eval('(@(Html.Raw(new JavaScriptSerializer().Serialize(Model))))'));
+    var ViewModel = function () {
         var self = this;
         self.Expand = function (targetId) {
             var target = $('#' + targetId);
@@ -20,19 +19,26 @@
             });
         };
         self.ExpandedList = ko.observableArray([]);
-        self.GetDisplay = function(targetId) {
+        self.GetDisplay = function (targetId) {
             if (self.ExpandedList[targetId] !== null && typeof self.ExpandedList[targetId] !== 'undefined') {
                 return self.ExpandedList[targetId];
             } else {
                 return 'none';
             }
         };
+
+        self.NumberOfCars = ko.observable(0);
+        self.IncreaseCars = function() {
+            self.NumberOfCars(self.NumberOfCars() + 1);
+        };
     };
 
     $(function () {
-        $.extend(ViewModel, new ActionModel());
-        ko.applyBindings(ViewModel);
-        GetVehicle(0);
+        $.extend(DataModel, new ViewModel());
+        ko.applyBindings(DataModel, document.getElementById("vehicle-test"));
+        setTimeout(function () {
+            GetVehicle(0);
+        }, 5000);
     });
 
     function GetVehicle(id) {
@@ -45,7 +51,7 @@
             data: JSON.stringify(idx),
             traditional: true,
             success: function (d) {
-                ko.mapping.fromJS(d, ViewModel);
+                ko.mapping.fromJS(d,DataModel);
                 var inv = setInterval(function () {
                     GetVehicle(id + 1);
                     clearInterval(inv);
@@ -57,18 +63,22 @@
         });
     }
 </script>
-
-<div data-bind="foreach: Cars">
-    <strong data-bind="
+<div id="vehicle-test">
+    <div data-bind="foreach: Cars">
+        <strong data-bind="
         text: Name,
         attr: {id: 'header-' + $index()},
         click: function(){$root.Expand('content-' + $index())}"></strong>
-    <div data-bind="
+        <div data-bind="
         attr: {id: 'content-' + $index()}, 
         foreach: Wheels,
         style: {display: $root.GetDisplay('content-' + $index())}">
-        <span data-bind="text: WheelName"></span>
-        <br />
+            <span data-bind="text: WheelName"></span>
+            <br />
+        </div>
+        <div style="clear: both;"></div>
     </div>
-    <div style="clear: both;"></div>
+    <input type="button" value="Add Car" data-bind="click: function(){$root.IncreaseCars();}"/>
+    <div id="total-vehicle" data-bind="text: 'Total of Cars:' + $root.NumberOfCars()">
+    </div>
 </div>
