@@ -19,21 +19,35 @@
         var ViewModel = null;
         var SPAViewModel = function () {
             var self = this;
+            self.NextPosition = '';
             self.nav = new NavHistory({
-                params: { view: "Page1", animation: "slideleft" },
-                onNavigate: function (navEntry) {
+                params: { view: "Page1" , next: ''},
+                onNavigate: function (navEntry, current) {
+                    //alert(current.isBack + current.isForward)
+
+                    if (current.isBack) {
+                        self.NextPosition = 'slideright';
+                    }else if (current.isForward) {
+                        self.NextPosition = 'slideleft';
+                    } else if (navEntry.params.next == 'next') {
+                        self.NextPosition = 'slideleft';
+                    } else if (navEntry.params.next == 'back') {
+                        self.NextPosition = 'slideright';
+                    }
+                    
+                    $('#result').text(self.NextPosition);
                     var currentView = navEntry.params.view;
                     self.CurrentPage(currentView);
                 }
             });
 
-            self.GotoView = function (view) {
-                self.nav.navigate({ view: view });
+            self.GotoView = function (view, next) {
+                self.nav.navigate({ view: view, next: next });
             };
 
             self.CurrentPage = ko.observable(self.nav.params().view);
-            self.CurrentPage.subscribe(function (newValue) {
-                alert(self.nav.params().animation);
+            self.CurrentPage.subscribe(function (newValue, next) {
+                //alert(self.nav.params().animation);
                 $('#[id*=Page][id!=' + newValue + ']').stop().hide(300, function () {
                     $('#' + newValue).show(300);
                 });
@@ -51,14 +65,17 @@
 <body>
     <div id="Main" data-bind="attr: {currentPage: CurrentPage()}">
 
-        <div id="Page1" data-bind="click: function(){$root.GotoView('Page2')}">
+        <div id="Page1" data-bind="click: function(){$root.GotoView('Page2', 'next')}">
             This is the Page1
         </div>
-        <div id="Page2" style="display: none;" data-bind="click: function(){$root.GotoView('Page3')}">
+        <div id="Page2" style="display: none;" data-bind="click: function(){$root.GotoView('Page3', 'next')}">
             This is the Page2
         </div>
-        <div id="Page3" style="display: none;" data-bind="click: function(){$root.GotoView('Page1')}">
+        <div id="Page3" style="display: none;" data-bind="click: function(){$root.GotoView('Page1', 'back')}">
             This is the Page3
+        </div>
+        <div id="result">
+            
         </div>
     </div>
 
