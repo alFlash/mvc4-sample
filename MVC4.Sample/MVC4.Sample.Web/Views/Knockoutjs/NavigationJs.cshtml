@@ -21,21 +21,21 @@
             var self = this;
             self.NextPosition = '';
             self.nav = new NavHistory({
-                params: { view: "Page1" , next: ''},
+                params: { view: "Page1", next: '' },
                 onNavigate: function (navEntry, current) {
                     //alert(current.isBack + current.isForward)
 
                     if (current.isBack) {
                         self.NextPosition = 'slideright';
-                    }else if (current.isForward) {
+                    } else if (current.isForward) {
                         self.NextPosition = 'slideleft';
                     } else if (navEntry.params.next == 'next') {
                         self.NextPosition = 'slideleft';
                     } else if (navEntry.params.next == 'back') {
                         self.NextPosition = 'slideright';
                     }
-                    
-                    $('#result').text(self.NextPosition);
+                     
+                    $('#result').text('isBack: ' + current.isBack + '. isForward: ' + current.isForward + '. Next Position: ' + (self.NextPosition !== '' ? self.NextPosition : 'none'));
                     var currentView = navEntry.params.view;
                     self.CurrentPage(currentView);
                 }
@@ -45,8 +45,16 @@
                 self.nav.navigate({ view: view, next: next });
             };
 
+            self.Back = function () {
+                self.nav.back();
+            };
+
+            self.Next = function () {
+                self.nav.forward();
+            };
+
             self.CurrentPage = ko.observable(self.nav.params().view);
-            self.CurrentPage.subscribe(function (newValue, next) {
+            self.CurrentPage.subscribe(function (newValue) {
                 //alert(self.nav.params().animation);
                 $('#[id*=Page][id!=' + newValue + ']').stop().hide(300, function () {
                     $('#' + newValue).show(300);
@@ -76,6 +84,10 @@
         </div>
         <div id="result">
             
+        </div>
+        <div>
+            <input type="button" value="Back" data-bind="click: function(){$root.Back()}"/>
+            <input type="button" value="Next" data-bind="click: function(){$root.Next()}"/>
         </div>
     </div>
 
