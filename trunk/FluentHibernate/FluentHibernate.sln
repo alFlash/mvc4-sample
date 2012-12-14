@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentHibernate.Sample", "FluentHibernate.Sample\FluentHibernate.Sample.csproj", "{C8FD247E-EC25-4B62-AAEA-5839E2385E23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentHibernate.DAO", "FluentHibernate.DAO\FluentHibernate.DAO.csproj", "{DA880F98-F71E-4E8B-9963-46A00AC19CA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentHibernate.Common", "FluentHibernate.Common\FluentHibernate.Common.csproj", "{6C48EA4B-32C5-4C98-ADBA-802290419BB3}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -17,8 +21,19 @@ Global
 		{C8FD247E-EC25-4B62-AAEA-5839E2385E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8FD247E-EC25-4B62-AAEA-5839E2385E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8FD247E-EC25-4B62-AAEA-5839E2385E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA880F98-F71E-4E8B-9963-46A00AC19CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA880F98-F71E-4E8B-9963-46A00AC19CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA880F98-F71E-4E8B-9963-46A00AC19CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA880F98-F71E-4E8B-9963-46A00AC19CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C48EA4B-32C5-4C98-ADBA-802290419BB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C48EA4B-32C5-4C98-ADBA-802290419BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C48EA4B-32C5-4C98-ADBA-802290419BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C48EA4B-32C5-4C98-ADBA-802290419BB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 	EndGlobalSection
 EndGlobal
