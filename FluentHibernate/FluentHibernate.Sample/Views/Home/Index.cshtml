@@ -1,0 +1,12 @@
+﻿@model IList<FluentHibernate.DAO.Models.People>
+
+@{
+    ViewBag.Title = "title";
+    Layout = null;
+}
+
+<h2>title</h2>
+@foreach (var people in Model)
+{
+    @(people.LastName + " " + people.FirstName) <br/> 
+}
